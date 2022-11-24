@@ -13,9 +13,8 @@ COPY server ./server
 
 # As node user, install packages and set permissions
 USER node
-RUN npm cache clean --force
 RUN npm i
-COPY --chown=node:node ../limitless-website .
+COPY --chown=node:node . .
 
 # Build and add files to working directory
 RUN npm run build
