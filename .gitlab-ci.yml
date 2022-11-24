@@ -17,6 +17,7 @@ build:
   only:
     refs:
       - develop
+      - main
   script:
     - echo "$CI_BUILD_TOKEN" | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
     - docker build
@@ -31,6 +32,7 @@ build:
   only:
     refs:
       - develop
+      - main
   script:
     - export INGRESS_HOSTNAME=${CI_ENVIRONMENT_URL#*://}
     - export INGRESS_HOSTNAME=${INGRESS_HOSTNAME%*/}
