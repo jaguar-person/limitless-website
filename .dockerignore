@@ -1,0 +1,16 @@
+# Node stuff
+node_modules/
+*.log
+.yarn
+
+# Project stuff
+.git
+.vscode/
+*.md
+
+# Docker stuff
+Dockerfile
+.dockerignore
+
+# Kube stuff
+.kube/

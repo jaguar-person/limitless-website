@@ -1,0 +1,57 @@
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: docker:19.03.13-git
+  services:
+    - docker:19.03.13-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  only:
+    refs:
+      - develop
+  script:
+    - echo "$CI_BUILD_TOKEN" | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+    - docker build
+      -t $CI_REGISTRY/$CI_PROJECT_PATH
+      -t $CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA .
+    - docker push $CI_REGISTRY/$CI_PROJECT_PATH
+
+
+.deploy:
+  stage: deploy
+  image: google/cloud-sdk:313.0.1
+  only:
+    refs:
+      - develop
+  script:
+    - export INGRESS_HOSTNAME=${CI_ENVIRONMENT_URL#*://}
+    - export INGRESS_HOSTNAME=${INGRESS_HOSTNAME%*/}
+    - kubectl config set-context --current --namespace="rusticated-$CI_ENVIRONMENT_SLUG"
+    - ( echo "cat <<EOF" ; cat .kube/deployment.yml ; echo EOF ) | sh | kubectl apply -f -
+    - ( echo "cat <<EOF" ; cat .kube/service.yml ; echo EOF ) | sh | kubectl apply -f -
+    - ( echo "cat <<EOF" ; cat .kube/ingress.yml ; echo EOF ) | sh | kubectl apply -f -
+
+deploy_test:
+  extends: .deploy
+  environment:
+    name: test
+
+deploy_stage:
+  extends: .deploy
+  environment:
+    name: stage
+  when: manual
+
+deploy_production:
+  extends: .deploy
+  environment:
+    name: production
+  when: manual
