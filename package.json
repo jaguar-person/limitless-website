@@ -29,7 +29,7 @@
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
     "remark-gfm": "^3.0.1",
-    "rusty-web": "git+https://npm-dependency:gvwoMHDvtJsJkHY3JvAR@gitlab.com/rusticated/rusty-web.git#82f3efc34c90de10601f43cb26ba2d1f11841589",
+    "rusty-web": "git+https://npm-dependency:gvwoMHDvtJsJkHY3JvAR@gitlab.com/rusticated/rusty-web.git#4d022f756001e8d268c7a2540209921b49297b41",
     "socket.io-client": "^4.5.1",
     "styled-components": "^5.3.5",
     "typescript": "^4.7.3",
