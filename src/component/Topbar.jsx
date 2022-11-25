@@ -39,7 +39,7 @@ const ProfileLink = ({ me, orgId }) => {
 		return (
 			<>
 				{ me.permissions?.includes('UI_SHOW_ADMIN_STUFF') &&
-					<TopbarLink as='a' href={`${window.location.origin.replace('rustinity', 'rusticated').replace('limitless', 'rusticated')}/gaffer`} rel="noreferrer noopener" title="Staff">
+					<TopbarLink as='a' href={`${window.location.origin.replace('limitlessrust', 'rusticated')}/gaffer`} rel="noreferrer noopener" title="Staff">
 						Staff
 					</TopbarLink>
 				}
