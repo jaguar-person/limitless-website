@@ -11,7 +11,7 @@ const Dashboard = () => {
 			<img src={logo} alt="R"/>
 			<nav>
 				<DiscordLink href="https://discord.gg/limitlesss" >DISCORD</DiscordLink>
-				<SupportLink href="https://store.limitless.com" >STORE</SupportLink>
+				<SupportLink href="https://store.limitlessrust.com" >STORE</SupportLink>
 			</nav>
 			{/*<Footer />*/}
 		</DashboardContainer>

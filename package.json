@@ -33,7 +33,8 @@
     "socket.io-client": "^4.5.1",
     "styled-components": "^5.3.5",
     "typescript": "^4.7.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "rusty-config": "git+https://npm-dependency:zxFxkCUNt2Mi1vupyzGx@gitlab.com/rusticated/rusty-config.git#43f6feb696512c8008a2928579dc25decf9eae20"
   },
   "scripts": {
     "start": "craco start",

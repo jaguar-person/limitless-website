@@ -24,7 +24,7 @@ const Topbar = () =>  {
 			<Link to=""><span>Limitless</span></Link>
 			<nav>
 				<TopbarLink to="leaderboards">Leaderboards</TopbarLink>
-				<TopbarLink as='a' href="https://store.limitless.com" >Store</TopbarLink>
+				<TopbarLink as='a' href="https://store.limitlessrust.com" >Store</TopbarLink>
 				<TopbarLink to="support" >Support</TopbarLink>
 				{ me?.linkedAccounts && <TopbarLink to="account/tickets" >My Tickets</TopbarLink> }
 				<ProfileLink me={me} orgId={orgId} />

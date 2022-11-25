@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="feat: initial commit">
+    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="refactor: new image">
+      <change afterPath="$PROJECT_DIR$/configs/local.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/production.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/stage.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Topbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Topbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +91,7 @@
       <updated>1668973285787</updated>
       <workItem from="1668973286888" duration="3514000" />
       <workItem from="1669322331738" duration="4803000" />
+      <workItem from="1669377794859" duration="429000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1669324472802</created>
@@ -91,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669324472802</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor: new image">
+      <created>1669378001062</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669378001062</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: initial commit" />
+    <MESSAGE value="refactor: new image" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: new image" />
   </component>
 </project>

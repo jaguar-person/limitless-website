@@ -17,3 +17,6 @@
 .env.production.local
 
 npm-debug.log*
+
+# Config stuff
+configs/local.json
