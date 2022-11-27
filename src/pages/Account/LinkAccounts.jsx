@@ -133,7 +133,7 @@ const Service = ({ service, account, unlinkStatus = '', submitUnlink, cancelUnli
     const linked = Boolean(account);
     account = account || {};
 
-    const follower = account.followedOrgs && account.followedOrgs['1'];
+    const follower = account.followedOrgs && account.followedOrgs['3'];
 
     let linkStatus = linked ? (unlinkHovered ? 'Unlink' : 'Linked') : 'Link'
     if (unlinkStatus && unlinkStatus !== 'APPROVED') {
@@ -196,7 +196,7 @@ const Service = ({ service, account, unlinkStatus = '', submitUnlink, cancelUnli
 
 const NitroService = ({ account }) => {
     account = account || {};
-    const supporter = Boolean(account.supportedOrgs && account.supportedOrgs['1']);
+    const supporter = Boolean(account.supportedOrgs && account.supportedOrgs['3']);
     const supporterStatus = supporter ? 'Boosting' : 'Boost';
 
     return (
