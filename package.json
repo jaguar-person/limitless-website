@@ -29,12 +29,12 @@
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
     "remark-gfm": "^3.0.1",
-    "rusty-web": "git+https://npm-dependency:gvwoMHDvtJsJkHY3JvAR@gitlab.com/rusticated/rusty-web.git#da299c0e1036abd83d34f7f16bccd24103ac584e",
+    "rusty-config": "git+https://npm-dependency:zxFxkCUNt2Mi1vupyzGx@gitlab.com/rusticated/rusty-config.git#43f6feb696512c8008a2928579dc25decf9eae20",
+    "rusty-web": "git+https://npm-dependency:gvwoMHDvtJsJkHY3JvAR@gitlab.com/rusticated/rusty-web.git#1f5769c162f9beca0e61bee790cae8531a862e50",
     "socket.io-client": "^4.5.1",
     "styled-components": "^5.3.5",
     "typescript": "^4.7.3",
-    "web-vitals": "^2.1.4",
-    "rusty-config": "git+https://npm-dependency:zxFxkCUNt2Mi1vupyzGx@gitlab.com/rusticated/rusty-config.git#43f6feb696512c8008a2928579dc25decf9eae20"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "craco start",
@@ -71,7 +71,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",
-    "@craco/craco": "^7.0.0",
+    "@craco/craco": "^6.4.5",
     "babel-plugin-styled-components": "^2.0.7",
     "craco-babel-loader": "^1.0.3",
     "http-proxy-middleware": "^2.0.6",
