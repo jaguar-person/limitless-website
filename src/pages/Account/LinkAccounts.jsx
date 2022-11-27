@@ -171,24 +171,35 @@ const Service = ({ service, account, unlinkStatus = '', submitUnlink, cancelUnli
                     {!linked && unlinkStatus === 'APPROVED' && 'Unlink request approved'}
                     {unlinkStatus === 'DENIED' && 'Unlink request denied by admin. You may resubmit your request in 3 days'}
                     {unlinkStatus === 'PENDING' && 'Unlink request pending admin approval'}
-                    {unlinkStatus === 'CANCELLED' && 'You have cancelled this unlink request. Please wait 15 mintues to request again'}
+                    {unlinkStatus === 'CANCELLED' && 'You have cancelled this unlink request. Please wait 15 minutes to request again'}
                 </LinkButtonSideInfo>
+                <ButtonContainer>
                 { service === 'steam' ?
                     <ServiceActionLink linkStatus={follower ? 'Boosting' : 'Boost'} href="/steam" target="_blank" rel="noreferrer noopener">
                         { follower ? 'Joined' : 'Join' }
                         <FontAwesomeIcon icon={follower ? faCheck : faExternalLinkAlt} />
                     </ServiceActionLink>
                 : service === 'discord' ?
-                    <ServiceActionLink linkStatus={linkStatus} href="/discord" target="_blank" rel="noreferrer noopener">
-                        { follower ? 'Joined' : 'Join' }
-                        <FontAwesomeIcon icon={follower ? faCheck : faExternalLinkAlt} />
-                    </ServiceActionLink>
+                    <>
+                        <ServiceAction linked={linked} linkStatus={linkStatus} onClick={onButtonClick} onMouseEnter={() => setUnlinkHovered(true)} onMouseLeave={() => setUnlinkHovered(false)}>
+                            {linkStatus.toLowerCase()}
+                            <FontAwesomeIcon icon={linkStatusIcons[linkStatus]} />
+                        </ServiceAction>
+
+                        {linkStatus !== 'Link' && (
+                            <ServiceActionLink href="/discord" target="_blank" rel="noreferrer noopener">
+                                { follower ? 'Joined' : 'Join' }
+                                <FontAwesomeIcon icon={follower ? faCheck : faExternalLinkAlt} />
+                            </ServiceActionLink>
+                        )}
+                    </>
                 :
                     <ServiceAction linked={linked} linkStatus={linkStatus} onClick={onButtonClick} onMouseEnter={() => setUnlinkHovered(true)} onMouseLeave={() => setUnlinkHovered(false)}>
                         {linkStatus.toLowerCase()}
                         <FontAwesomeIcon icon={linkStatusIcons[linkStatus]} />
                     </ServiceAction>
                 }
+                </ButtonContainer>
             </ServiceHeader>
             <ServiceContent>
                 Rewards: { rewards[service].length > 0 && rewards[service].map(reward =>
@@ -244,6 +255,11 @@ const ServiceHeader = styled.div`
 		color:  ${props => props.theme.colors.subtext};
 	}
 `;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+`
 
 const ServiceIcon = styled(FontAwesomeIcon)`
 	font-size: 1.8em;
