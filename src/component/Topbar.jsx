@@ -6,9 +6,9 @@ import { Avatar, Hamburger } from 'rusty-web/src/component/Common.jsx';
 import { loginLogout } from 'rusty-web/src/util/tools';
 
 const Topbar = () =>  {
-	const { state: { me, orgId }} = useStoreService();
+	const { state: { me, orgId }, clearAuthorization } = useStoreService();
 	const [showNav, setShowNav] = React.useState(false);
-	
+
 	useEffect(() => {
 		const hideNav = () => setShowNav(false);
 		if (showNav) {
@@ -27,14 +27,14 @@ const Topbar = () =>  {
 				<TopbarLink as='a' href="https://store.limitlessrust.com" >Store</TopbarLink>
 				<TopbarLink to="support" >Support</TopbarLink>
 				{ me?.linkedAccounts && <TopbarLink to="account/tickets" >My Tickets</TopbarLink> }
-				<ProfileLink me={me} orgId={orgId} />
+				<ProfileLink me={me} orgId={orgId} logout={clearAuthorization} />
 			</nav>
 			<Hamburger onClick={(e) => {e.stopPropagation(); setShowNav(bool => !bool)}} />
 		</TopbarContainer>
 	);
 }
 
-const ProfileLink = ({ me, orgId }) => {
+const ProfileLink = ({ me, orgId, logout }) => {
 	if (me?.linkedAccounts) {
 		return (
 			<>
@@ -52,7 +52,7 @@ const ProfileLink = ({ me, orgId }) => {
 	}
 
 	return (
-		<TopbarLink as='div' title="Sign in through steam" onClick={() => loginLogout(orgId, false)}>
+		<TopbarLink as='div' title="Sign in through steam" onClick={() => loginLogout(orgId, false, logout, null)}>
 			Sign In
 		</TopbarLink>
 	)

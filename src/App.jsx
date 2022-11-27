@@ -35,7 +35,7 @@ const App = () => {
 								<Routes>
 									<Route index element={<Dashboard />} />
 									<Route path="leaderboards" element={<Leaderboards />} />
-									<Route path="/service-auth/:service" element={<ServiceAuth />}/>
+									<Route exact path="/service-auth/:service" element={<ServiceAuth />}/>
 									<Route element={<PrivateRoute authorized={authorized} me={me} />}>
 										<Route path="support" element={<Support />} />
 										<Route path="account/*" element={<Account linkAccounts={LinkAccounts} />} />
