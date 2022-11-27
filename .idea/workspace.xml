@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="refactor: new image">
-      <change afterPath="$PROJECT_DIR$/configs/local.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/production.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/stage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configs/test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="feat: link accounts page">
+      <change afterPath="$PROJECT_DIR$/src/pages/Account/LinkAccounts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/local.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Topbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Topbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,8 @@
       <updated>1668973285787</updated>
       <workItem from="1668973286888" duration="3514000" />
       <workItem from="1669322331738" duration="4803000" />
-      <workItem from="1669377794859" duration="429000" />
+      <workItem from="1669377794859" duration="2244000" />
+      <workItem from="1669553318046" duration="3362000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1669324472802</created>
@@ -107,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669378001062</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: better api proxying">
+      <created>1669378456932</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669378456932</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +132,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: initial commit" />
     <MESSAGE value="refactor: new image" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: new image" />
+    <MESSAGE value="feat: better api proxying" />
+    <MESSAGE value="feat: link accounts page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: link accounts page" />
   </component>
 </project>

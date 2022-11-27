@@ -11,6 +11,39 @@ const fadeIn = keyframes`
 	}
 `
 
+const fadePushIn = keyframes`
+	from {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+`
+
+const fadeDownIn = keyframes`
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+`
+
+const fadeUpIn = keyframes`
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+`
+
 const offsetFadeIn = keyframes`
 	0% {
 		opacity: 0;
@@ -86,13 +119,16 @@ const theme = {
 		breathing,
 		orbit,
 		rotate,
-		rotateReverse
-	},
-	durations: {
-		short: "100ms",
-		medium: "250ms",
-		long: "500ms",
-		longer: "1s"
+		rotateReverse,
+		fadePushIn,
+		fadeUpIn,
+		fadeDownIn,
+		durations: {
+			short: "100ms",
+			medium: "250ms",
+			long: "500ms",
+			longer: "1s"
+		},
 	},
 	scales: {
 		small: 1.10,
@@ -124,6 +160,16 @@ const theme = {
 			3: '#1a1a26',
 			4: '#1a1a26',
 			5: '#242431',
+		},
+		brands: {
+			steam: '#2e445d',
+			discord: '#586aea',
+			twitter: '#1DA1F3',
+			twitch: '#6441A4',
+			youtube: '#B71D1C',
+			reddit: '#ff581a',
+			nitro: '#ff73fa',
+			tradeurl: '#1f5f83'
 		}
 	}
 }

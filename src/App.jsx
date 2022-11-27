@@ -12,12 +12,16 @@ import PrivateRoute from 'rusty-web/src/component/PrivateRoute';
 import Dashboard from './pages/Dashboard';
 import ServiceAuth from 'rusty-web/src/pages/Auth';
 import Leaderboards from 'rusty-web/src/pages/Leaderboards';
+import LinkAccounts from './pages/Account/LinkAccounts';
+
+import RustyAlert from "rusty-web/src/component/RustyAlert";
+import RustyNotification from "rusty-web/src/component/RustyNotification";
 
 const Support = React.lazy(() => import('rusty-web/src/pages/Support'));
 const Account = React.lazy(() => import('rusty-web/src/pages/Account'));
 
 const App = () => {
-	const { state: { authorized, me }} = useStoreService();
+	const { state: { authorized, me, popup }} = useStoreService();
 	useLoadMyInfo();
 
 	return (
@@ -31,16 +35,20 @@ const App = () => {
 								<Routes>
 									<Route index element={<Dashboard />} />
 									<Route path="leaderboards" element={<Leaderboards />} />
-									<Route path="/service-auth/steam" element={<ServiceAuth />}/>
+									<Route path="/service-auth/:service" element={<ServiceAuth />}/>
 									<Route element={<PrivateRoute authorized={authorized} me={me} />}>
 										<Route path="support" element={<Support />} />
-										<Route path="account/*" element={<Account />} />
+										<Route path="account/*" element={<Account linkAccounts={LinkAccounts} />} />
 									</Route>
+									<Route exact path='/link/' element={<Navigate to={'/account/links'} />} />
 									<Route path="*" element={<Navigate to='' replace />}/>
 								</Routes>
 							</ErrorBoundary>
 						</React.Suspense>
 					</ErrorBoundary>
+
+					{ popup && <RustyAlert border popup={popup} >{popup.message}</RustyAlert>}
+					<RustyNotification />
 				</SiteWrapper>
 			</ThemeProvider>
 		</BrowserRouter>
