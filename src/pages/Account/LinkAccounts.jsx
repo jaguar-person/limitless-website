@@ -105,11 +105,10 @@ const LinkAccounts = () => {
                     <FontAwesomeIcon icon={faSync} />
                 </RustyAction>
             </RustyHeader>
-            <RustyAlert>After linking your accounts, type <span>/claim {dynamicService === "steam" ? "steamgroup" : dynamicService || "discord"}</span> on our modded servers to claim.</RustyAlert>
             <RustyScroll scroll={scroll} ref={scrollRef} >
-                <Service service="steam" account={user.linkedAccounts["STEAM"]} unlinkStatus={unlinkStatuses["STEAM"]} submitUnlink={submitUnlink} cancelUnlink={cancelUnlink}/>
-                <Service service="discord" account={user.linkedAccounts["DISCORD"]} unlinkStatus={unlinkStatuses["DISCORD"]} submitUnlink={submitUnlink} cancelUnlink={cancelUnlink}/>
-                <NitroService account={user.linkedAccounts["DISCORD"]} />
+                <Service service="steam" account={user?.linkedAccounts["STEAM"]} unlinkStatus={unlinkStatuses["STEAM"]} submitUnlink={submitUnlink} cancelUnlink={cancelUnlink}/>
+                <Service service="discord" account={user?.linkedAccounts["DISCORD"]} unlinkStatus={unlinkStatuses["DISCORD"]} submitUnlink={submitUnlink} cancelUnlink={cancelUnlink}/>
+               {/* <NitroService account={user.linkedAccounts["DISCORD"]} />*/}
             </RustyScroll>
         </>
     )
