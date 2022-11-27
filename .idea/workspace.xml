@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="fix: you've gotta be kidding me">
+    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="feat: add linked and join button to discord">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account/LinkAccounts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account/LinkAccounts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,8 @@
       <workItem from="1669377794859" duration="2244000" />
       <workItem from="1669553318046" duration="4207000" />
       <workItem from="1669575754109" duration="5628000" />
-      <workItem from="1669584120253" duration="521000" />
+      <workItem from="1669584120253" duration="616000" />
+      <workItem from="1669585185807" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1669324472802</created>
@@ -173,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669582175133</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: add linked and join button to discord">
+      <created>1669584660855</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669584660855</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +211,7 @@
     <MESSAGE value="feat: add discord link" />
     <MESSAGE value="fix: fuck off already" />
     <MESSAGE value="fix: you've gotta be kidding me" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: you've gotta be kidding me" />
+    <MESSAGE value="feat: add linked and join button to discord" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add linked and join button to discord" />
   </component>
 </project>
