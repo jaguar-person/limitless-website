@@ -177,7 +177,13 @@ const Service = ({ service, account, unlinkStatus = '', submitUnlink, cancelUnli
                     <ServiceActionLink linkStatus={follower ? 'Boosting' : 'Boost'} href="/steam" target="_blank" rel="noreferrer noopener">
                         { follower ? 'Joined' : 'Join' }
                         <FontAwesomeIcon icon={follower ? faCheck : faExternalLinkAlt} />
-                    </ServiceActionLink> :
+                    </ServiceActionLink>
+                : service === 'discord' ?
+                    <ServiceActionLink linkStatus={linkStatus} href="/discord" target="_blank" rel="noreferrer noopener">
+                        { follower ? 'Joined' : 'Join' }
+                        <FontAwesomeIcon icon={follower ? faCheck : faExternalLinkAlt} />
+                    </ServiceActionLink>
+                :
                     <ServiceAction linked={linked} linkStatus={linkStatus} onClick={onButtonClick} onMouseEnter={() => setUnlinkHovered(true)} onMouseLeave={() => setUnlinkHovered(false)}>
                         {linkStatus.toLowerCase()}
                         <FontAwesomeIcon icon={linkStatusIcons[linkStatus]} />

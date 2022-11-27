@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="fix: login">
+    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="chore: update rusty-web">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account/LinkAccounts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Account/LinkAccounts.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
       <workItem from="1669322331738" duration="4803000" />
       <workItem from="1669377794859" duration="2244000" />
       <workItem from="1669553318046" duration="4207000" />
-      <workItem from="1669575754109" duration="2516000" />
+      <workItem from="1669575754109" duration="4377000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1669324472802</created>
@@ -143,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669577168650</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore: update rusty-web">
+      <created>1669578991554</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669578991554</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +178,7 @@
     <MESSAGE value="fix: npm being naughty again" />
     <MESSAGE value="fix: null coalesce user" />
     <MESSAGE value="fix: login" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: login" />
+    <MESSAGE value="chore: update rusty-web" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update rusty-web" />
   </component>
 </project>
