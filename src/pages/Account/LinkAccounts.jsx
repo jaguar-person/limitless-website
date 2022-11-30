@@ -144,6 +144,11 @@ const Service = ({ service, account, unlinkStatus = '', submitUnlink, cancelUnli
     }
 
     function onButtonClick() {
+        if (!follower && linked && service === 'discord') {
+            window.open('/discord', '_blank');
+            return;
+        }
+
         if (linkStatus === 'Link') {
             if (service === 'twitch') {
                 window.open('/twitch', '_blank');
@@ -182,16 +187,9 @@ const Service = ({ service, account, unlinkStatus = '', submitUnlink, cancelUnli
                 : service === 'discord' ?
                     <>
                         <ServiceAction linked={linked} linkStatus={linkStatus} onClick={onButtonClick} onMouseEnter={() => setUnlinkHovered(true)} onMouseLeave={() => setUnlinkHovered(false)}>
-                            {linkStatus.toLowerCase()}
-                            <FontAwesomeIcon icon={linkStatusIcons[linkStatus]} />
+                            { follower ? 'Linked' : 'Link' }
+                            <FontAwesomeIcon icon={linkStatusIcons[follower ? 'Linked' : 'Link']} />
                         </ServiceAction>
-
-                        {linkStatus !== 'Link' && (
-                            <ServiceActionLink href="/discord" target="_blank" rel="noreferrer noopener">
-                                { follower ? 'Joined' : 'Join' }
-                                <FontAwesomeIcon icon={follower ? faCheck : faExternalLinkAlt} />
-                            </ServiceActionLink>
-                        )}
                     </>
                 :
                     <ServiceAction linked={linked} linkStatus={linkStatus} onClick={onButtonClick} onMouseEnter={() => setUnlinkHovered(true)} onMouseLeave={() => setUnlinkHovered(false)}>
