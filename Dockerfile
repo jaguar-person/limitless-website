@@ -13,7 +13,7 @@ COPY server ./server
 
 # As node user, install packages and set permissions
 USER node
-RUN npm i --force
+RUN npm ci
 COPY --chown=node:node . .
 
 # Build and add files to working directory
