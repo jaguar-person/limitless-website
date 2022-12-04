@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="refactor: show link button if not in guild">
+    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="deps: update rusty-web">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <workItem from="1669586396297" duration="1851000" />
       <workItem from="1669830393666" duration="1453000" />
       <workItem from="1669842900119" duration="3000" />
-      <workItem from="1670173881347" duration="2162000" />
+      <workItem from="1670173881347" duration="2563000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1669324472802</created>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669831263146</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="deps: update rusty-web">
+      <created>1670176102682</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670176102682</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +245,7 @@
     <MESSAGE value="feat: add linked and join button to discord" />
     <MESSAGE value="chore: update rusty-web" />
     <MESSAGE value="refactor: show link button if not in guild" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: show link button if not in guild" />
+    <MESSAGE value="deps: update rusty-web" />
+    <option name="LAST_COMMIT_MESSAGE" value="deps: update rusty-web" />
   </component>
 </project>
