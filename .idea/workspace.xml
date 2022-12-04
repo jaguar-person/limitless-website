@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="fix: remove this shit fron package-lock">
+    <list default="true" id="e2476ae9-8c75-4656-a939-66c163d2e9af" name="Changes" comment="refactor: use npm ci instead of install">
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +91,7 @@
       <workItem from="1669586396297" duration="1851000" />
       <workItem from="1669830393666" duration="1453000" />
       <workItem from="1669842900119" duration="3000" />
-      <workItem from="1670173881347" duration="2826000" />
+      <workItem from="1670173881347" duration="3279000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1669324472802</created>
@@ -219,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670176516301</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="refactor: use npm ci instead of install">
+      <created>1670176838618</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670176838618</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +260,7 @@
     <MESSAGE value="refactor: show link button if not in guild" />
     <MESSAGE value="deps: update rusty-web" />
     <MESSAGE value="fix: remove this shit fron package-lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove this shit fron package-lock" />
+    <MESSAGE value="refactor: use npm ci instead of install" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: use npm ci instead of install" />
   </component>
 </project>

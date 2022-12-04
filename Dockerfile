@@ -13,7 +13,8 @@ COPY server ./server
 
 # As node user, install packages and set permissions
 USER node
-RUN npm ci
+RUN rm package-lock.json
+RUN npm install
 COPY --chown=node:node . .
 
 # Build and add files to working directory
