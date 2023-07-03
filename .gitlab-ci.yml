@@ -19,11 +19,12 @@ build:
       - develop
       - main
   script:
-    - echo "$CI_BUILD_TOKEN" | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+    - echo "$RC_REGISTRY_PASS" | docker login -u $RC_REGISTRY_USER --password-stdin $RC_REGISTRY
     - docker build
-      -t $CI_REGISTRY/$CI_PROJECT_PATH
-      -t $CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA .
-    - docker push $CI_REGISTRY/$CI_PROJECT_PATH
+      --build-arg GIT_COMMIT=$CI_COMMIT_SHORT_SHA
+      -t $RC_REGISTRY/$CI_PROJECT_PATH
+      -t $RC_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA .
+    - docker push $RC_REGISTRY/$CI_PROJECT_PATH
 
 
 .deploy:

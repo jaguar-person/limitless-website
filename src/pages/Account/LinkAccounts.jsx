@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faCheck, faTimes, faSync, faExternalLinkAlt, faPencilAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { faDiscord, faSteam } from '@fortawesome/free-brands-svg-icons';
+import {faDiscord, faSteam, faTiktok} from '@fortawesome/free-brands-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 import { useStoreService } from 'rusty-web/src/store';
@@ -26,6 +26,11 @@ const serviceRenderHelpers = {
         link: account => `https://discordapp.com/users/${account.id}`,
         avatar: ({ id, avatar: hash }) => `https://cdn.discordapp.com/avatars/${id}/${hash}.png`
     },
+    TIKTOK: {
+        name: 'TikTok',
+        link: `https://www.tiktok.com/@limitlessrust`,
+        icon: faTiktok,
+    }
 }
 
 
@@ -106,6 +111,7 @@ const LinkAccounts = () => {
                 </RustyAction>
             </RustyHeader>
             <RustyScroll scroll={scroll} ref={scrollRef} >
+                <GenericService service="TIKTOK" />
                 <Service service="steam" account={user?.linkedAccounts["STEAM"]} unlinkStatus={unlinkStatuses["STEAM"]} submitUnlink={submitUnlink} cancelUnlink={cancelUnlink}/>
                 <Service service="discord" account={user?.linkedAccounts["DISCORD"]} unlinkStatus={unlinkStatuses["DISCORD"]} submitUnlink={submitUnlink} cancelUnlink={cancelUnlink}/>
                {/* <NitroService account={user.linkedAccounts["DISCORD"]} />*/}
@@ -236,6 +242,28 @@ const NitroService = ({ account }) => {
                 Rewards: { rewards.nitro?.length > 0 && rewards.nitro?.map(reward =>
                 <Reward key={reward[0]} src={reward[1]} alt={reward[0]} title={reward[0]}/>
             )}
+            </ServiceContent>
+        </RustyRow>
+    );
+}
+
+const GenericService = ({ service }) => {
+    return (
+        <RustyRow>
+            <ServiceHeader>
+                <ServiceIcon service={service} icon={serviceRenderHelpers[service].icon} />
+                <div>
+                    {serviceRenderHelpers[service].name}
+                </div>
+                <LinkButtonSideInfo>
+                </LinkButtonSideInfo>
+                <ServiceActionLink href={serviceRenderHelpers[service].link} target="_blank" rel="noreferrer noopener">
+                    Follow
+                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                </ServiceActionLink>
+            </ServiceHeader>
+            <ServiceContent>
+                Rewards: coming soon
             </ServiceContent>
         </RustyRow>
     );
