@@ -1,8 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
 
-import TobBar from "../layouts/TopBar";
-import Footer from "../layouts/Footer";
 import Hero from "../modules/dashboard/hero";
 import Servers from "../modules/dashboard/servers";
 import Shop from "../modules/dashboard/shop";

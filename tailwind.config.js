@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         background: "#1F1E24",
         "secondary-background": "#282730",
+        "secondary-background-accent": "#363541",
         secondary: "#999999",
         points: "#E7CF77",
         gems: "#94E777",
