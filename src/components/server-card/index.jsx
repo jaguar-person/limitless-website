@@ -6,7 +6,13 @@ import ServerIcon from "../../images/server.svg";
 const ServerCard = () => (
   <div className="flex flex-col">
     <div className="flex flex-col gap-5 p-5 pb-2.5 bg-gradient-to-b from-[#282730] to-[#1F1E24] border border-[#363541]  rounded-t-lg">
-      <Image src={ServerIcon} width={366} height={152} className="rounded-lg" />
+      <Image
+        src={ServerIcon}
+        width={366}
+        height={152}
+        className="rounded-lg"
+        alt="server"
+      />
       <div className="flex flex-col gap-1 text-left">
         <div>
           <p className="text-secondary">Last wipe • 3 months ago</p>
