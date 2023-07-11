@@ -9,7 +9,6 @@ WORKDIR /home/node/app
 COPY package*.json ./
 COPY src ./src
 COPY public ./public
-COPY server ./server
 
 # As node user, install packages and set permissions
 USER node
