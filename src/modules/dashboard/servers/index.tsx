@@ -1,3 +1,4 @@
+import React from "react";
 import ServerCard from "../../../components/server-card";
 
 const Servers = () => (

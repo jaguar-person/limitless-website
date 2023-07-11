@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import SiteIcon from "../../images/site.svg";
 import UsersIcon from "../../images/users.svg";

@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import ShopIcon from "../../../images/shop.svg";
 import SiteIcon from "../../../images/site.svg";

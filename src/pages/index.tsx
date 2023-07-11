@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import React from "react";
 import Image from "next/image";
 
@@ -9,7 +10,7 @@ import Shop from "../modules/dashboard/shop";
 
 import BackgroundImage from "../images/background.svg";
 
-const Dashboard = () => {
+const Dashboard: NextPage = () => {
   return (
     <div className="relative z-50 p-[100px] bg-background max-w-[1440px] mx-auto">
       <Image
