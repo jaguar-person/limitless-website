@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import React from "react";
 import Image from "next/image";
 
 import TobBar from "../layouts/TopBar";
@@ -7,12 +6,12 @@ import Footer from "../layouts/Footer";
 import Hero from "../modules/dashboard/hero";
 import Servers from "../modules/dashboard/servers";
 import Shop from "../modules/dashboard/shop";
-
+import MainLayout from "../layouts/Main";
 import BackgroundImage from "../images/background.svg";
 
 const Dashboard: NextPage = () => {
   return (
-    <div className="relative z-50 p-[100px] bg-background max-w-[1440px] mx-auto">
+    <MainLayout>
       <Image
         src={BackgroundImage}
         width={2134}
@@ -20,7 +19,6 @@ const Dashboard: NextPage = () => {
         className="absolute -top-16  z-20"
         alt="background"
       />
-      <TobBar />
       <div className="hero mt-[197px]">
         <Hero />
       </div>
@@ -30,8 +28,7 @@ const Dashboard: NextPage = () => {
       <div className="shop my-[130px] px-[115px]">
         <Shop />
       </div>
-      <Footer />
-    </div>
+    </MainLayout>
   );
 };
 
