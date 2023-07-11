@@ -11,7 +11,13 @@ import BackgroundImage from "../images/background.svg";
 
 const Dashboard = () => {
   return (
-    <div className="relative p-[100px] bg-background max-w-[1440px] mx-auto">
+    <div className="relative z-50 p-[100px] bg-background max-w-[1440px] mx-auto">
+      <Image
+        src={BackgroundImage}
+        width={2134}
+        height={1423}
+        className="absolute -top-16  z-20"
+      />
       <TobBar />
       <div className="hero mt-[197px]">
         <Hero />
