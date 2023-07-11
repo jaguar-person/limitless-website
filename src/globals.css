@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-custom-initial {
+    @apply rounded-md py-3 px-5 flex gap-2.5 items-center cursor-pointer
+}

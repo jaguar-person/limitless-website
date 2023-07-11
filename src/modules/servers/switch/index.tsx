@@ -13,7 +13,7 @@ const ServerSwitch = () => {
     <div className="flex gap-2.5">
       <div
         className={
-          "cursor-pointer py-3.5 px-8 rounded-md flex gap-5 items-center border " +
+          "btn-custom-initial !px-8 border " +
           (switchFlag
             ? "bg-[#0052B4]/50 border-[#0052B4]"
             : "bg-secondary-background border-secondary-background-accent")
@@ -25,7 +25,7 @@ const ServerSwitch = () => {
       </div>
       <div
         className={
-          "cursor-pointer py-3.5 px-8 rounded-md flex gap-5 items-center border " +
+          "btn-custom-initial !px-8 border " +
           (switchFlag
             ? "bg-secondary-background border-secondary-background-accent"
             : "bg-[#702835] border-[#D80027]")

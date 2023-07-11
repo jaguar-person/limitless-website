@@ -16,7 +16,7 @@ const ServerCard = () => (
       />
       <div className="flex flex-col gap-1 text-left">
         <div>
-          <p className="text-secondary">Last wipe • 3 months ago</p>
+          <p className="text-secondary text-[13px]">Last wipe • 3 months ago</p>
           <p className="font-bold leading-9 text-2xl text-white">
             2x VANILA EU MAIN
           </p>
