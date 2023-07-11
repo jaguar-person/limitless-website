@@ -7,14 +7,14 @@ const ServerCard = () => (
   <div className="flex flex-col">
     <div className="flex flex-col gap-5 p-5 pb-2.5 bg-gradient-to-b from-[#282730] to-[#1F1E24] border border-[#363541]  rounded-t-lg">
       <Image src={ServerIcon} width={366} height={152} className="rounded-lg" />
-      <div className="flex flex-col items-start gap-1">
+      <div className="flex flex-col gap-1 text-left">
         <div>
           <p className="text-secondary">Last wipe • 3 months ago</p>
           <p className="font-bold leading-9 text-2xl text-white">
             2x VANILA EU MAIN
           </p>
         </div>
-        <div className="leading-6 truncate h-20 w-[50px] text-secondary">
+        <div className="line-clamp-3 text-secondary text-left text-[15px]">
           Join the Rust revolution! Our high-performance gaming server offers a
           thrilling, fair, and lag-free experience. With an active community and
           moderated environment become the ultimate survivor in this intense
