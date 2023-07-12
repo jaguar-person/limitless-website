@@ -1,5 +1,5 @@
 import React from "react";
-import ServerCard from "../../../components/server-card";
+import ServerCard from "../../../components/card";
 
 const Servers = () => (
   <div className="text-center flex flex-col items-center gap-9">
