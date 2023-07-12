@@ -18,11 +18,11 @@ type AppPropsWithLayout = AppProps & {
 const poppins = localFont({
   src: [
     {
-      path: "../../public/fonts/Poppins-Regular.ttf",
+      path: "./fonts/Poppins-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../../public/fonts/Poppins-Bold.ttf",
+      path: "./fonts/Poppins-Bold.ttf",
       weight: "700",
     },
   ],
