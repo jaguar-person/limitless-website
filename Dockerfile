@@ -1,5 +1,5 @@
 # Build app
-FROM node:17.4.0
+FROM node:18.13.0
 
 # Create and set working directory
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
