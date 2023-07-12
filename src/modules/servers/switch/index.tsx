@@ -1,42 +1,18 @@
-import Image from "next/image";
-import EURFlag from "../../../images/flag-eur.svg";
-import USAFlag from "../../../images/flag-usa.svg";
+import React from "react";
 import { useState } from "react";
+import ServersSwitchEurope from "./ServersSwitchEurope";
+import ServersSwitchUSA from "./ServerSwitchUSA";
 
-const ServerSwitch = () => {
+const ServerSwitch: React.FC = () => {
   const [switchFlag, setSwitchFlag] = useState(true);
 
-  const handleClick = (flag: boolean) => (event: React.MouseEvent) => {
+  const handleSwitch = (flag: boolean) => (event: React.MouseEvent) => {
     setSwitchFlag(flag);
   };
   return (
     <div className="flex gap-2.5">
-      <div
-        className={
-          "btn-custom-initial !px-8 border " +
-          (switchFlag
-            ? "bg-[#0052B4]/50 border-[#0052B4]"
-            : "bg-secondary-background border-secondary-background-accent")
-        }
-        onClick={handleClick(true)}
-      >
-        <Image src={EURFlag} width={35} height={35} alt="eurFlag" />
-        <p className="font-semibold text-base text-white">Europe Servers</p>
-      </div>
-      <div
-        className={
-          "btn-custom-initial !px-8 border " +
-          (switchFlag
-            ? "bg-secondary-background border-secondary-background-accent"
-            : "bg-[#702835] border-[#D80027]")
-        }
-        onClick={handleClick(false)}
-      >
-        <Image src={USAFlag} width={35} height={35} alt="eurFlag" />
-        <p className="font-semibold text-base text-secondary">
-          America Servers
-        </p>
-      </div>
+      <ServersSwitchEurope flag={switchFlag} onSwitch={handleSwitch} />
+      <ServersSwitchUSA flag={switchFlag} onSwitch={handleSwitch} />
     </div>
   );
 };
