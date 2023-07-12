@@ -7,7 +7,7 @@ import Shop from "../modules/dashboard/shop";
 import MainLayout from "../layouts/Main";
 import BackgroundImage from "../images/background.svg";
 
-const Dashboard: NextPage = () => {
+const DashboardPage: NextPage = () => {
   return (
     <MainLayout>
       <Image
@@ -30,4 +30,4 @@ const Dashboard: NextPage = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardPage;

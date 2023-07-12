@@ -15,6 +15,7 @@ module.exports = {
         "secondary-background": "#282730",
         "secondary-background-accent": "#363541",
         secondary: "#999999",
+        "secondary-in-box": "#ADADAD",
         points: "#E7CF77",
         gems: "#94E777",
         danger: "#E77979",
