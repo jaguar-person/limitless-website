@@ -4,7 +4,7 @@ import ArrowDown from "../../images/arrow-down.svg";
 import { useState } from "react";
 
 interface IDropdown {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   title: string;
 }
 
