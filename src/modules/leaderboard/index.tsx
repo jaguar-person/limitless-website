@@ -1,13 +1,13 @@
 import React from "react";
 import LeaderBoardSettings from "./settings";
-import LeaderBoardTable from "./table";
+import LeaderBoardMain from "./main";
 
 const LeaderBoard = () => (
-  <div className="my-20 gap-20 flex flex-col items-center">
+  <div className="mt-40 mb-20 gap-20 flex flex-col items-center">
     <div className="text-white font-bold text-5xl">Limitless Leaderboards</div>
-    <div className="flex gap-3">
+    <div className="flex gap-3 w-full">
       <LeaderBoardSettings />
-      <LeaderBoardTable />
+      <LeaderBoardMain />
     </div>
   </div>
 );

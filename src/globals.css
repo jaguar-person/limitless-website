@@ -5,3 +5,11 @@
 .btn-custom-initial {
     @apply rounded-md py-3 px-5 flex gap-2.5 items-center cursor-pointer
 }
+
+.tr--hover {
+    @apply hover:border hover:border-gems hover:bg-gradient-to-l hover:from-gems/[6%] hover:to-gems/[38%]
+}
+
+.container {
+    @apply flex flex-col gap-4 bg-secondary-background border border-secondary-background-accent rounded-md p-4
+}
