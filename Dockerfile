@@ -6,19 +6,16 @@ RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 
 # Copy over dependencies
-COPY package*.json ./
-COPY src ./src
-COPY public ./public
+COPY * ./
 
 # As node user, install packages and set permissions
 USER node
-RUN rm package-lock.json
-RUN npm install
+RUN yarn install
 COPY --chown=node:node . .
 
 # Build and add files to working directory
-RUN npm run build
+RUN yarn run build
 
 # Run app
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD ["yarn", "run", "start"]
