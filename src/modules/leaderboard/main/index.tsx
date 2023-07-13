@@ -23,8 +23,7 @@ const LeaderBoardMain: React.FC<ILeaderboardMain> = ({ flag }) => (
           </div>
         </DropDown>
       </div>
-      {!!flag && <LeaderBoardTable />}
-      {!flag && <HeatMap />}
+      {flag ? <LeaderBoardTable /> : <HeatMap />}
     </div>
   </div>
 );

@@ -10,7 +10,7 @@ interface ISwitchIcon {
 const ServersSwitchEurope: React.FC<ISwitchIcon> = ({ flag, onSwitch }) => (
   <div
     className={
-      "btn-custom-initial !px-8 border " +
+      "btn-custom !px-8 border " +
       (flag
         ? "bg-[#0052B4]/50 border-[#0052B4]"
         : "bg-secondary-background border-secondary-background-accent")

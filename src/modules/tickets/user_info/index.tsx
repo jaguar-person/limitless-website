@@ -31,7 +31,7 @@ const TicketsUserInfo: React.FC = () => (
         </div>
       </div>
     </div>
-    <button className="btn-custom-initial text-black/75 font-bold bg-danger rounded-md z-10">
+    <button className="btn-custom text-black/75 font-bold bg-danger rounded-md z-10">
       Log Out
     </button>
   </div>

@@ -17,7 +17,7 @@ const DropDown: React.FC<IDropdown> = ({ children, className, title }) => {
   return (
     <div className={"relative " + className}>
       <div
-        className="btn-custom-initial bg-secondary-background-accent border-secondary-background flex justify-between"
+        className="btn-custom bg-secondary-background-accent border-secondary-background flex justify-between"
         onClick={handleShowMenu}
       >
         <p className="text-secondary font-semibold text-base">{title}</p>
