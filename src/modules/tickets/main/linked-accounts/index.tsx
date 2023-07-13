@@ -5,18 +5,10 @@ import SiteIcon from "../../../../images/site.svg";
 import DiscrodIconBlue from "../../../../images/discord--blue.svg";
 import DiscrodIconPink from "../../../../images/discord--pink.svg";
 import LinkIcon from "../../../../images/link.svg";
-
-export enum AccountStatusTypes {
-  NOT_CONNECTED = "Not connected",
-  CONNECTED = "Connected",
-  BOOSTED = "Boosted",
-}
-
-export enum AccountActionTypes {
-  LINK = "Link",
-  UNLINK = "Unlink",
-  BOOST = "Boost",
-}
+import {
+  AccountActionTypes,
+  AccountStatusTypes,
+} from "../../../../utils/enums";
 
 interface IAccountLink {
   name: string;
