@@ -14,7 +14,7 @@ const SearchBar: React.FC<ISearchBar> = ({ icon, placeholder }) => (
         className="p-1 focus:outline-none focus:shadow-outline"
       >
         <Image
-          src={`/images/${icon}.svg`}
+          src={require(`../../images/${icon}.svg`)}
           width={22}
           height={22}
           alt="search"

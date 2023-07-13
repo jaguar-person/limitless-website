@@ -6,15 +6,16 @@ import { useState } from "react";
 interface IDropdown {
   children?: React.ReactNode;
   title: string;
+  className?: string;
 }
 
-const DropDown: React.FC<IDropdown> = ({ children, title }) => {
+const DropDown: React.FC<IDropdown> = ({ children, className, title }) => {
   const [isShowMenu, setShowMenu] = useState(false);
   const handleShowMenu = () => {
     setShowMenu(!isShowMenu);
   };
   return (
-    <div className="relative">
+    <div className={"relative " + className}>
       <div
         className="btn-custom-initial bg-secondary-background-accent border-secondary-background flex justify-between"
         onClick={handleShowMenu}

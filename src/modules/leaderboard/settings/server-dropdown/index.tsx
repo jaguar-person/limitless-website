@@ -19,8 +19,8 @@ const LeaderBoardSettingsServerDropDown: React.FC = () => {
 
   return (
     <DropDown title="LR - US 2x Quad Monthly">
-      <div className="mt-2.5 z-50 right-0 absolute rounded-md bg-secondary-background-accent border-secondary-background flex flex-col gap-2.5 p-2.5 w-full">
-        <SearchBar icon="search" placeholder="Search a server..." />
+      <div className="dropdown-container">
+        <SearchBar icon="search_2" placeholder="Search a server..." />
         {Object.entries(options).map((server) => (
           <div key={server[0]}>
             <div className="flex justify-between text-xs">
