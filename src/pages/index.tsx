@@ -14,7 +14,7 @@ const DashboardPage: NextPage = () => {
         src={BackgroundImage}
         width={2134}
         height={1423}
-        className="absolute -top-16  z-20"
+        className="absolute left-0 -top-16  z-20"
         alt="background"
       />
       <div className="hero mt-[197px]">

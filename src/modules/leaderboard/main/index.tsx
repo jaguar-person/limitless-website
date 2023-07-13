@@ -11,12 +11,14 @@ const LeaderBoardMain = () => (
           </div>
           <p className="text-white text-lg">US 2X Quad Monthly</p>
         </div>
-        <DropDown title="Lifetime" />
+        <DropDown title="Lifetime" className="!font-normal">
+          <div className="dropdown-container text-secondary ">
+            <div>Lifetime</div>
+            <div>Wipe</div>
+          </div>
+        </DropDown>
       </div>
       <LeaderBoardTable />
-    </div>
-    <div className="flex justify-between">
-      <p className="text-secondary">Showing 0 to 10 of 5169 entries</p>
     </div>
   </div>
 );

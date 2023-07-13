@@ -7,10 +7,12 @@ interface IMainLayout {
 }
 
 const MainLayout = ({ children }: IMainLayout) => (
-  <div className="relative z-50 p-[100px] bg-background max-w-[1440px] mx-auto">
-    <TopBar />
-    {children}
-    <Footer />
+  <div className="bg-background">
+    <div className="relative z-50 p-[100px] bg-background max-w-[1440px] mx-auto">
+      <TopBar />
+      {children}
+      <Footer />
+    </div>
   </div>
 );
 
