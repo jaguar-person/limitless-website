@@ -16,6 +16,7 @@ type TableType = {
 
 interface ITable {
   data: TableType[];
+  isLeaderBoardTable?: boolean;
 }
 
 interface IPaginationIcon {
@@ -42,7 +43,7 @@ const TablePaginationIcon: React.FC<IPaginationIcon> = ({
   </div>
 );
 
-const Table: React.FC<ITable> = ({ data }) => {
+const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleCurrentPage = (currentPage: number) => (e: MouseEvent) => {
@@ -56,8 +57,6 @@ const Table: React.FC<ITable> = ({ data }) => {
     )
       setCurrentPage(currentPage + step);
   };
-  console.log(currentPage);
-
   return (
     <div className="flex flex-col gap-2.5">
       <table className="min-w-full text-left text-sm font-light">
@@ -86,15 +85,17 @@ const Table: React.FC<ITable> = ({ data }) => {
         <tbody className="text-secondary">
           {data.map((item, key) => (
             <tr
-              className={
-                "cursor-pointer border-b border-none tr--hover " +
-                (key % 2
-                  ? "bg-secondary-background"
-                  : "bg-secondary-background-accent")
-              }
+              className={`cursor-pointer border-b border-none tr--hover
+                ${
+                  key % 2
+                    ? "bg-secondary-background"
+                    : "bg-secondary-background-accent"
+                }`}
               key={key}
             >
-              <td className="leading-10 py-2 px-4 font-medium">{item.rank}</td>
+              <td className="leading-10 py-2 px-4 font-medium rounded-l-md">
+                {item.rank}
+              </td>
               <td className="leading-10 py-2 px-4 font-medium text-white flex gap-2.5 items-center">
                 <Image
                   src={require(`../../images/${
@@ -112,7 +113,9 @@ const Table: React.FC<ITable> = ({ data }) => {
                 {item.deaths}
               </td>
               <td className="leading-10 py-2 px-4 font-medium">{item.kd}</td>
-              <td className="leading-10 py-2 px-4 font-medium">{item.hours}</td>
+              <td className="leading-10 py-2 px-4 font-medium rounded-r-md">
+                {item.hours}
+              </td>
             </tr>
           ))}
         </tbody>

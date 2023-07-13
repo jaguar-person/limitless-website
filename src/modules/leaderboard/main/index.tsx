@@ -1,7 +1,12 @@
 import DropDown from "../../../components/dropdown";
-import LeaderBoardTable from "../table";
+import LeaderBoardTable from "./LeaderBoardTable";
+import HeatMap from "./HeatMap";
 
-const LeaderBoardMain = () => (
+interface ILeaderboardMain {
+  flag: boolean;
+}
+
+const LeaderBoardMain: React.FC<ILeaderboardMain> = ({ flag }) => (
   <div className="flex flex-col gap-2.5 flex-grow overflow-hidden">
     <div className="container">
       <div className="flex justify-between">
@@ -18,7 +23,8 @@ const LeaderBoardMain = () => (
           </div>
         </DropDown>
       </div>
-      <LeaderBoardTable />
+      {!!flag && <LeaderBoardTable />}
+      {!flag && <HeatMap />}
     </div>
   </div>
 );
