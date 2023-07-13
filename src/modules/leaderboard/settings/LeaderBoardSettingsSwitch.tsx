@@ -10,6 +10,8 @@ interface ISwitchIcon {
 interface ILeaderBoardSwitch {
   leftName: string;
   rightName: string;
+  flag: boolean;
+  onFlag?: (type: boolean) => void;
 }
 
 const SwitchIcon: React.FC<ISwitchIcon> = ({ flag, name, onClick }) => (
@@ -29,10 +31,13 @@ const SwitchIcon: React.FC<ISwitchIcon> = ({ flag, name, onClick }) => (
 const LeaderBoardSettingsSwitch: React.FC<ILeaderBoardSwitch> = ({
   leftName,
   rightName,
+  flag,
+  onFlag,
 }) => {
-  const [currentFlag, setCurrentFlag] = useState(true);
+  const [currentFlag, setCurrentFlag] = useState(flag);
 
   const handleSwitch = (flag: boolean) => (event: React.MouseEvent) => {
+    onFlag && onFlag(flag);
     setCurrentFlag(flag);
   };
   return (

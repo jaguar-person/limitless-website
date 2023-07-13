@@ -96,7 +96,7 @@ const tableData = [
 
 const LeaderBoardTable = () => (
   <div>
-    <Table data={tableData} />
+    <Table data={tableData} isLeaderBoardTable={true} />
   </div>
 );
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import DropDown from "../../../../components/dropdown";
-import SearchBar from "../../../../components/search-bar";
-import EURIcon from "../../../../images/eur.svg";
-import USAIcon from "../../../../images/usa.svg";
+import DropDown from "../../../components/dropdown";
+import SearchBar from "../../../components/search-bar";
+import EURIcon from "../../../images/eur.svg";
+import USAIcon from "../../../images/usa.svg";
 
 const LeaderBoardSettingsServerDropDown: React.FC = () => {
   const options = {

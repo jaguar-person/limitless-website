@@ -1,8 +1,7 @@
 import React from "react";
 import ServerCard from "../../components/card";
 import ServerSwitch from "./switch";
-import DropDown from "../../components/dropdown";
-import ServerDropDown from "./dropdown";
+import ServersDropDown from "./ServersDropdown";
 
 const Server = () => (
   <div className="text-white mt-40 mb-16 flex flex-col gap-16 items-center">
@@ -21,7 +20,7 @@ const Server = () => (
     <div className="flex flex-col gap-2.5">
       <div className="flex justify-between">
         <p className="text-white font-bold text-3xl">Listed Servers</p>
-        <ServerDropDown />
+        <ServersDropDown />
       </div>
       <div className="grid grid-cols-3 gap-2.5">
         <ServerCard />

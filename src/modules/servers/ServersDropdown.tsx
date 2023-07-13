@@ -1,7 +1,7 @@
 import React from "react";
-import DropDown from "../../../components/dropdown";
+import DropDown from "../../components/dropdown";
 
-const ServerDropDown: React.FC = () => {
+const ServersDropDown: React.FC = () => {
   const gameModes = [
     "All Servers",
     "Quad Monthly",
@@ -27,4 +27,4 @@ const ServerDropDown: React.FC = () => {
   );
 };
 
-export default ServerDropDown;
+export default ServersDropDown;
