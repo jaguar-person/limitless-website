@@ -1,8 +1,6 @@
-import React, { useState, MouseEventHandler, MouseEvent } from "react";
+import React from "react";
 import Image from "next/image";
-
-import LeftArrowIcon from "../../images/arrow-left.svg";
-import RightArrowIcon from "../../images/arrow-right.svg";
+import Pagination from "../pagination";
 
 type TableType = {
   rank: number;
@@ -19,44 +17,7 @@ interface ITable {
   isLeaderBoardTable?: boolean;
 }
 
-interface IPaginationIcon {
-  children: React.ReactNode;
-  onClick?: MouseEventHandler<HTMLDivElement> | undefined;
-  isCurrentPage?: boolean;
-}
-
-const TablePaginationIcon: React.FC<IPaginationIcon> = ({
-  children,
-  onClick,
-  isCurrentPage,
-}) => (
-  <div
-    className={
-      "w-9 h-9 cursor-pointer inline-flex items-center justify-center rounded-lg  font-semibold border " +
-      (isCurrentPage
-        ? "text-black/75 bg-gems border-gems"
-        : "text-[#ADADAD] bg-[#282730] border-[#363541]")
-    }
-    onClick={onClick}
-  >
-    {children}
-  </div>
-);
-
 const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handleCurrentPage = (currentPage: number) => (e: MouseEvent) => {
-    setCurrentPage(currentPage);
-  };
-
-  const handleNextPage = (step: number) => (e: MouseEvent) => {
-    if (
-      (currentPage > 0 && currentPage < 10 && step > 0) ||
-      (currentPage > 1 && currentPage < 11 && step < 0)
-    )
-      setCurrentPage(currentPage + step);
-  };
   return (
     <div className="flex flex-col gap-2.5">
       <table className="min-w-full text-left text-sm font-light">
@@ -124,41 +85,7 @@ const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
         <div className="flex justify-between">
           <p className="text-secondary">Showing 0 to 10 of 5169 entries</p>
         </div>
-        <div>
-          <nav className="isolate inline-flex gap-1">
-            <TablePaginationIcon onClick={handleNextPage(-1)}>
-              <Image src={LeftArrowIcon} width={8} height={8} alt="left" />
-            </TablePaginationIcon>
-            <TablePaginationIcon
-              onClick={handleCurrentPage(1)}
-              isCurrentPage={currentPage === 1}
-            >
-              1
-            </TablePaginationIcon>
-            <TablePaginationIcon
-              onClick={handleCurrentPage(2)}
-              isCurrentPage={currentPage === 2}
-            >
-              2
-            </TablePaginationIcon>
-            <TablePaginationIcon
-              onClick={handleCurrentPage(3)}
-              isCurrentPage={currentPage === 3}
-            >
-              3
-            </TablePaginationIcon>
-            <TablePaginationIcon>...</TablePaginationIcon>
-            <TablePaginationIcon
-              onClick={handleCurrentPage(10)}
-              isCurrentPage={currentPage === 10}
-            >
-              10
-            </TablePaginationIcon>
-            <TablePaginationIcon onClick={handleNextPage(1)}>
-              <Image src={RightArrowIcon} width={8} height={8} alt="right" />
-            </TablePaginationIcon>
-          </nav>
-        </div>
+        <Pagination />
       </div>
     </div>
   );
