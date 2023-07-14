@@ -5,6 +5,7 @@ import MyTicketsSearch from "./MyTicketsSearch";
 import MyTicketsTable from "./MyTicketsTable";
 import { TicketType } from "../../../../utils/enums";
 import Pagination from "../../../../components/pagination";
+import { useRouter } from "next/router";
 
 const MOCK_TICKETS = [
   {
@@ -58,6 +59,7 @@ const MOCK_TICKETS = [
 ];
 
 const TicketsMyTickets = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col gap-5">
       <div className="flex justify-between">
@@ -65,7 +67,14 @@ const TicketsMyTickets = () => {
           My Tickets
         </p>
         <button className="btn-custom flex gap-2 items-center bg-gems rounded-md">
-          <div className="text-black/75 text-base font-bold">New Ticket</div>
+          <div
+            className="text-black/75 text-base font-bold"
+            onClick={() => {
+              router.push("./tickets/add");
+            }}
+          >
+            New Ticket
+          </div>
           <Image src={AddIcon} width={20} height={20} alt="add" />
         </button>
       </div>

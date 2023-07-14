@@ -6,7 +6,7 @@ import ServerIcon from "../../images/server.svg";
 
 const ServerCard = () => (
   <div className="flex flex-col">
-    <div className="flex flex-col gap-5 p-5 pb-2.5 bg-gradient-to-b from-[#282730] to-[#1F1E24] border border-[#363541]  rounded-t-lg">
+    <div className="flex flex-col gap-5 p-5 pb-2.5 bg-gradient-to-b from-secondary-background to-background border border-secondary-background-accent  rounded-t-lg">
       <Image
         src={ServerIcon}
         width={366}
@@ -29,7 +29,7 @@ const ServerCard = () => (
         </div>
       </div>
     </div>
-    <div className="py-3.5 px-6 flex justify-between bg-gradient-to-r from-[#363541] via-[#25232A] to-[#2F2E38] rounded-b-lg border-t-white border-opacity-[7]">
+    <div className="py-3.5 px-6 flex justify-between bg-gradient-to-r from-secondary-background-accent via-[#25232A] to-[#2F2E38] rounded-b-lg border-t-white border-opacity-[7]">
       <div className="flex flex-col items-start">
         <p className="text-secondary">Players</p>
         <div className="flex gap-2.5">
