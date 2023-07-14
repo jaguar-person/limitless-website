@@ -9,7 +9,7 @@ export enum AccountActionTypes {
   UNLINK = "Unlink",
   BOOST = "Boost",
 }
-export enum TicketType {
+export enum TicketStatus {
   OPENED = "Opened",
   CLOSED = "Closed",
   AWAITING = "Awaiting",

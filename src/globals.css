@@ -19,5 +19,8 @@
 }
 
 .card-container {
-    @apply relative bg-secondary-background border rounded-md flex flex-col gap-2.5 justify-center items-center cursor-pointer
+    @apply relative bg-secondary-background border border-secondary-background-accent rounded-md  cursor-pointer
+}
+.vertical {
+    @apply flex flex-col justify-center items-center gap-2.5
 }
