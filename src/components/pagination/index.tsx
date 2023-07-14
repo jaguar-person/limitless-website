@@ -19,7 +19,7 @@ const TablePaginationIcon: React.FC<IPaginationIcon> = ({
       "w-9 h-9 cursor-pointer inline-flex items-center justify-center rounded-lg  font-semibold border " +
       (isCurrentPage
         ? "text-black/75 bg-gems border-gems"
-        : "text-[#ADADAD] bg-[#282730] border-[#363541]")
+        : "text-secondary-in-box bg-secondary-background border-secondary-background-accent")
     }
     onClick={onClick}
   >

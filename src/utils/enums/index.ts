@@ -14,3 +14,10 @@ export enum TicketType {
   CLOSED = "Closed",
   AWAITING = "Awaiting",
 }
+
+export enum TicketsAddSteps {
+  ISSUE,
+  SERVER,
+  PLAYER,
+  DESCRIPTION,
+}

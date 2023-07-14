@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn-custom {
-    @apply rounded-md py-3 px-5 flex gap-2.5 items-center cursor-pointer
+    @apply rounded-md py-3 px-5 flex gap-2.5 items-center cursor-pointer font-bold
 }
 
 .tr--hover {
