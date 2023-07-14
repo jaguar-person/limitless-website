@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import MainLayout from "../../../layouts/Main";
-import TicketAdd from "../../../modules/tickets/add";
+import TicketsAdd from "../../../modules/tickets/add";
 
 const TicketAddPage: NextPage = () => (
   <MainLayout>
-    <TicketAdd />
+    <TicketsAdd />
   </MainLayout>
 );
 export default TicketAddPage;

@@ -12,7 +12,7 @@ export const CheckIcon = () => (
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      stroke-width="2"
+      strokeWidth="2"
       d="M1 5.917 5.724 10.5 15 1.5"
     />
   </svg>
@@ -49,7 +49,12 @@ const Stepper: React.FC<IStepper> = ({
 }) => (
   <ol className="relative text-gray-500 border-r-2 border-secondary-background">
     <li className="py-9 mr-8">
-      <span className="absolute -right-[13px] top-11 flex items-center justify-center w-6 h-6 rounded-[4px] bg-secondary-background-accent border border-gems/[15%]">
+      <span
+        className={
+          "absolute -right-[13px] top-11 flex items-center justify-center w-6 h-6 rounded-[4px] border border-gems/[15%] " +
+          (isChecked ? "bg-gems" : "bg-secondary-background-accent")
+        }
+      >
         {isChecked ? <CheckIconChecked /> : <CheckIcon />}
       </span>
       <div className="flex flex-col items-end">
