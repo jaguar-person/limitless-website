@@ -1,10 +1,19 @@
-import { TicketType } from "../enums";
+import { TicketStatus } from "../enums";
 
 export type TicketTableType = {
   id: string;
-  type: TicketType;
+  status: TicketStatus;
   title: string;
   description: string;
   createdAt: string;
   updatedAt: string;
+};
+
+export type IChatHistory = {
+  user: {
+    avatar: string;
+    name: string;
+    date: string;
+  };
+  message: string;
 };

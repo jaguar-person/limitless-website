@@ -25,7 +25,7 @@ const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
   return (
     <div
       className={
-        "card-container p-4 " +
+        "card-container vertical p-4 " +
         (isChecked ? "border-gems" : "border-secondary-background-accent")
       }
       onClick={() => {

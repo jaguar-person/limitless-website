@@ -3,14 +3,14 @@ import Image from "next/image";
 import AddIcon from "../../../../images/add.svg";
 import MyTicketsSearch from "./MyTicketsSearch";
 import MyTicketsTable from "./MyTicketsTable";
-import { TicketType } from "../../../../utils/enums";
+import { TicketStatus } from "../../../../utils/enums";
 import Pagination from "../../../../components/pagination";
 import { useRouter } from "next/router";
 
 const MOCK_TICKETS = [
   {
     id: "#45858",
-    type: TicketType.OPENED,
+    status: TicketStatus.OPENED,
     title: "Example title",
     description: "Don't delete this ticket, is for UI of the new website.",
     createdAt: "6 days ago",
@@ -18,7 +18,7 @@ const MOCK_TICKETS = [
   },
   {
     id: "#45858",
-    type: TicketType.CLOSED,
+    status: TicketStatus.CLOSED,
     title: "Example title",
     description: "Don't delete this ticket, is for UI of the new website.",
     createdAt: "6 days ago",
@@ -26,7 +26,7 @@ const MOCK_TICKETS = [
   },
   {
     id: "#45858",
-    type: TicketType.AWAITING,
+    status: TicketStatus.AWAITING,
     title: "Example title",
     description: "Don't delete this ticket, is for UI of the new website.",
     createdAt: "6 days ago",
@@ -34,7 +34,7 @@ const MOCK_TICKETS = [
   },
   {
     id: "#45858",
-    type: TicketType.OPENED,
+    status: TicketStatus.OPENED,
     title: "Example title",
     description: "Don't delete this ticket, is for UI of the new website.",
     createdAt: "6 days ago",
@@ -42,7 +42,7 @@ const MOCK_TICKETS = [
   },
   {
     id: "#45858",
-    type: TicketType.OPENED,
+    status: TicketStatus.OPENED,
     title: "Example title",
     description: "Don't delete this ticket, is for UI of the new website.",
     createdAt: "6 days ago",
@@ -50,7 +50,7 @@ const MOCK_TICKETS = [
   },
   {
     id: "#45858",
-    type: TicketType.OPENED,
+    status: TicketStatus.OPENED,
     title: "Example title",
     description: "Don't delete this ticket, is for UI of the new website.",
     createdAt: "6 days ago",

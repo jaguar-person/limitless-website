@@ -17,7 +17,7 @@ const TicketsAddServerCard: React.FC<ITicketsAddServerCard> = ({
   return (
     <div
       className={
-        "card-container p-8 " +
+        "card-container vertical p-8 " +
         (isChecked
           ? "border-gems text-white"
           : "border-secondary-background-accent text-secondary")
