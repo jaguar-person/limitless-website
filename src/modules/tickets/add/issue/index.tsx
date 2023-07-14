@@ -2,6 +2,10 @@ import React from "react";
 import TicketsAddTitle from "../TicketsAddTitle";
 import TicketsAddIssueCard from "./TicketsAddIssueCard";
 
+export interface ITicketAddStep {
+  onCurrentStep: () => void;
+}
+
 const MOCK_ISSUES = [
   {
     title: "Mute Appeal",
@@ -46,8 +50,8 @@ const MOCK_ISSUES = [
 ];
 
 const TicketAddChooseIssue: React.FC = () => (
-  <div className="flex flex-col gap-2">
-    <TicketsAddTitle />
+  <div className="flex flex-col gap-2.5">
+    <TicketsAddTitle title="Choose an issue" />
     <div className="grid grid-cols-4 gap-2.5">
       {MOCK_ISSUES.map((issue, key) => (
         <TicketsAddIssueCard

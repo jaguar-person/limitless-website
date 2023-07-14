@@ -57,7 +57,7 @@ const Stepper: React.FC<IStepper> = ({
       >
         {isChecked ? <CheckIconChecked /> : <CheckIcon />}
       </span>
-      <div className="flex flex-col items-end">
+      <div className="flex flex-col items-end min-w-[155px]">
         <p className="text-white font-medium text-base">{title}</p>
         <p className="text-secondary text-right">{description}</p>
       </div>

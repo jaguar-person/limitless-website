@@ -8,10 +8,10 @@ interface ITicketsAddIssueCard {
   description: string;
 }
 
-const IssueChecking = () => (
+export const CardChecking = () => (
   <div className="w-[26px] h-[26px] bg-background rounded-full" />
 );
-const IssueChecked = () => (
+export const CardChecked = () => (
   <div className="w-[26px] h-[26px] bg-gems rounded-full flex items-center justify-center">
     <CheckIconChecked />
   </div>
@@ -25,7 +25,7 @@ const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
   return (
     <div
       className={
-        "relative p-4 bg-secondary-background border rounded-md flex flex-col gap-2.5 justify-center items-center " +
+        "card-container p-4 " +
         (isChecked ? "border-gems" : "border-secondary-background-accent")
       }
       onClick={() => {
@@ -33,7 +33,7 @@ const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
       }}
     >
       <div className="absolute top-3 right-3">
-        {isChecked ? <IssueChecked /> : <IssueChecking />}
+        {isChecked ? <CardChecked /> : <CardChecking />}
       </div>
       <Image src={IssueIcon} width={54} height={61} alt="issue" />
       <p className="text-base text-white font-semibold">{title}</p>
