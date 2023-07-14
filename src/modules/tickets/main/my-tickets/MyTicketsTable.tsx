@@ -40,7 +40,7 @@ const MyTicketsTableRow: React.FC<IMyTicketsTableRow> = ({ data, isEven }) => (
 const MyTicketsTable: React.FC<IMyTicketsTable> = ({ tickets }) => (
   <div className="flex flex-col gap-2.5">
     {tickets.map((ticket, key) => (
-      <MyTicketsTableRow data={ticket} isEven={Boolean(key % 2)} />
+      <MyTicketsTableRow data={ticket} isEven={Boolean(key % 2)} key={key} />
     ))}
   </div>
 );
