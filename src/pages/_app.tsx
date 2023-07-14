@@ -22,6 +22,14 @@ const poppins = localFont({
       weight: "400",
     },
     {
+      path: "./fonts/Poppins-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "./fonts/Poppins-SemiBold.ttf",
+      weight: "600",
+    },
+    {
       path: "./fonts/Poppins-Bold.ttf",
       weight: "700",
     },

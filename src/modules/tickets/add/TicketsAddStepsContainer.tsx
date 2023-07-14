@@ -11,17 +11,17 @@ const TicketAddStepsContainer: React.FC<ITicketAddSteps> = ({
 }) => (
   <div>
     <Stepper
-      isChecked={currentStep === TicketsAddSteps.SERVER}
+      isChecked={currentStep >= TicketsAddSteps.SERVER}
       title="Issue"
       description="Describe your issue"
     />
     <Stepper
-      isChecked={currentStep === TicketsAddSteps.PLAYER}
+      isChecked={currentStep >= TicketsAddSteps.PLAYER}
       title="Select a server"
       description="Describe your issue"
     />
     <Stepper
-      isChecked={currentStep === TicketsAddSteps.DESCRIPTION}
+      isChecked={currentStep >= TicketsAddSteps.DESCRIPTION}
       title="Report a player"
       description="Describe your issue"
     />
