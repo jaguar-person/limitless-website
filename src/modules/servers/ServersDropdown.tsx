@@ -13,10 +13,10 @@ const ServersDropDown: React.FC = () => {
   return (
     <DropDown title="Game Modes">
       <div className="dropdown-container w-[190px] ">
-        {gameModes.map((mode) => (
+        {gameModes.map((mode, key) => (
           <div
             className="flex gap-2 border-b  py-2 border-secondary-background-accent items-center"
-            key={mode}
+            key={key}
           >
             <input type="checkbox" className="w-3.5 h-3.5" />
             <p className="text-secondary">{mode}</p>
