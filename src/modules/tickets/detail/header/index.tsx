@@ -31,7 +31,7 @@ const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
           />
           <TicketStatusBadge status={ticket.status} />
         </div>
-        <Button name="Close Ticket" bgColor="danger" color="black/75" />
+        <Button name="Close Ticket" bgColor="danger" />
       </div>
       <div className="p-5 flex justify-between card-container">
         <p className="text-white font-bold text-lg">Ticket Details</p>
