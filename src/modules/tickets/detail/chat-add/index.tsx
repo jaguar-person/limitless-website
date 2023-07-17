@@ -12,13 +12,8 @@ const TicketsDetailChatAdd: React.FC = () => (
       />
     </div>
     <div className="flex gap-2.5 self-end">
-      <Button
-        name="Attach"
-        rightIcon="attach"
-        bgColor="secondary-background"
-        color="secondary"
-      />
-      <Button name="Send" bgColor="gems" color="black/75" />
+      <Button name="Attach" rightIcon="attach" bgColor="secondary-background" />
+      <Button name="Send" bgColor="gems" />
     </div>
   </div>
 );
