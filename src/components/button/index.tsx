@@ -5,7 +5,8 @@ interface IButton {
   leftIcon?: string;
   rightIcon?: string;
   bgColor?: string;
-  color?: string;
+  className?: string;
+  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
   name: string;
 }
 
@@ -13,11 +14,12 @@ const Button: React.FC<IButton> = ({
   leftIcon = null,
   rightIcon = null,
   bgColor = "gems",
-  color = "black/[71%]",
+  className,
+  size = "sm",
   name,
 }) => (
   <button
-    className={`rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${color}`}
+    className={`rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${size} ${className}`}
   >
     {!!leftIcon && (
       <Image
@@ -27,7 +29,7 @@ const Button: React.FC<IButton> = ({
         alt="left"
       />
     )}
-    {name}
+    <p className="font-extrabold tracking-tighter uppercase">{name}</p>
     {!!rightIcon && (
       <Image
         src={require(`../../images/${rightIcon}.svg`)}

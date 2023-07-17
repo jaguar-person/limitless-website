@@ -20,6 +20,7 @@ module.exports = {
         gems: "#94E777",
         danger: "#E77979",
         info: "#5865F2",
+        cyan: "#1BF1E7",
       },
       fontFamily: {
         sans: ["var(--font-poppins)"],

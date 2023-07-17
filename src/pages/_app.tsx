@@ -33,6 +33,10 @@ const poppins = localFont({
       path: "./fonts/Poppins-Bold.ttf",
       weight: "700",
     },
+    {
+      path: "./fonts/Poppins-ExtraBold.ttf",
+      weight: "800",
+    },
   ],
   variable: "--font-poppins",
 });
