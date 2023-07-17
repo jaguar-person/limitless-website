@@ -30,13 +30,15 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
             onFlag={onLeaderBoard}
           />
         </LeaderBoardSettingsItem>
-        <LeaderBoardSettingsItem title="Show Icons">
-          <LeaderBoardSettingsSwitch
-            leftName="No"
-            rightName="Yes"
-            flag={false}
-          />
-        </LeaderBoardSettingsItem>
+        {!isLeaderBoard && (
+          <LeaderBoardSettingsItem title="Show Icons">
+            <LeaderBoardSettingsSwitch
+              leftName="No"
+              rightName="Yes"
+              flag={false}
+            />
+          </LeaderBoardSettingsItem>
+        )}
         <LeaderBoardSettingsItem title="Stats Type">
           <DropDown title="Kills" />
         </LeaderBoardSettingsItem>
