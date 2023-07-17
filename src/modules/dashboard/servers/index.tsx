@@ -3,6 +3,7 @@ import Image from "next/image";
 import ServerCard from "../../../components/card";
 import Decoration from "../../../components/decoration";
 import SiteIcon from "../../../images/site.svg";
+import Button from "../../../components/button";
 
 const Servers = () => (
   <div className="text-center flex flex-col items-center gap-2 md:gap-9">
@@ -27,12 +28,13 @@ const Servers = () => (
       <ServerCard />
       <ServerCard />
     </div>
-    <div className="btn-custom bg-cyan w-full text-xl mt-2 md:mt-0">
-      <p className="text-background font-extrabold tracking-tighter uppercase">
-        Explore Servers
-      </p>
-      <Image src={SiteIcon} width={20} height={20} alt="site" />
-    </div>
+    <Button
+      name="explore servers"
+      bgColor="cyan"
+      className="py-5 w-full mt-2"
+      rightIcon="site"
+      size="xl"
+    />
   </div>
 );
 

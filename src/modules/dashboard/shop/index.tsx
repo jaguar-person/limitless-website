@@ -3,6 +3,7 @@ import Image from "next/image";
 import ShopIcon from "../../../images/shop.svg";
 import SiteIcon from "../../../images/site.svg";
 import Decoration from "../../../components/decoration";
+import Button from "../../../components/button";
 
 const Shop = () => (
   <div className="flex flex-col md:flex-row gap-6 md:gap-[60px]">
@@ -24,12 +25,13 @@ const Shop = () => (
         Purchase a package from our webstore, gain exclusive perks and show your
         support for our servers. Visit the webstore now!
       </p>
-      <div className="btn-custom px-7 py-4 bg-points w-full my-4">
-        <p className="text-background uppercase text-xl tracking-tighter font-extrabold">
-          Visit Shop
-        </p>
-        <Image src={SiteIcon} width={20} height={20} alt="site" />
-      </div>
+      <Button
+        name="visit shop"
+        bgColor="points"
+        rightIcon="site"
+        size="xl"
+        className="py-5 w-full"
+      />
     </div>
   </div>
 );
