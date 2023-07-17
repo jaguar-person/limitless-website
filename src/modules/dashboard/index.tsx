@@ -16,13 +16,13 @@ const Dashboard: NextPage = () => {
         className="hidden md:block absolute left-0 -top-16  z-20"
         alt="background"
       />
-      <div className="hero pt-[197px]">
+      <div className="md:pt-[197px]">
         <Hero />
       </div>
-      <div className="server mt-[337px]">
+      <div className="mt-14 md:mt-[337px]">
         <Servers />
       </div>
-      <div className="shop my-[130px] px-[115px]">
+      <div className="my-[88px] md:my-[130px] md:px-[115px]">
         <Shop />
       </div>
     </div>
