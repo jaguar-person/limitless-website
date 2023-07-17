@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import DiscordIcon from "../images/discord.svg";
 const Footer = () => (
-  <div className="flex justify-between items-center absolute bottom-10 left-0 w-full px-[100px] pt-10 border-t-white/10 border-t">
-    <div className="font-bold text-lg leading-3 text-white">
+  <div className="flex flex-col md:flex-row gap-9 md:gap-0 md:justify-between md:items-center absolute bottom-10 left-0 w-full px-10 md:px-[100px] pt-10 border-t-black border-t">
+    <div className="font-bold text-lg leading-3 text-[#8078A9]">
       Copyright © 2023 Limitless LLC.
     </div>
     <div className="cursor-pointer p-3 rounded-md bg-info flex gap-2">
