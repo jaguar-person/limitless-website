@@ -6,17 +6,26 @@ import NavItem from "../components/nav-item";
 import User from "../components/user";
 import Menu from "../components/menu";
 
-import { isMobile } from "react-device-detect";
-
 const TopBar = () => {
   const router = useRouter();
   return (
     <div className="flex justify-between items-center relative z-30">
       <Image
         src={LogoIcon}
-        width={isMobile ? 64 : 32}
-        height={isMobile ? 64 : 32}
-        alt="Logo"
+        alt="My image"
+        width={64}
+        height={64}
+        className="hidden md:block"
+        onClick={() => {
+          router.push("/");
+        }}
+      />
+      <Image
+        src={LogoIcon}
+        alt="My image"
+        width={32}
+        height={32}
+        className="block md:hidden"
         onClick={() => {
           router.push("/");
         }}
