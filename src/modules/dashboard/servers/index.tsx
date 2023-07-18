@@ -30,7 +30,7 @@ const Servers = () => (
     </div>
     <Button
       name="explore servers"
-      bgColor="cyan"
+      bgColor="info-light"
       className="py-5 w-full mt-2"
       rightIcon="site"
       size="xl"
