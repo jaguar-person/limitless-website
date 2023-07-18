@@ -29,7 +29,9 @@ const Button: React.FC<IButton> = ({
         alt="left"
       />
     )}
-    <p className="font-extrabold tracking-tighter uppercase">{name}</p>
+    <p className="font-extrabold tracking-tighter uppercase text-background">
+      {name}
+    </p>
     {!!rightIcon && (
       <Image
         src={require(`../../images/${rightIcon}.svg`)}

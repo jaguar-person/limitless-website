@@ -1,18 +1,12 @@
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import localFont from "next/font/local";
+import { IsSsrMobileContext } from "../utils/hooks/useIsMobile";
 
 import "../globals.css";
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   hasNoLayout?: boolean;
-};
-
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
-  pageProps: {
-    user?: unknown;
-  };
 };
 
 const poppins = localFont({
@@ -41,11 +35,16 @@ const poppins = localFont({
   variable: "--font-poppins",
 });
 
-const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+const MyApp = ({
+  Component,
+  pageProps,
+}: AppProps<{ isSsrMobile: boolean }>) => {
   return (
-    <main className={`${poppins.variable} font-sans`}>
-      <Component {...pageProps} />
-    </main>
+    <IsSsrMobileContext.Provider value={pageProps.isSsrMobile}>
+      <main className={`${poppins.variable} font-sans`}>
+        <Component {...pageProps} />
+      </main>
+    </IsSsrMobileContext.Provider>
   );
 };
 

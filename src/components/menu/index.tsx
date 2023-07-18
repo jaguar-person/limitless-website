@@ -25,8 +25,8 @@ const Menu = () => {
         }}
       />
       {!!isMenu && (
-        <div className="fixed top-20 left-0 w-full h-full bg-background">
-          <div className="relative flex flex-col gap-20 mt-10 px-12 ">
+        <div className="fixed top-16 left-0 w-full h-full bg-background">
+          <div className="relative flex flex-col gap-20 mt-10 px-12 z-30">
             <div className="flex flex-col gap-8">
               <NavItem
                 path={ROUTING_PATH.LEADERBOARD}
