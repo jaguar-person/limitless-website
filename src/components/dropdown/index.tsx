@@ -15,9 +15,9 @@ const DropDown: React.FC<IDropdown> = ({ children, className, title }) => {
     setShowMenu(!isShowMenu);
   };
   return (
-    <div className={"relative " + className}>
+    <div className={"relative w-full md:w-fit " + className}>
       <div
-        className="btn-custom bg-secondary-background-accent border-secondary-background flex justify-between"
+        className="py-3 px-5 bg-secondary-background border-secondary-background-accent flex md:gap-2.5 justify-between w-full rounded-md"
         onClick={handleShowMenu}
       >
         <p className="text-secondary font-semibold text-base">{title}</p>

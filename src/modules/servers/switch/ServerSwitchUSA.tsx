@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { GetServerSidePropsContext } from "next";
+import { getIsSsrMobile } from "../../../utils/hooks/useIsMobile";
+import { useIsMobile } from "../../../utils/hooks/useIsMobile";
+
 import USAIcon from "../../../images/usa.svg";
 
 interface ISwitchIcon {
@@ -7,19 +11,32 @@ interface ISwitchIcon {
   onSwitch: (flag: boolean) => (e: React.MouseEvent) => void;
 }
 
-const ServersSwitchUSA: React.FC<ISwitchIcon> = ({ flag, onSwitch }) => (
-  <div
-    className={
-      "btn-custom !px-8 border " +
-      (flag
-        ? "bg-secondary-background border-secondary-background-accent"
-        : "bg-[#702835] border-[#D80027]")
-    }
-    onClick={onSwitch(false)}
-  >
-    <Image src={USAIcon} width={35} height={35} alt="eurFlag" />
-    <p className="font-semibold text-base text-secondary">America Servers</p>
-  </div>
-);
+const ServersSwitchUSA: React.FC<ISwitchIcon> = ({ flag, onSwitch }) => {
+  const isMobile = useIsMobile();
+  return (
+    <div
+      className={
+        "btn-custom !px-8 border flex-1 md:flex-auto " +
+        (flag
+          ? "bg-secondary-background border-secondary-background-accent"
+          : "bg-[#702835] border-[#D80027]")
+      }
+      onClick={onSwitch(false)}
+    >
+      <Image src={USAIcon} width={35} height={35} alt="eurFlag" />
+      <p className="font-semibold text-base text-white">
+        America {isMobile ? "" : "Servers"}{" "}
+      </p>
+    </div>
+  );
+};
+
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  return {
+    props: {
+      isSsrMobile: getIsSsrMobile(context),
+    },
+  };
+}
 
 export default ServersSwitchUSA;

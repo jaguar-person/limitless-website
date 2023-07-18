@@ -28,7 +28,7 @@ const Hero = () => {
           <span className="text-points">Limitless Rust</span> The Ultimate
           Experience
         </div>
-        <div className="flex md:flex-row flex-col gap-4 md:gap-10 relative z-30 w-full md:w-[45%]">
+        <div className="flex md:flex-row flex-col gap-4 md:gap-10 relative z-20 w-full md:w-[45%]">
           <Button name="shop" size="xl" className="py-6 flex-1" />
           <Button
             name="Join Discord"

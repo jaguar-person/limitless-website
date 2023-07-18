@@ -12,7 +12,7 @@ const ServersDropDown: React.FC = () => {
 
   return (
     <DropDown title="Game Modes">
-      <div className="dropdown-container w-[190px] ">
+      <div className="dropdown-container min-w-[190px] ">
         {gameModes.map((mode, key) => (
           <div
             className="flex gap-2 border-b  py-2 border-secondary-background-accent items-center"

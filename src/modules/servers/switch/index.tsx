@@ -10,7 +10,7 @@ const ServerSwitch: React.FC = () => {
     setSwitchFlag(flag);
   };
   return (
-    <div className="flex gap-2.5">
+    <div className="flex gap-2.5 mt-4 md:mt-0">
       <ServersSwitchEurope flag={switchFlag} onSwitch={handleSwitch} />
       <ServersSwitchUSA flag={switchFlag} onSwitch={handleSwitch} />
     </div>
