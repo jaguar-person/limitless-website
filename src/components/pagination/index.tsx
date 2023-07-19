@@ -42,8 +42,8 @@ const Pagination: React.FC = () => {
       setCurrentPage(currentPage + step);
   };
   return (
-    <div>
-      <p className="text-center md:hidden text-secondary mb-2.5">
+    <div className="flex flex-col md:flex-row justify-between items-center">
+      <p className="text-center text-secondary mb-2.5">
         Showing 0 to 10 of 5169 entries
       </p>
       <nav className="isolate inline-flex gap-1">

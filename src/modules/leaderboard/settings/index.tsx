@@ -14,7 +14,7 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
   isLeaderBoard,
   onLeaderBoard,
 }) => (
-  <div className="p-4 flex flex-col gap-4 bg-secondary-background border-secondary-background-accent rounded-md min-h-[700px]">
+  <div className="hidden p-4 md:flex flex-col gap-4 bg-secondary-background border-secondary-background-accent rounded-md min-h-[700px]">
     <SearchBar icon="search" placeholder="Search by ID or username..." />
     <div className="flex flex-col gap-2.5 ">
       <div className="text-white text-xl font-bold">Settings</div>
