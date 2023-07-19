@@ -14,7 +14,7 @@ interface ITicketsSwitch {
 const SwitchIcon: React.FC<ISwitchIcon> = ({ isClicked, onClick, name }) => (
   <div
     className={
-      "cursor-pointer py-2.5 px-5 flex text-lg " +
+      "cursor-pointer py-4 md:py-2.5 md:px-5 flex text-base md:text-lg justify-center flex-1 md:flex-none " +
       (isClicked
         ? " border-b-gems border-b-[3px] text-white"
         : "text-secondary")
@@ -27,7 +27,7 @@ const SwitchIcon: React.FC<ISwitchIcon> = ({ isClicked, onClick, name }) => (
 
 const TicketsSwitch: React.FC<ITicketsSwitch> = ({ isClicked, onSwitch }) => {
   return (
-    <div className="flex gap-2.5 border-b-secondary-background border-b-[3px]">
+    <div className="flex md:gap-2.5 border-b-secondary-background border-b-[3px]">
       <SwitchIcon
         name="Link Accounts"
         isClicked={!isClicked}

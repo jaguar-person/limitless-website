@@ -78,8 +78,8 @@ const ServersList: React.FC = () => {
       </div>
       <div className="flex flex-col gap-4 pt-4 md:pt-0 items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2.5 ">
-          {MOCK_SERVERS.map((server, i) => (
-            <ServerCard server={server} key={i} />
+          {MOCK_SERVERS.map((item, i) => (
+            <ServerCard server={item} key={i} />
           ))}
         </div>
         <Button
