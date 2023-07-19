@@ -107,12 +107,7 @@ const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
           ))}
         </tbody>
       </table>
-      <div className="flex justify-between items-center">
-        <div className="flex justify-between">
-          <p className="text-secondary">Showing 0 to 10 of 5169 entries</p>
-        </div>
-        <Pagination />
-      </div>
+      <Pagination />
     </div>
   );
 };
