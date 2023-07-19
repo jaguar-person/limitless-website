@@ -1,15 +1,9 @@
 import React from "react";
-import ServerCard from "../../components/card";
 import ServerSwitch from "./switch";
-import ServersDropDown from "./ServersDropdown";
-import Button from "../../components/button";
 import Decoration from "../../components/decoration";
-import Line from "../../components/line";
+import ServersList from "./list";
 
-import { useIsMobile } from "../../utils/hooks/useIsMobile";
-
-const Server = () => {
-  const isMobile = useIsMobile();
+const Server: React.FC = () => {
   return (
     <div className="mt-12 md:mt-[147px] mb-80 md:mb-24 flex flex-col gap-2 md:gap-16 items-center">
       <div className="flex flex-col md:gap-5">
@@ -28,35 +22,7 @@ const Server = () => {
         </div>
         <ServerSwitch />
       </div>
-      <div className="flex flex-col gap-2 md:gap-2.5">
-        <div className="flex justify-between pb-2 md:pb-0 w-full">
-          <p className="text-white font-bold text-3xl hidden md:block">
-            Listed Servers
-          </p>
-          <ServersDropDown />
-        </div>
-        <div className="w-full block md:hidden">
-          <Line />
-        </div>
-        <div className="flex flex-col gap-4 pt-4 md:pt-0 items-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2.5 ">
-            <ServerCard />
-            <ServerCard />
-            <ServerCard />
-            <ServerCard />
-            <ServerCard />
-            <ServerCard />
-          </div>
-          <Button
-            name="explore servers"
-            bgColor="info-light"
-            className="py-5 mt-2"
-            rightIcon="site"
-            size="xl"
-            width={isMobile ? "full" : "fit"}
-          />
-        </div>
-      </div>
+      <ServersList />
     </div>
   );
 };

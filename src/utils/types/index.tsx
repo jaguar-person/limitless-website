@@ -17,3 +17,12 @@ export type IChatHistory = {
   };
   message: string;
 };
+
+export type IServer = {
+  lastDate: string;
+  count: number;
+  name: string;
+  description: string;
+  player_alive: number;
+  player_total: number;
+};
