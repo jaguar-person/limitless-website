@@ -42,39 +42,44 @@ const Pagination: React.FC = () => {
       setCurrentPage(currentPage + step);
   };
   return (
-    <nav className="isolate inline-flex gap-1">
-      <TablePaginationIcon onClick={handleNextPage(-1)}>
-        <Image src={LeftArrowIcon} width={8} height={8} alt="left" />
-      </TablePaginationIcon>
-      <TablePaginationIcon
-        onClick={handleCurrentPage(1)}
-        isCurrentPage={currentPage === 1}
-      >
-        1
-      </TablePaginationIcon>
-      <TablePaginationIcon
-        onClick={handleCurrentPage(2)}
-        isCurrentPage={currentPage === 2}
-      >
-        2
-      </TablePaginationIcon>
-      <TablePaginationIcon
-        onClick={handleCurrentPage(3)}
-        isCurrentPage={currentPage === 3}
-      >
-        3
-      </TablePaginationIcon>
-      <TablePaginationIcon>...</TablePaginationIcon>
-      <TablePaginationIcon
-        onClick={handleCurrentPage(10)}
-        isCurrentPage={currentPage === 10}
-      >
-        10
-      </TablePaginationIcon>
-      <TablePaginationIcon onClick={handleNextPage(1)}>
-        <Image src={RightArrowIcon} width={8} height={8} alt="right" />
-      </TablePaginationIcon>
-    </nav>
+    <div>
+      <p className="text-center md:hidden text-secondary mb-2.5">
+        Showing 0 to 10 of 5169 entries
+      </p>
+      <nav className="isolate inline-flex gap-1">
+        <TablePaginationIcon onClick={handleNextPage(-1)}>
+          <Image src={LeftArrowIcon} width={8} height={8} alt="left" />
+        </TablePaginationIcon>
+        <TablePaginationIcon
+          onClick={handleCurrentPage(1)}
+          isCurrentPage={currentPage === 1}
+        >
+          1
+        </TablePaginationIcon>
+        <TablePaginationIcon
+          onClick={handleCurrentPage(2)}
+          isCurrentPage={currentPage === 2}
+        >
+          2
+        </TablePaginationIcon>
+        <TablePaginationIcon
+          onClick={handleCurrentPage(3)}
+          isCurrentPage={currentPage === 3}
+        >
+          3
+        </TablePaginationIcon>
+        <TablePaginationIcon>...</TablePaginationIcon>
+        <TablePaginationIcon
+          onClick={handleCurrentPage(10)}
+          isCurrentPage={currentPage === 10}
+        >
+          10
+        </TablePaginationIcon>
+        <TablePaginationIcon onClick={handleNextPage(1)}>
+          <Image src={RightArrowIcon} width={8} height={8} alt="right" />
+        </TablePaginationIcon>
+      </nav>
+    </div>
   );
 };
 

@@ -6,6 +6,8 @@ import MyTicketsTable from "./MyTicketsTable";
 import { TicketStatus } from "../../../../utils/enums";
 import Pagination from "../../../../components/pagination";
 import { useRouter } from "next/router";
+import Button from "../../../../components/button";
+import { useIsMobile } from "../../../../utils/hooks/useIsMobile";
 
 const MOCK_TICKETS = [
   {
@@ -60,23 +62,25 @@ const MOCK_TICKETS = [
 
 const TicketsMyTickets = () => {
   const router = useRouter();
+  const isMobile = useIsMobile();
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex justify-between">
-        <p className="text-white font-bold text-[28px] leading-10">
+      <div className="flex flex-col md:flex-row justify-between">
+        <p className="hidden md:block text-white font-bold text-[28px] leading-10">
           My Tickets
         </p>
-        <button className="btn-custom flex gap-2 items-center bg-gems rounded-md">
-          <div
-            className="text-black/75 text-base font-bold"
-            onClick={() => {
-              router.push("./tickets/add");
-            }}
-          >
-            New Ticket
-          </div>
-          <Image src={AddIcon} width={20} height={20} alt="add" />
-        </button>
+        <div
+          onClick={() => {
+            router.push("./tickets/add");
+          }}
+        >
+          <Button
+            name="New Ticket"
+            bgColor="gems"
+            rightIcon="add"
+            width={isMobile ? "full" : "fit"}
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-6">
         <MyTicketsSearch />
