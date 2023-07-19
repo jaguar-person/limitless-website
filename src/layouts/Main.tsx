@@ -7,8 +7,8 @@ interface IMainLayout {
 }
 
 const MainLayout = ({ children }: IMainLayout) => (
-  <div className="bg-background">
-    <div className="relative md:px-[100px] md:py-[88px] py-6 px-4 bg-background md:max-w-[1440px] mx-auto max-w-fit">
+  <div className="bg-background overflow-hidden">
+    <div className="relative md:px-[100px] md:py-[88px] py-6 px-4 bg-background md:max-w-[1440px] mx-auto w-full">
       <TopBar />
       {children}
       <Footer />

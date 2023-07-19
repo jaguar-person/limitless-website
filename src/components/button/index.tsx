@@ -21,7 +21,7 @@ const Button: React.FC<IButton> = ({
   width = "fit",
 }) => (
   <button
-    className={`rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${size} w-${width} ${className}`}
+    className={`z-10 rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${size} w-${width} ${className}`}
   >
     {!!leftIcon && (
       <Image

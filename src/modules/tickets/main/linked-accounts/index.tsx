@@ -9,6 +9,8 @@ import {
   AccountActionTypes,
   AccountStatusTypes,
 } from "../../../../utils/enums";
+import Button from "../../../../components/button";
+import { useIsMobile } from "../../../../utils/hooks/useIsMobile";
 
 interface IAccountLink {
   name: string;
@@ -21,8 +23,9 @@ const TicketsLinkedAccountLink: React.FC<IAccountLink> = ({
   status,
   action,
 }) => {
+  const isMobile = useIsMobile();
   return (
-    <div className="flex flex-col gap-5 p-5 bg-secondary-background border border-secondary-background-accent rounded-md">
+    <div className="flex flex-col gap-5 p-4 md:p-5 bg-secondary-background border border-secondary-background-accent rounded-md">
       <div className="flex flex-col items-center gap-2 px-2">
         <div className="flex gap-3 items-center">
           <Image
@@ -49,55 +52,58 @@ const TicketsLinkedAccountLink: React.FC<IAccountLink> = ({
           <p className="text-secondary">{status}</p>
         </div>
       </div>
-      <button
-        className={
-          "flex justify-center items-center gap-2 btn-custom rounded-md py-2.5 " +
-          (action === AccountActionTypes.UNLINK ? "bg-danger" : "bg-points")
+      <Button
+        name={
+          action === AccountActionTypes.BOOST ? "Boost" : action + "Account"
         }
-      >
-        <p className="text-black/75 font-bold text-base">
-          {action === AccountActionTypes.BOOST ? "Boost" : action + "Account"}
-        </p>
-        <Image src={SiteIcon} width={16} height={16} alt="site" />
-      </button>
+        bgColor={action === AccountActionTypes.UNLINK ? "danger" : "points"}
+        rightIcon="site"
+        width="full"
+      />
     </div>
   );
 };
 
-const TicketsLinkedAccounts: React.FC = () => (
-  <div className="flex flex-col gap-5">
-    <div className="flex justify-between">
-      <p className="font-bold text-[28px] leading-10 text-white">
-        Linked Accounts
-      </p>
-      <button className="btn-custom bg-gems flex gap-2 items-center">
-        <p className=" text-black/75 text-base font-bold">Resend Rewards</p>
-        <Image src={RefreshIcon} width={19} height={19} alt="refresh" />
-      </button>
+const TicketsLinkedAccounts: React.FC = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <div className="flex flex-col gap-5">
+      <div className="flex justify-between">
+        <p className="font-bold text-[28px] leading-10 text-white hidden md:block">
+          Linked Accounts
+        </p>
+        <Button
+          name="Resend Rewards"
+          bgColor="gems"
+          rightIcon="refresh"
+          width={isMobile ? "full" : "fit"}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-3">
+        <TicketsLinkedAccountLink
+          name="Discord"
+          status={AccountStatusTypes.NOT_CONNECTED}
+          action={AccountActionTypes.LINK}
+        />
+        <TicketsLinkedAccountLink
+          name="Steam"
+          status={AccountStatusTypes.NOT_CONNECTED}
+          action={AccountActionTypes.UNLINK}
+        />
+        <TicketsLinkedAccountLink
+          name="Discord"
+          status={AccountStatusTypes.BOOSTED}
+          action={AccountActionTypes.BOOST}
+        />
+        <TicketsLinkedAccountLink
+          name="Steam"
+          status={AccountStatusTypes.NOT_CONNECTED}
+          action={AccountActionTypes.UNLINK}
+        />
+      </div>
     </div>
-    <div className="grid grid-cols-4 gap-3">
-      <TicketsLinkedAccountLink
-        name="Discord"
-        status={AccountStatusTypes.NOT_CONNECTED}
-        action={AccountActionTypes.LINK}
-      />
-      <TicketsLinkedAccountLink
-        name="Steam"
-        status={AccountStatusTypes.NOT_CONNECTED}
-        action={AccountActionTypes.UNLINK}
-      />
-      <TicketsLinkedAccountLink
-        name="Discord"
-        status={AccountStatusTypes.BOOSTED}
-        action={AccountActionTypes.BOOST}
-      />
-      <TicketsLinkedAccountLink
-        name="Steam"
-        status={AccountStatusTypes.NOT_CONNECTED}
-        action={AccountActionTypes.UNLINK}
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 export default TicketsLinkedAccounts;
