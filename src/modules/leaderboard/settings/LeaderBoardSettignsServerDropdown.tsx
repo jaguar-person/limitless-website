@@ -18,7 +18,11 @@ const LeaderBoardSettingsServerDropDown: React.FC = () => {
   };
 
   return (
-    <DropDown title="LR - US 2x Quad Monthly">
+    <DropDown
+      title="LR - US 2x Quad Monthly"
+      bgColor="secondary-background-accent"
+      width="full"
+    >
       <div className="dropdown-container">
         <SearchBar icon="search_2" placeholder="Search a server..." />
         {Object.entries(options).map((server) => (

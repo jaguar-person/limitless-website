@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import React from "react";
 import Image from "next/image";
 
 import Hero from "./hero";
@@ -6,9 +6,9 @@ import Servers from "./servers";
 import Shop from "./shop";
 import BackgroundImage from "../../images/background.svg";
 
-const Dashboard: NextPage = () => {
+const Dashboard: React.FC = () => {
   return (
-    <div>
+    <div className="pb-24">
       <Image
         src={BackgroundImage}
         width={2134}

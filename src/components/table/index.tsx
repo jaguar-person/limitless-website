@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Pagination from "../pagination";
+import { BorderWave } from "../border-wave";
 
 type TableType = {
   rank: number;
@@ -20,7 +21,7 @@ interface ITable {
 const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
   return (
     <div className="flex flex-col gap-2.5">
-      <table className="min-w-full text-left text-sm font-light">
+      <table className="min-w-full text-left text-sm font-light table-auto border-collapse">
         <thead className="border-b  bg-secondary-background border-none text-secondary-in-box">
           <tr>
             <th scope="col" className="px-2.5 pb-2.5 font-normal leading-6">
@@ -46,16 +47,41 @@ const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
         <tbody className="text-secondary">
           {data.map((item, key) => (
             <tr
-              className={`cursor-pointer border-b border-none tr--hover
+              className={`cursor-pointer border-b border-none tr--hover my-1
                 ${
                   key % 2
                     ? "bg-secondary-background"
                     : "bg-secondary-background-accent"
-                }`}
+                } ${
+                key === 0 &&
+                "bg-gradient-to-l from-secondary-background-accent to-points/20"
+              } ${
+                key === 1 &&
+                "bg-gradient-to-l from-secondary-background to-[#BEBEBE]/20"
+              } ${
+                key === 2 &&
+                "bg-gradient-to-l from-secondary-background-accent to-[#FF9B3E]/20"
+              }`}
               key={key}
             >
-              <td className="leading-10 py-2 px-4 font-medium rounded-l-md">
-                {item.rank}
+              <td
+                className={`leading-10 py-2 px-4 font-medium rounded-l-md ${
+                  key < 3 ? "text-black/75" : "text-secondary"
+                } `}
+              >
+                <BorderWave
+                  color={
+                    key === 0
+                      ? "#E7CF77"
+                      : key === 1
+                      ? "#999999"
+                      : key === 2
+                      ? "#FFA86A"
+                      : "none"
+                  }
+                >
+                  {item.rank}
+                </BorderWave>
               </td>
               <td className="leading-10 py-2 px-4 font-medium text-white flex gap-2.5 items-center">
                 <Image

@@ -8,6 +8,7 @@ interface IButton {
   className?: string;
   size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
   name: string;
+  width?: "full" | "fit";
 }
 
 const Button: React.FC<IButton> = ({
@@ -17,9 +18,10 @@ const Button: React.FC<IButton> = ({
   className,
   size = "sm",
   name,
+  width = "fit",
 }) => (
   <button
-    className={`rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${size} ${className}`}
+    className={`rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${size} w-${width} ${className}`}
   >
     {!!leftIcon && (
       <Image

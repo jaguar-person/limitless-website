@@ -40,7 +40,11 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
           </LeaderBoardSettingsItem>
         )}
         <LeaderBoardSettingsItem title="Stats Type">
-          <DropDown title="Kills" />
+          <DropDown
+            title="Kills"
+            bgColor="secondary-background-accent"
+            width="full"
+          />
         </LeaderBoardSettingsItem>
       </div>
     </div>
