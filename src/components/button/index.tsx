@@ -31,7 +31,7 @@ const Button: React.FC<IButton> = ({
         alt="left"
       />
     )}
-    <p className="font-extrabold tracking-tighter uppercase text-background">
+    <p className="font-extrabold text-base tracking-tighter uppercase text-background">
       {name}
     </p>
     {!!rightIcon && (

@@ -23,7 +23,7 @@ const SearchBar: React.FC<ISearchBar> = ({ icon, placeholder }) => (
     </span>
     <input
       type="search"
-      className="py-3 text-sm text-secondary bg-secondary-background-accent rounded-md pl-10 focus:outline-none w-full"
+      className="py-4 text-sm text-secondary bg-secondary-background-accent rounded-md pl-10 focus:outline-none w-full"
       placeholder={placeholder}
       autoComplete="off"
     />
