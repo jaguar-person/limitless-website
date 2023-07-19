@@ -11,7 +11,7 @@ const ServersDropDown: React.FC = () => {
   ];
 
   return (
-    <DropDown title="Game Modes">
+    <DropDown title="Game Modes" width="fit">
       <div className="dropdown-container min-w-[190px] ">
         {gameModes.map((mode, key) => (
           <div

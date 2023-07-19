@@ -6,18 +6,24 @@ import { useState } from "react";
 interface IDropdown {
   children?: React.ReactNode;
   title: string;
-  className?: string;
+  bgColor?: string;
+  width: string;
 }
 
-const DropDown: React.FC<IDropdown> = ({ children, className, title }) => {
+const DropDown: React.FC<IDropdown> = ({
+  children,
+  bgColor = "secondary-background",
+  title,
+  width = "fit",
+}) => {
   const [isShowMenu, setShowMenu] = useState(false);
   const handleShowMenu = () => {
     setShowMenu(!isShowMenu);
   };
   return (
-    <div className={"relative w-full md:w-fit " + className}>
+    <div className={`relative cursor-pointer w-full md:w-fit`}>
       <div
-        className="py-3 px-5 bg-secondary-background border-secondary-background-accent flex md:gap-2.5 justify-between w-full rounded-md"
+        className={`py-3 px-5 bg-${bgColor} border-secondary-background-accent flex md:gap-2.5 justify-between w-full rounded-md`}
         onClick={handleShowMenu}
       >
         <p className="text-secondary font-semibold text-base">{title}</p>

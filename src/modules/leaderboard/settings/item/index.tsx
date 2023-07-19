@@ -9,9 +9,9 @@ const LeaderBoardSettingsItem: React.FC<ILeaderBoardSettingsItem> = ({
   children,
   title,
 }) => (
-  <div>
+  <div className="w-full">
     <p className="text-secondary">{title}</p>
-    {children}
+    <div className="w-full flex">{children}</div>
   </div>
 );
 

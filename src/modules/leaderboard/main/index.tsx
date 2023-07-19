@@ -16,7 +16,11 @@ const LeaderBoardMain: React.FC<ILeaderboardMain> = ({ flag }) => (
           </div>
           <p className="text-white text-lg">US 2X Quad Monthly</p>
         </div>
-        <DropDown title="Lifetime" className="!font-normal">
+        <DropDown
+          title="Lifetime"
+          bgColor="secondary-background-accent"
+          width="fit"
+        >
           <div className="dropdown-container text-secondary ">
             <div>Lifetime</div>
             <div>Wipe</div>

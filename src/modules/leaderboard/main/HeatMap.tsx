@@ -4,7 +4,7 @@ import HeatMapImage from "../../../images/heatmap.png";
 const HeatMap = () => (
   <Image
     src={HeatMapImage}
-    width={907}
+    width={890}
     height={804}
     alt="heatmap"
     className="rounded-md"
