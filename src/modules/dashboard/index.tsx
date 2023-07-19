@@ -8,7 +8,7 @@ import BackgroundImage from "../../images/background.svg";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="pb-24">
+    <div className="mb-72 md:mb-[180px]">
       <Image
         src={BackgroundImage}
         width={2134}
@@ -16,13 +16,13 @@ const Dashboard: React.FC = () => {
         className="hidden md:block absolute left-0 -top-16  z-20"
         alt="background"
       />
-      <div className="md:pt-[197px]">
+      <div className="md:mt-[197px]">
         <Hero />
       </div>
       <div className="mt-14 md:mt-[337px]">
         <Servers />
       </div>
-      <div className="my-[88px] md:my-[130px] md:px-[115px]">
+      <div className="mt-[88px] md:mt-[130px] md:px-[115px]">
         <Shop />
       </div>
     </div>

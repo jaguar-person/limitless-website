@@ -11,7 +11,7 @@ import { useIsMobile } from "../../utils/hooks/useIsMobile";
 const Server = () => {
   const isMobile = useIsMobile();
   return (
-    <div className="text-white mt-14 md:mt-40 mb-56 md:mb-24 flex flex-col gap-2 md:gap-16 items-center">
+    <div className="mt-12 md:mt-[147px] mb-80 md:mb-24 flex flex-col gap-2 md:gap-16 items-center">
       <div className="flex flex-col md:gap-5">
         <div className="flex flex-col gap-4 md:gap-2.5 items-center py-3">
           <Decoration color="gems" />

@@ -4,7 +4,11 @@ import HeroIcon from "../../../images/hero.svg";
 import MobileHeroIcon from "../../../images/mobile-hero.png";
 import Button from "../../../components/button";
 
-const Hero = () => {
+import { useIsMobile } from "../../../utils/hooks/useIsMobile";
+
+const Hero: React.FC = () => {
+  const isMobile = useIsMobile();
+
   return (
     <div className=" flex flex-col">
       <div className="relative flex flex-col gap-5 md:gap-10 items-center md:items-start">
@@ -29,12 +33,18 @@ const Hero = () => {
           Experience
         </div>
         <div className="flex md:flex-row flex-col gap-4 md:gap-10 relative z-20 w-full md:w-[45%]">
-          <Button name="shop" size="xl" className="py-6 flex-1" />
+          <Button
+            name="shop"
+            size="xl"
+            className="py-6 flex-1"
+            width={isMobile ? "full" : "fit"}
+          />
           <Button
             name="Join Discord"
             size="xl"
             className="py-6 flex-1"
             bgColor="info"
+            width={isMobile ? "full" : "fit"}
           />
         </div>
       </div>
