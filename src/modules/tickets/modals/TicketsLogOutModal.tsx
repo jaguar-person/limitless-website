@@ -7,7 +7,7 @@ const TicketsLogOutModal: React.FC = () => {
   const [isShow, setShow] = useState(false);
   const isMobile = useIsMobile();
   return (
-    <div className="z-10">
+    <div className="z-50">
       <Button
         name="Log Out"
         bgColor="danger"

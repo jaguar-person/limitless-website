@@ -1,6 +1,6 @@
 import React from "react";
 
-export const CheckIcon = () => (
+export const CheckIcon: React.FC = () => (
   <svg
     className="w-4 h-4 text-gems/[36%]"
     aria-hidden="true"
@@ -18,7 +18,7 @@ export const CheckIcon = () => (
   </svg>
 );
 
-export const CheckIconChecked = () => (
+export const CheckIconChecked: React.FC = () => (
   <svg
     className="w-4 h-4 text-[#1E3217]/75"
     aria-hidden="true"

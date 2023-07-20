@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import AvatarIcon from "../../images/avatar.png";
 
-const User = () => (
+const User: React.FC = () => (
   <div className="flex gap-2 items-center">
     <Image src={AvatarIcon} width={50} height={50} alt="Avatar" />
     <div>

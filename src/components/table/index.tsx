@@ -15,10 +15,9 @@ type TableType = {
 
 interface ITable {
   data: TableType[];
-  isLeaderBoardTable?: boolean;
 }
 
-const Table: React.FC<ITable> = ({ data, isLeaderBoardTable }) => {
+const Table: React.FC<ITable> = ({ data }) => {
   return (
     <div className="flex flex-col gap-2.5">
       <table className="min-w-full text-left text-sm font-light table-auto border-collapse">

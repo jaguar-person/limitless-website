@@ -35,10 +35,10 @@ const poppins = localFont({
   variable: "--font-poppins",
 });
 
-const MyApp = ({
+const MyApp: NextPage<AppProps<{ isSsrMobile: boolean }>> = ({
   Component,
   pageProps,
-}: AppProps<{ isSsrMobile: boolean }>) => {
+}) => {
   return (
     <IsSsrMobileContext.Provider value={pageProps.isSsrMobile}>
       <main className={`${poppins.variable} font-sans`}>

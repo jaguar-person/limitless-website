@@ -1,3 +1,4 @@
+import React from "react";
 import DropDown from "../../../components/dropdown";
 import LeaderBoardTable from "./LeaderBoardTable";
 import HeatMap from "./HeatMap";

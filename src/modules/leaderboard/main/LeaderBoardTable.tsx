@@ -95,13 +95,13 @@ const tableData = [
   },
 ];
 
-const LeaderBoardTable = () => (
+const LeaderBoardTable: React.FC = () => (
   <div className="flex flex-col gap-6">
     <div className="md:hidden block"></div>
     <div className="md:hidden block">
       <Pagination />
     </div>
-    <Table data={tableData} isLeaderBoardTable={true} />
+    <Table data={tableData} />
   </div>
 );
 

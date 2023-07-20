@@ -3,6 +3,63 @@ import ServerSwitch from "./switch";
 import Decoration from "../../components/decoration";
 import ServersList from "./list";
 
+const MOCK_SERVERS = [
+  {
+    lastDate: "3 months ago",
+    count: 2,
+    name: "VANILA EU MAIN",
+    description:
+      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
+    player_alive: 38,
+    player_total: 256,
+  },
+  {
+    lastDate: "3 months ago",
+    count: 2,
+    name: "VANILA EU MAIN",
+    description:
+      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
+    player_alive: 38,
+    player_total: 256,
+  },
+  {
+    lastDate: "3 months ago",
+    count: 2,
+    name: "VANILA EU MAIN",
+    description:
+      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
+    player_alive: 38,
+    player_total: 256,
+  },
+  {
+    lastDate: "3 months ago",
+    count: 2,
+    name: "VANILA EU MAIN",
+    description:
+      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
+    player_alive: 38,
+    player_total: 256,
+  },
+  {
+    lastDate: "3 months ago",
+    count: 2,
+    name: "VANILA EU MAIN",
+    description:
+      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
+    player_alive: 38,
+    player_total: 256,
+  },
+  {
+    lastDate: "3 months ago",
+    count: 2,
+    name: "VANILA EU MAIN",
+    description:
+      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
+    player_alive: 38,
+    player_total: 256,
+  },
+];
+
 const Server: React.FC = () => {
   return (
     <div className="mt-12 md:mt-[147px] mb-80 md:mb-24 flex flex-col gap-2 md:gap-16 items-center">
@@ -22,7 +79,7 @@ const Server: React.FC = () => {
         </div>
         <ServerSwitch />
       </div>
-      <ServersList />
+      <ServersList servers={MOCK_SERVERS} />
     </div>
   );
 };

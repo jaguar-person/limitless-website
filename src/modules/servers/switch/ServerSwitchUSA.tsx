@@ -3,7 +3,6 @@ import Image from "next/image";
 import { GetServerSidePropsContext } from "next";
 import { getIsSsrMobile } from "../../../utils/hooks/useIsMobile";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
-
 import USAIcon from "../../../images/usa.svg";
 
 interface ISwitchIcon {
@@ -30,13 +29,5 @@ const ServersSwitchUSA: React.FC<ISwitchIcon> = ({ flag, onSwitch }) => {
     </div>
   );
 };
-
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  return {
-    props: {
-      isSsrMobile: getIsSsrMobile(context),
-    },
-  };
-}
 
 export default ServersSwitchUSA;

@@ -22,7 +22,7 @@ export const Ticket: React.FC<ITicket> = ({ type }) => (
   </div>
 );
 
-const MyTicketsSearch = () => {
+const MyTicketsSearch: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-center md:px-5 rounded-md md:bg-secondary-background md:border border-secondary-background-accent">
       <div className="hidden md:flex gap-2.5 items-center">

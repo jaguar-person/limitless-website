@@ -6,7 +6,7 @@ interface IMainLayout {
   children: React.ReactNode;
 }
 
-const MainLayout = ({ children }: IMainLayout) => (
+const MainLayout: React.FC<IMainLayout> = ({ children }) => (
   <div className="bg-background overflow-hidden">
     <div className="relative md:px-[100px] md:py-[88px] py-6 px-4 bg-background md:max-w-[1440px] mx-auto w-full">
       <TopBar />

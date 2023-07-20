@@ -7,7 +7,7 @@ import User from "../components/user";
 import Menu from "../components/menu";
 import { ROUTING_PATH } from "../utils/constants";
 
-const TopBar = () => {
+const TopBar: React.FC = () => {
   const router = useRouter();
   const currentPathName = router.pathname.split("/")[1];
 

@@ -5,65 +5,13 @@ import ServerCard from "../../../components/card";
 import Button from "../../../components/button";
 
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
+import { IServer } from "../../../utils/types";
 
-const MOCK_SERVERS = [
-  {
-    lastDate: "3 months ago",
-    count: 2,
-    name: "VANILA EU MAIN",
-    description:
-      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
-    player_alive: 38,
-    player_total: 256,
-  },
-  {
-    lastDate: "3 months ago",
-    count: 2,
-    name: "VANILA EU MAIN",
-    description:
-      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
-    player_alive: 38,
-    player_total: 256,
-  },
-  {
-    lastDate: "3 months ago",
-    count: 2,
-    name: "VANILA EU MAIN",
-    description:
-      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
-    player_alive: 38,
-    player_total: 256,
-  },
-  {
-    lastDate: "3 months ago",
-    count: 2,
-    name: "VANILA EU MAIN",
-    description:
-      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
-    player_alive: 38,
-    player_total: 256,
-  },
-  {
-    lastDate: "3 months ago",
-    count: 2,
-    name: "VANILA EU MAIN",
-    description:
-      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
-    player_alive: 38,
-    player_total: 256,
-  },
-  {
-    lastDate: "3 months ago",
-    count: 2,
-    name: "VANILA EU MAIN",
-    description:
-      "Join the Rust revolution! Our high-performance gaming server offers a thrilling, fair, and lag-free experience. With an active community and moderated environment become the ultimate survivor in this intense world. Start building and thriving, join now!",
-    player_alive: 38,
-    player_total: 256,
-  },
-];
+interface IServersList {
+  servers: IServer[];
+}
 
-const ServersList: React.FC = () => {
+const ServersList: React.FC<IServersList> = ({ servers }) => {
   const isMobile = useIsMobile();
   return (
     <div className="flex flex-col gap-2 md:gap-2.5">
@@ -78,7 +26,7 @@ const ServersList: React.FC = () => {
       </div>
       <div className="flex flex-col gap-4 pt-4 md:pt-0 items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2.5 ">
-          {MOCK_SERVERS.map((item, i) => (
+          {servers.map((item, i) => (
             <ServerCard server={item} key={i} />
           ))}
         </div>
