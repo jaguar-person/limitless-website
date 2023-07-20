@@ -6,6 +6,7 @@ import Avatar from "../../../images/avatar--rounded.png";
 import TicketsUserID from "./TicketsUserID";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 import Button from "../../../components/button";
+import { TicketsLogOutModal } from "../modals";
 
 const TicketsUserInfo: React.FC = () => {
   const isMobile = useIsMobile();
@@ -47,7 +48,7 @@ const TicketsUserInfo: React.FC = () => {
             </div>
           </div>
         </div>
-        <Button name="Log Out" bgColor="danger" />
+        <TicketsLogOutModal />
       </div>
       <div className="flex flex-col gap-2 md:hidden relative z-10">
         <p className="text-white text-2xl">TripleZone</p>

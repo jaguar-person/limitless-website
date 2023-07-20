@@ -11,6 +11,7 @@ import {
 } from "../../../../utils/enums";
 import Button from "../../../../components/button";
 import { useIsMobile } from "../../../../utils/hooks/useIsMobile";
+import { TicketsLinkAccountModal } from "../../modals";
 
 interface IAccountLink {
   name: string;
@@ -47,19 +48,12 @@ const TicketsLinkedAccountLink: React.FC<IAccountLink> = ({
           <p className="text-white font-bold text-lg">
             {action === AccountActionTypes.BOOST
               ? "Boost " + name
-              : name + "Account"}
+              : name + " Account"}
           </p>
           <p className="text-secondary">{status}</p>
         </div>
       </div>
-      <Button
-        name={
-          action === AccountActionTypes.BOOST ? "Boost" : action + "Account"
-        }
-        bgColor={action === AccountActionTypes.UNLINK ? "danger" : "points"}
-        rightIcon="site"
-        width="full"
-      />
+      <TicketsLinkAccountModal action={action} />
     </div>
   );
 };
