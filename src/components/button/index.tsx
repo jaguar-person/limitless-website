@@ -5,6 +5,7 @@ interface IButton {
   leftIcon?: string;
   rightIcon?: string;
   bgColor?: string;
+  color?: string;
   className?: string;
   size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
   name: string;
@@ -15,6 +16,7 @@ const Button: React.FC<IButton> = ({
   leftIcon = null,
   rightIcon = null,
   bgColor = "gems",
+  color = "background",
   className,
   size = "sm",
   name,
@@ -31,7 +33,9 @@ const Button: React.FC<IButton> = ({
         alt="left"
       />
     )}
-    <p className="font-extrabold text-base tracking-tighter uppercase text-background">
+    <p
+      className={`font-extrabold text-base tracking-tighter capitalize text-${color}`}
+    >
       {name}
     </p>
     {!!rightIcon && (
