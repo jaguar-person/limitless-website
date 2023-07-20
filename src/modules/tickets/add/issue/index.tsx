@@ -52,7 +52,7 @@ const MOCK_ISSUES = [
 const TicketAddChooseIssue: React.FC = () => (
   <div className="flex flex-col gap-2.5">
     <TicketsAddTitle title="Choose an issue" />
-    <div className="grid grid-cols-4 gap-2.5">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-2.5">
       {MOCK_ISSUES.map((issue, key) => (
         <TicketsAddIssueCard
           title={issue.title}

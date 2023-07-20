@@ -25,7 +25,7 @@ const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
   return (
     <div
       className={
-        "card-container vertical p-4 " +
+        "card-container flex flex-col items-start md:items-center gap-2 p-4 " +
         (isChecked ? "border-gems" : "border-secondary-background-accent")
       }
       onClick={() => {
@@ -35,9 +35,17 @@ const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
       <div className="absolute top-3 right-3">
         {isChecked ? <CardChecked /> : <CardChecking />}
       </div>
-      <Image src={IssueIcon} width={54} height={61} alt="issue" />
+      <Image
+        src={IssueIcon}
+        width={54}
+        height={61}
+        alt="issue"
+        className="hidden md:block"
+      />
       <p className="text-base text-white font-semibold">{title}</p>
-      <p className="text-xs text-secondary text-center">{description}</p>
+      <p className="text-base text-secondary text-left md:text-center">
+        {description}
+      </p>
     </div>
   );
 };

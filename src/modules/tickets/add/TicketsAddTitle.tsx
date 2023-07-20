@@ -10,6 +10,7 @@ const TicketsAddTitle: React.FC<ITicketsAddTitle> = ({
   title,
 }) => (
   <div
+    className="hidden md:block"
     onClick={() => {
       onCurrentStep && onCurrentStep();
     }}
