@@ -17,7 +17,7 @@ const TicketsAddServerCard: React.FC<ITicketsAddServerCard> = ({
   return (
     <div
       className={
-        "card-container vertical p-8 " +
+        "card-container flex flex-row gap-4 justify-between items-center md:vertical p-4 md:p-8 " +
         (isChecked
           ? "border-gems text-white"
           : "border-secondary-background-accent text-secondary")
@@ -26,18 +26,18 @@ const TicketsAddServerCard: React.FC<ITicketsAddServerCard> = ({
         setChecked(!isChecked);
       }}
     >
-      <div className="absolute top-3 right-3">
-        {isChecked ? <CardChecked /> : <CardChecking />}
-      </div>
       <Image
         src={require(`../../../../images/${type}.svg`)}
         width={54}
         height={61}
         alt="issue"
       />
-      <p className="text-base  !font-semibold">
+      <p className="text-base">
         {count}x {name}
       </p>
+      <div className="relative md:absolute md:top-3 md:right-3">
+        {isChecked ? <CardChecked /> : <CardChecking />}
+      </div>
     </div>
   );
 };
