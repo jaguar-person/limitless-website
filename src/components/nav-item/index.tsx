@@ -7,7 +7,7 @@ interface INavItem {
   isCurrentPath?: boolean;
 }
 
-const NavItem = ({ children, path, isCurrentPath }: INavItem) => {
+const NavItem: React.FC<INavItem> = ({ children, path, isCurrentPath }) => {
   const router = useRouter();
   return (
     <div

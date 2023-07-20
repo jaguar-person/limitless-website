@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import AddIcon from "../../../../images/add.svg";
 import MyTicketsSearch from "./MyTicketsSearch";
 import MyTicketsTable from "./MyTicketsTable";
 import { TicketStatus } from "../../../../utils/enums";
@@ -60,7 +58,7 @@ const MOCK_TICKETS = [
   },
 ];
 
-const TicketsMyTickets = () => {
+const TicketsMyTickets: React.FC = () => {
   const router = useRouter();
   const isMobile = useIsMobile();
   return (

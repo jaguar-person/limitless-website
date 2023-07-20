@@ -1,9 +1,10 @@
+import React from "react";
 import Image from "next/image";
 import HeatMapImage from "../../../images/heatmap.png";
 import MobileHeatMapImage from "../../../images/mobile-heatmap.png";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 
-const HeatMap = () => {
+const HeatMap: React.FC = () => {
   const isMobile = useIsMobile();
   return (
     <Image

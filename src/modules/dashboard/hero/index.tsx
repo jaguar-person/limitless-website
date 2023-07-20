@@ -33,16 +33,11 @@ const Hero: React.FC = () => {
           Experience
         </div>
         <div className="flex md:flex-row flex-col gap-4 md:gap-10 relative z-20 w-full md:w-[45%]">
-          <div className="w-1/2">
-            <Button name="shop" size="xl" width={isMobile ? "full" : "fit"} />
+          <div className="w-full md:w-1/2">
+            <Button name="shop" size="xl" width="full" />
           </div>
-          <div className="w-1/2">
-            <Button
-              name="Join Discord"
-              size="xl"
-              bgColor="info"
-              width={isMobile ? "full" : "fit"}
-            />
+          <div className="w-full md:w-1/2">
+            <Button name="Join Discord" size="xl" bgColor="info" width="full" />
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const TicketsUserInfo: React.FC = () => {
 
   return (
     <div>
-      <div className="relative flex justify-between items-center md:px-10 md:py-5 border-secondary-background-accent rounded-md z-10 mb-2.5 md:mb-0">
+      <div className="relative flex justify-between items-center md:px-10 md:py-5 border-secondary-background-accent rounded-md mb-2.5 md:mb-0">
         <div className="min-w-[480px] md:w-full absolute -top-20 -left-4 md:top-0 md:left-0 bg-blend-overlay z-0">
           <Image
             src={isMobile ? MobileBgImage : BgImage}
@@ -34,10 +34,6 @@ const TicketsUserInfo: React.FC = () => {
           <div className="md:flex flex-col gap-2.5 hidden">
             <div>
               <p className="text-white font-bold text-2xl">Catalin</p>
-              {/* <p className="text-secondary">
-              <span className="text-white">First seen:</span> 14 days ago on
-              01/25/2023
-            </p> */}
             </div>
             <div className="flex gap-1">
               <TicketsUserID name="Steam ID" id="76561198191626285" />
@@ -50,7 +46,7 @@ const TicketsUserInfo: React.FC = () => {
         </div>
         <TicketsLogOutModal />
       </div>
-      <div className="flex flex-col gap-2 md:hidden relative z-10">
+      <div className="flex flex-col gap-2 md:hidden relative">
         <p className="text-white text-2xl">TripleZone</p>
         <div className="flex">
           <div className="flex-1 w-1/2">
