@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "../../../components/table";
+import Pagination from "../../../components/pagination";
 
 const tableData = [
   {
@@ -95,7 +96,11 @@ const tableData = [
 ];
 
 const LeaderBoardTable = () => (
-  <div>
+  <div className="flex flex-col gap-6">
+    <div className="md:hidden block"></div>
+    <div className="md:hidden block">
+      <Pagination />
+    </div>
     <Table data={tableData} isLeaderBoardTable={true} />
   </div>
 );
