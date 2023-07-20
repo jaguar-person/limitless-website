@@ -7,6 +7,8 @@ import Button from "../../../../components/button";
 import { TicketStatus } from "../../../../utils/enums";
 import TicketDetailsInfo from "./TicketDetailsInfo";
 import MobileBgImage from "../../../../images/mobile-ticket-bg.png";
+import { TicketsCloseTicketModal } from "../../modals";
+import Modal from "../../../../components/modal";
 interface ITicketsDetailHeader {
   ticket: {
     status: TicketStatus;
@@ -30,7 +32,7 @@ const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
           className="w-full h-48 md:hidden bg-gradient-to-r from-secondary-background to-[#24222C] z-0"
         />
       </div>
-      <div className="flex justify-between z-10 md:z-0">
+      <div className="flex justify-between ">
         <div className="hidden md:flex gap-5 items-center">
           <TitleArrow
             title="Cheater"
@@ -41,11 +43,11 @@ const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
           />
           <TicketStatusBadge status={ticket.status} />
         </div>
-        <div className="flex flex-col gap-1 md:hidden items-center">
+        <div className="z-10 flex flex-col gap-1 md:hidden items-center">
           <p className="text-points text-2xl">{ticket.id}</p>
           <p className="text-white text-xs font-medium">{ticket.server}</p>
         </div>
-        <Button name="Close Ticket" bgColor="danger" className="px-7" />
+        <TicketsCloseTicketModal />
       </div>
       <div className="flex md:hidden justify-between text-xs text-secondary z-10 md:z-0">
         <div className="w-1/2">

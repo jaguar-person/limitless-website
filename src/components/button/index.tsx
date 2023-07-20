@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 
 interface IButton {
@@ -6,10 +6,10 @@ interface IButton {
   rightIcon?: string;
   bgColor?: string;
   color?: string;
-  className?: string;
   size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl";
   name: string;
   width?: "full" | "fit";
+  onClick?: MouseEventHandler | undefined;
 }
 
 const Button: React.FC<IButton> = ({
@@ -17,13 +17,14 @@ const Button: React.FC<IButton> = ({
   rightIcon = null,
   bgColor = "gems",
   color = "background",
-  className,
-  size = "sm",
+  size = "base",
   name,
   width = "fit",
+  onClick,
 }) => (
   <button
-    className={`z-10 rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} text-${size} w-${width} ${className}`}
+    className={`z-10 rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} w-${width}`}
+    onClick={onClick}
   >
     {!!leftIcon && (
       <Image
@@ -34,7 +35,7 @@ const Button: React.FC<IButton> = ({
       />
     )}
     <p
-      className={`font-extrabold text-base tracking-tighter capitalize text-${color}`}
+      className={`font-extrabold text-base capitalize text-${color} text-${size}`}
     >
       {name}
     </p>

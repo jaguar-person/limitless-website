@@ -15,7 +15,7 @@
 }
 
 .dropdown-container {
-    @apply mt-2.5 z-50 right-0 absolute rounded-md bg-secondary-background-accent border-secondary-background flex flex-col gap-2.5 p-2.5 w-full cursor-pointer
+    @apply mt-2.5 z-40 right-0 absolute rounded-md bg-secondary-background-accent border-secondary-background flex flex-col gap-2.5 p-2.5 w-full cursor-pointer
 }
 
 .card-container {

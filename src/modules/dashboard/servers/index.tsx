@@ -62,7 +62,6 @@ const Servers = () => {
       <Button
         name="explore servers"
         bgColor="info-light"
-        className="py-5 mt-2 bg-info-light"
         rightIcon="site"
         size="xl"
         width={isMobile ? "full" : "fit"}

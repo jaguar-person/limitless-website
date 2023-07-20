@@ -33,7 +33,6 @@ const Shop: React.FC = () => {
           bgColor="points"
           rightIcon="site"
           size="xl"
-          className="py-5"
           width={isMobile ? "full" : "fit"}
         />
       </div>
