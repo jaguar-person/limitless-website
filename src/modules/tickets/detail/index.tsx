@@ -1,8 +1,9 @@
-import React from "react";
-import TicketsDetailChat from "./chat-history";
+import React, { useState } from "react";
+import TicketsDetailChatHistory from "./chat-history";
 import TicketsDetailChatAdd from "./chat-add";
 import { TicketStatus } from "../../../utils/enums";
 import TicketsDetailHeader from "./header";
+import TicketsDetailChatAddMessage from "./chat-add/TicketsDetailChatAddMessage";
 
 const MOCK_TICKET = {
   status: TicketStatus.OPENED,
@@ -42,12 +43,29 @@ const MOCK_CHATS = [
   },
 ];
 
-const TicketsDetail: React.FC = () => (
-  <div className="mb-20 mt-32 flex flex-col gap-5">
-    <TicketsDetailHeader ticket={MOCK_TICKET} />
-    <TicketsDetailChat chats={MOCK_CHATS} />
-    <TicketsDetailChatAdd />
-  </div>
-);
+const TicketsDetail: React.FC = () => {
+  const [isMessage, setMessage] = useState(false);
+  return (
+    <div className="mb-80 md:mb-20 mt-6 md:mt-32 flex flex-col gap-5">
+      <TicketsDetailHeader ticket={MOCK_TICKET} />
+      {isMessage ? (
+        <TicketsDetailChatAddMessage
+          onMessage={() => {
+            setMessage(false);
+          }}
+        />
+      ) : (
+        <div className="flex flex-col gap-5">
+          <TicketsDetailChatHistory chats={MOCK_CHATS} />
+          <TicketsDetailChatAdd
+            onMessage={() => {
+              setMessage(true);
+            }}
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default TicketsDetail;

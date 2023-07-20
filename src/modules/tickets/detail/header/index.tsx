@@ -1,11 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import TitleArrow from "../../../../components/title-arrow";
 import TicketStatusBadge from "../../shared/TicketStatus";
 import Button from "../../../../components/button";
 import { TicketStatus } from "../../../../utils/enums";
 import TicketDetailsInfo from "./TicketDetailsInfo";
-
+import MobileBgImage from "../../../../images/mobile-ticket-bg.png";
 interface ITicketsDetailHeader {
   ticket: {
     status: TicketStatus;
@@ -19,9 +20,18 @@ interface ITicketsDetailHeader {
 const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col gap-3.5">
-      <div className="flex justify-between">
-        <div className="flex gap-5 items-center">
+    <div className="relative flex flex-col gap-3.5 pb-4 md:pb-0">
+      <div className="min-w-[480px] absolute -top-20 -left-4 bg-blend-overlay z-0">
+        <Image
+          src={MobileBgImage}
+          width={360}
+          height={196}
+          alt="bg"
+          className="w-full h-48 md:hidden bg-gradient-to-r from-secondary-background to-[#24222C] z-0"
+        />
+      </div>
+      <div className="flex justify-between z-10 md:z-0">
+        <div className="hidden md:flex gap-5 items-center">
           <TitleArrow
             title="Cheater"
             size="lg"
@@ -31,9 +41,23 @@ const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
           />
           <TicketStatusBadge status={ticket.status} />
         </div>
-        <Button name="Close Ticket" bgColor="danger" />
+        <div className="flex flex-col gap-1 md:hidden items-center">
+          <p className="text-points text-2xl">{ticket.id}</p>
+          <p className="text-white text-xs font-medium">{ticket.server}</p>
+        </div>
+        <Button name="Close Ticket" bgColor="danger" className="px-7" />
       </div>
-      <div className="p-5 flex justify-between card-container">
+      <div className="flex md:hidden justify-between text-xs text-secondary z-10 md:z-0">
+        <div className="w-1/2">
+          <p className="uppercase leading-5 font-bold">CREATED</p>
+          <p>{ticket.createdAt}</p>
+        </div>
+        <div className="w-1/2">
+          <p className="uppercase leading-5 font-bold">Last Updated</p>
+          <p>{ticket.updatedAt}</p>
+        </div>
+      </div>
+      <div className="p-5 hidden md:flex justify-between card-container">
         <p className="text-white font-bold text-lg">Ticket Details</p>
         <div className="flex w-1/2 divide-x divide-secondary-background-accent">
           <div className="flex flex-col gap-0.5 flex-1">
