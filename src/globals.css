@@ -24,3 +24,15 @@
 .vertical {
     @apply flex flex-col justify-center items-center gap-2.5
 }
+
+.rank-1 {
+ @apply bg-gradient-to-r from-points/[15%] via-secondary-background-accent to-secondary-background-accent
+}
+
+.rank-2 {
+ @apply bg-gradient-to-l from-secondary-background to-[#BEBEBE]/20   
+}
+
+.rank-3 {
+    @apply bg-gradient-to-l from-secondary-background-accent via-secondary-background-accent to-[#FF9B3E]/[15%]
+}

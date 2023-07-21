@@ -9,6 +9,16 @@ export type TicketTableType = {
   updatedAt: string;
 };
 
+export type LeaderBoardTableType = {
+  rank: number;
+  icon: string;
+  player: string;
+  kills: number;
+  deaths: number;
+  kd: number;
+  hours: number;
+};
+
 export type IChatHistory = {
   user: {
     avatar: string;

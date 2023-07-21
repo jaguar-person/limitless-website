@@ -1,8 +1,8 @@
 import React from "react";
-import Table from "../../../components/table";
 import Pagination from "../../../components/pagination";
+import LeaderTable from "../shared/LeaderTable";
 
-const tableData = [
+const MOCK_DATA = [
   {
     rank: 1,
     icon: "avatar",
@@ -101,7 +101,7 @@ const LeaderBoardTable: React.FC = () => (
     <div className="md:hidden block">
       <Pagination />
     </div>
-    <Table data={tableData} />
+    <LeaderTable data={MOCK_DATA} />
   </div>
 );
 
