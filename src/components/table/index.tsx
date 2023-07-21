@@ -27,10 +27,10 @@ export const TR: React.FC<IRow> = ({ children, row }) => {
   return (
     <div
       className={clsx(
-        "py-2 px-5 rounded-md flex justify-between my-1 tr--hover",
+        "py-2 px-5 rounded-md flex justify-between my-1 w-full tr--hover",
         {
-          "bg-secondary-background-accent": row % 2 === 1,
-          "bg-secondary-background": row % 2 === 0,
+          "bg-secondary-background-accent": row % 2 === 0,
+          "bg-secondary-background": row % 2 === 1,
           "rank-1": row === 0,
           "rank-2": row === 1,
           "rank-3": row === 2,
@@ -45,7 +45,7 @@ export const TR: React.FC<IRow> = ({ children, row }) => {
 export const THead: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => (
-  <div className="w-full flex justify-between bg-secondary-background">
+  <div className="w-full hidden md:flex justify-between bg-secondary-background">
     {children}
   </div>
 );

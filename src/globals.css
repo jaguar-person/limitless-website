@@ -11,7 +11,7 @@
 }
 
 .container {
-    @apply flex flex-col gap-4 bg-secondary-background border border-secondary-background-accent rounded-md p-4
+    @apply flex flex-col gap-4 bg-background md:bg-secondary-background md:border md:border-secondary-background-accent rounded-md md:p-4
 }
 
 .dropdown-container {
@@ -26,13 +26,13 @@
 }
 
 .rank-1 {
- @apply bg-gradient-to-r from-points/[15%] via-secondary-background-accent to-secondary-background-accent
+ @apply bg-gradient-to-r from-points/[15%] md:via-secondary-background-accent to-background md:to-secondary-background-accent
 }
 
 .rank-2 {
- @apply bg-gradient-to-l from-secondary-background to-[#BEBEBE]/20   
+ @apply bg-gradient-to-l from-background md:from-secondary-background to-[#BEBEBE]/20   
 }
 
 .rank-3 {
-    @apply bg-gradient-to-l from-secondary-background-accent via-secondary-background-accent to-[#FF9B3E]/[15%]
+    @apply bg-gradient-to-l from-background md:from-secondary-background-accent md:via-secondary-background-accent to-[#FF9B3E]/[15%]
 }
