@@ -23,7 +23,7 @@ export const BorderWaveBgIcon: React.FC<{ color: string }> = ({ color }) => (
 export const BorderWave: React.FC<IBorderWave> = ({ color, children }) => (
   <div className="relative">
     <BorderWaveBgIcon color={color} />
-    <span className="absolute -top-2 -translate-x-1/2 left-1/2">
+    <span className="absolute top-0 md:-top-2 -translate-x-1/2 left-1/2">
       {children}
     </span>
   </div>
