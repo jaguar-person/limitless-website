@@ -35,7 +35,7 @@ const TicketsUserInfo: React.FC = () => {
             <div>
               <p className="text-white font-bold text-2xl">Catalin</p>
             </div>
-            <div className="flex gap-1">
+            <div className="flex md:flex-col xl:flex-row gap-1">
               <TicketsUserID name="Steam ID" id="76561198191626285" />
               <TicketsUserID
                 name="Rusticated ID"

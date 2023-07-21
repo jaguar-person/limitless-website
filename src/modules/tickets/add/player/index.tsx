@@ -103,7 +103,7 @@ const TicketAddReportPlayer: React.FC<ITicketAddStep> = ({ onCurrentStep }) => (
       <SearchBar icon="search_2" placeholder="Search by name or Steam ID..." />
     </div>
     <TicketsAddTitle onCurrentStep={onCurrentStep} title="Report a Player" />
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+    <div className="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-2">
       {MOCK_PLAYERS.map((player, i) => (
         <TicketsAddPlayerCard
           key={i}

@@ -61,7 +61,7 @@ const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
       </div>
       <div className="p-5 hidden md:flex justify-between card-container">
         <p className="text-white font-bold text-lg">Ticket Details</p>
-        <div className="flex w-1/2 divide-x divide-secondary-background-accent">
+        <div className="flex md:w-2/3 xl:w-1/2 divide-x divide-secondary-background-accent">
           <div className="flex flex-col gap-0.5 flex-1">
             <TicketDetailsInfo name="Ticket ID" value="#45858" />
             <TicketDetailsInfo name="Server" value="LR-EU 2x SOLO" />

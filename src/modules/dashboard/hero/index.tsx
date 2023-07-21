@@ -4,11 +4,7 @@ import HeroIcon from "../../../images/hero.svg";
 import MobileHeroIcon from "../../../images/mobile-hero.png";
 import Button from "../../../components/button";
 
-import { useIsMobile } from "../../../utils/hooks/useIsMobile";
-
 const Hero: React.FC = () => {
-  const isMobile = useIsMobile();
-
   return (
     <div className=" flex flex-col">
       <div className="relative flex flex-col gap-5 md:gap-10 items-center md:items-start">
@@ -28,7 +24,7 @@ const Hero: React.FC = () => {
             className="block md:hidden"
           />
         </div>
-        <div className="font-bold text-center md:text-left md:leading-[84px] leading-[52px] md:text-[66px] text-[46px] w-full md:w-[60%] text-white mb-3 md:mb-0">
+        <div className="font-bold text-center md:text-left md:leading-[84px] leading-[52px] md:text-[52px] xl:text-[66px] text-[46px] w-full md:w-[60%] text-white mb-3 md:mb-0">
           <span className="text-points">Limitless Rust</span> The Ultimate
           Experience
         </div>

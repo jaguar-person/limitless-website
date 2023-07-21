@@ -21,7 +21,7 @@ const MyTicketsTableRow: React.FC<IMyTicketsTableRow> = ({ data, isEven }) => {
   return (
     <div
       className={
-        "relative cursor-pointer flex flex-col gap-2 md:gap-16 md:flex-row py-4 md:p-6 w-full justify-between md:justify-start items-start md:items-center text-secondary md:rounded-md bg-background border-b border-b-secondary-background " +
+        "relative cursor-pointer flex flex-col gap-2  xl:gap-16 md:flex-row py-4 md:p-6 w-full justify-between md:justify-start items-start md:items-center text-secondary md:rounded-md bg-background border-b border-b-secondary-background " +
         (isEven
           ? "md:bg-secondary-background"
           : "md:bg-secondary-background-accent")
@@ -39,7 +39,7 @@ const MyTicketsTableRow: React.FC<IMyTicketsTableRow> = ({ data, isEven }) => {
       <div className={isMobile ? "truncate w-full text-left" : ""}>
         {isMobile ? data.description : data.title}
       </div>
-      <div className="flex justify-between md:justify-start md:gap-16 w-full md:w-fit items-center">
+      <div className="flex justify-between md:justify-start xl:gap-16 w-full md:w-fit items-center">
         <div className={isMobile ? "text-white font-bold text-xs" : ""}>
           {isMobile ? data.id : data.description}
         </div>

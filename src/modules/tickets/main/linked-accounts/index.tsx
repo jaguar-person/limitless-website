@@ -74,7 +74,7 @@ const TicketsLinkedAccounts: React.FC = () => {
           width={isMobile ? "full" : "fit"}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-3">
         <TicketsLinkedAccountLink
           name="Discord"
           status={AccountStatusTypes.NOT_CONNECTED}

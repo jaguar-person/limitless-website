@@ -15,7 +15,7 @@ const Shop: React.FC = () => {
         width={352}
         height={333}
         alt="shop"
-        className="w-full"
+        className="w-full bg-bright rounded-xl"
       />
       <div className="flex flex-col gap-2 md:gap-5 items-start py-6 md:py-10">
         <div className="flex gap-4 items-center">

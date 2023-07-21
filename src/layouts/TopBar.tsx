@@ -41,14 +41,14 @@ const TopBar: React.FC = () => {
           Leaderboard
         </NavItem>
         <NavItem
-          path={ROUTING_PATH.LEADERBOARD}
-          isCurrentPath={currentPathName === ROUTING_PATH.LEADERBOARD}
+          path={ROUTING_PATH.SUPPORT}
+          isCurrentPath={currentPathName === ROUTING_PATH.SUPPORT}
         >
           Support
         </NavItem>
         <NavItem
-          path={ROUTING_PATH.LEADERBOARD}
-          isCurrentPath={currentPathName === ROUTING_PATH.LEADERBOARD}
+          path={ROUTING_PATH.SHOP}
+          isCurrentPath={currentPathName === ROUTING_PATH.SHOP}
         >
           Shop
         </NavItem>

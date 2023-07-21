@@ -75,7 +75,7 @@ const TicketAddSelectServer: React.FC<ITicketAddStep> = ({ onCurrentStep }) => (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
         <p className="text-base text-white">US Servers</p>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2">
           {MOCK_USA_SERVERS.map((server, i) => (
             <TicketsAddServerCard
               key={i}
@@ -88,7 +88,7 @@ const TicketAddSelectServer: React.FC<ITicketAddStep> = ({ onCurrentStep }) => (
       </div>
       <div className="flex flex-col gap-2">
         <p className="text-base text-white">EU Servers</p>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2">
           {MOCK_EUR_SERVERS.map((server, i) => (
             <TicketsAddServerCard
               key={i}
