@@ -4,6 +4,7 @@ import Pagination from "../../../components/pagination";
 import LeaderTable from "../shared/LeaderTable";
 
 import RightIcon from "../../../images/arrow-right.svg";
+import FiltersModal from "../shared/FiltersModal";
 
 const MOCK_DATA = [
   {
@@ -101,16 +102,7 @@ const MOCK_DATA = [
 const LeaderBoardTable: React.FC = () => (
   <div className="flex flex-col gap-6">
     <div className="md:hidden block">
-      <div className="flex justify-between py-3 px-5 bg-gems items-center rounded-md">
-        <p className="text-background font-bold text-base">Show Heatmap</p>
-        <Image
-          src={RightIcon}
-          width={20}
-          height={20}
-          alt="icon"
-          className="w-5 h-5"
-        />
-      </div>
+      <FiltersModal />
     </div>
     <div className="md:hidden block">
       <Pagination />

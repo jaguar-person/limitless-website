@@ -25,7 +25,8 @@ const LeaderTable: React.FC<ILeaderTable> = ({ data }) => {
       </THead>
       <TBody>
         {data.map((item, i) => {
-          if (isMobile) return <LeaderTableMobile index={i} item={item} />;
+          if (isMobile)
+            return <LeaderTableMobile index={i} item={item} key={i} />;
           else
             return (
               <TR key={i} row={i}>
