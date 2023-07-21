@@ -16,11 +16,11 @@ module.exports = {
         "secondary-background-accent": "#363541",
         secondary: "#999999",
         "secondary-in-box": "#ADADAD",
+        bright: "#1BF1E7",
         points: "#E7CF77",
         gems: "#94E777",
         danger: "#E77979",
         info: "#5865F2",
-        "info-light": "#1BF1E7",
       },
       fontFamily: {
         sans: ["var(--font-poppins)"],

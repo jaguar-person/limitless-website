@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
       <div className="mt-14 md:mt-[337px]">
         <Servers servers={MOCK_SERVERS} />
       </div>
-      <div className="mt-[88px] md:mt-[130px] md:px-[115px]">
+      <div className="mt-[88px] md:mt-[130px] xl:px-[115px]">
         <Shop />
       </div>
     </div>

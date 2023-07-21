@@ -1,6 +1,8 @@
 export const ROUTING_PATH = {
-  DASHBOARD: "/",
+  DASHBOARD: "",
   SERVERS: "servers",
   LEADERBOARD: "leaderboard",
   TICKETS: "tickets",
+  SHOP: "shop",
+  SUPPORT: "support",
 };

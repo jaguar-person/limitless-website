@@ -5,7 +5,6 @@ import Decoration from "../../../components/decoration";
 import Button from "../../../components/button";
 import { IServer } from "../../../utils/types";
 
-
 interface IServers {
   servers: IServer[];
 }
@@ -37,7 +36,7 @@ const Servers: React.FC<IServers> = ({ servers }) => {
       </div>
       <Button
         name="explore servers"
-        bgColor="info-light"
+        bgColor="bright"
         rightIcon="site"
         size="xl"
         width={isMobile ? "full" : "fit"}

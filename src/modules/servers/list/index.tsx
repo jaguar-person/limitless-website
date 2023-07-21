@@ -25,14 +25,14 @@ const ServersList: React.FC<IServersList> = ({ servers }) => {
         <Line />
       </div>
       <div className="flex flex-col gap-4 pt-4 md:pt-0 items-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2.5 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-2.5 ">
           {servers.map((item, i) => (
             <ServerCard server={item} key={i} />
           ))}
         </div>
         <Button
           name="explore servers"
-          bgColor="info-light"
+          bgColor="bright"
           rightIcon="site"
           size="xl"
           width={isMobile ? "full" : "fit"}
