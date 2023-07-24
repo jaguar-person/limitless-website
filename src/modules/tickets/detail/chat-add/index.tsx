@@ -25,7 +25,7 @@ const TicketsDetailChatAdd: React.FC<ITicketsDetailChatAdd> = ({
           <textarea
             className="card-container p-5 text-secondary focus:outline-none resize-none"
             rows={5}
-            defaultValue="Write a response for this ticket."
+            placeholder="Write a response for this ticket."
           />
         </div>
         <div className="flex gap-2.5 self-end">

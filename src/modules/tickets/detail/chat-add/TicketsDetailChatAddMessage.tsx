@@ -15,7 +15,7 @@ const TicketsDetailChatAddMessage: React.FC<ITicketsDetailChatAddMessage> = ({
     <div className="flex flex-col gap-4">
       <textarea
         className="w-full text-sm text-secondary min-h-[250px] bg-secondary-background border border-secondary-background-accent rounded-lg p-4 focus:outline-none resize-none"
-        defaultValue="Please type your message here..."
+        placeholder="Please type your message here..."
       />
       <FileUpload />
       <div className="flex gap-2.5">
