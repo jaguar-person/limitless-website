@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import LogoIcon from "../images/logo.svg";
-import NavItem from "../components/nav-item";
 import User from "../components/user";
 import Menu from "../components/menu";
 import { ROUTING_PATH } from "../utils/constants";
+import Nav from "../modules/shared/nav";
 
 const TopBar: React.FC = () => {
   const router = useRouter();
@@ -33,38 +33,8 @@ const TopBar: React.FC = () => {
           router.push(ROUTING_PATH.DASHBOARD);
         }}
       />
-      <div className="hidden md:flex gap-10 text-lg text-secondary">
-        <NavItem
-          path={ROUTING_PATH.LEADERBOARD}
-          isCurrentPath={currentPathName === ROUTING_PATH.LEADERBOARD}
-        >
-          Leaderboard
-        </NavItem>
-        <NavItem
-          path={ROUTING_PATH.SUPPORT}
-          isCurrentPath={currentPathName === ROUTING_PATH.SUPPORT}
-        >
-          Support
-        </NavItem>
-        <a
-          href="https://store.limitlessrust.com/category/all-packages"
-          target="_blank"
-          className="cursor-pointer md:text-lg text-3xl md:font-normal"
-        >
-          Shop
-        </a>
-        <NavItem
-          path={ROUTING_PATH.TICKETS}
-          isCurrentPath={currentPathName === ROUTING_PATH.TICKETS}
-        >
-          My Tickets
-        </NavItem>
-        <NavItem
-          path={ROUTING_PATH.SERVERS}
-          isCurrentPath={currentPathName === ROUTING_PATH.SERVERS}
-        >
-          Servers
-        </NavItem>
+      <div className="hidden md:block">
+        <Nav currentPathName={currentPathName} />
       </div>
       <div className="hidden md:block">
         <User />

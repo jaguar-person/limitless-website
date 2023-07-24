@@ -3,12 +3,11 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import MobileMenuIcon from "../../images/mobile-menu.svg";
 import MobileCloseIcon from "../../images/mobile-close.svg";
-import NavItem from "../nav-item";
 import AvatarIcon from "../../images/avatar.png";
 
-import { ROUTING_PATH } from "../../utils/constants";
 import Footer from "../../layouts/Footer";
 import Button from "../button";
+import Nav from "../../modules/shared/nav";
 
 const Menu: React.FC = () => {
   const [isMenu, setMenu] = useState(false);
@@ -28,39 +27,7 @@ const Menu: React.FC = () => {
       {!!isMenu && (
         <div className="fixed top-16 left-0 w-full h-full bg-background">
           <div className="relative flex flex-col gap-14 mt-10 px-12 z-30">
-            <div className="flex flex-col gap-8">
-              <NavItem
-                path={ROUTING_PATH.LEADERBOARD}
-                isCurrentPath={currentPathName === ROUTING_PATH.LEADERBOARD}
-              >
-                Leaderboard
-              </NavItem>
-              <NavItem
-                path={ROUTING_PATH.SUPPORT}
-                isCurrentPath={currentPathName === ROUTING_PATH.SUPPORT}
-              >
-                Support
-              </NavItem>
-              <a
-                href="https://store.limitlessrust.com/category/all-packages"
-                target="_blank"
-                className="cursor-pointer md:text-lg text-3xl md:font-normal text-secondary"
-              >
-                Shop
-              </a>
-              <NavItem
-                path={ROUTING_PATH.TICKETS}
-                isCurrentPath={currentPathName === ROUTING_PATH.TICKETS}
-              >
-                My Tickets
-              </NavItem>
-              <NavItem
-                path={ROUTING_PATH.SERVERS}
-                isCurrentPath={currentPathName === ROUTING_PATH.SERVERS}
-              >
-                Servers
-              </NavItem>
-            </div>
+            <Nav currentPathName={currentPathName} />
             <div className="flex flex-col gap-4">
               <div
                 className="flex gap-4 items-center"
