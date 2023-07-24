@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .btn-custom {
     @apply rounded-md py-5 px-5 flex gap-3 items-center justify-center cursor-pointer font-bold
 }
@@ -19,7 +20,7 @@
 }
 
 .dropdown-container {
-    @apply mt-2.5 z-40 right-0 absolute rounded-md bg-secondary-background-accent border-secondary-background flex flex-col gap-2.5 p-2.5 w-full cursor-pointer
+    @apply mt-2.5 z-40 right-0 absolute rounded-md bg-secondary-background border border-secondary-background-accent flex flex-col gap-2.5 pt-2.5 w-full cursor-pointer
 }
 
 .card-container {

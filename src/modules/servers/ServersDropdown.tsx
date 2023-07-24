@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DropDown from "../../components/dropdown";
 
 const ServersDropDown: React.FC = () => {
@@ -15,11 +15,20 @@ const ServersDropDown: React.FC = () => {
       <div className="dropdown-container min-w-[190px] ">
         {gameModes.map((mode, key) => (
           <div
-            className="flex gap-2 border-b  py-2 border-secondary-background-accent items-center"
+            className="flex items-center gap-2 py-2 px-2 border-b border-secondary-background-accent"
             key={key}
           >
-            <input type="checkbox" className="w-3.5 h-3.5" />
-            <p className="text-secondary">{mode}</p>
+            <input
+              id={"checkbox" + key}
+              type="checkbox"
+              className="h-4 w-4 text-gems border-gems"
+            />
+            <label
+              htmlFor={"checkbox" + key}
+              className="cursor-pointer select-none text-secondary"
+            >
+              {mode}
+            </label>
           </div>
         ))}
       </div>
