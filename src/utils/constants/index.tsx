@@ -3,6 +3,7 @@ export const ROUTING_PATH = {
   SERVERS: "servers",
   LEADERBOARD: "leaderboard",
   TICKETS: "tickets",
+  ACCOUNTS: "accounts",
   SHOP: "shop",
   SUPPORT: "support",
 };

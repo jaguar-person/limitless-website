@@ -13,23 +13,23 @@ export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
 const poppins = localFont({
   src: [
     {
-      path: "./fonts/Poppins-Regular.ttf",
+      path: "./_fonts/Poppins-Regular.ttf",
       weight: "400",
     },
     {
-      path: "./fonts/Poppins-Medium.ttf",
+      path: "./_fonts/Poppins-Medium.ttf",
       weight: "500",
     },
     {
-      path: "./fonts/Poppins-SemiBold.ttf",
+      path: "./_fonts/Poppins-SemiBold.ttf",
       weight: "600",
     },
     {
-      path: "./fonts/Poppins-Bold.ttf",
+      path: "./_fonts/Poppins-Bold.ttf",
       weight: "700",
     },
     {
-      path: "./fonts/Poppins-ExtraBold.ttf",
+      path: "./_fonts/Poppins-ExtraBold.ttf",
       weight: "800",
     },
   ],

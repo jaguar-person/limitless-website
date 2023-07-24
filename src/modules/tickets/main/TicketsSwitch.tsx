@@ -1,14 +1,11 @@
-import React, { MouseEventHandler } from "react";
+import { useRouter } from "next/router";
+import React, { MouseEventHandler, useState } from "react";
+import { ROUTING_PATH } from "../../../utils/constants";
 
 interface ISwitchIcon {
   isClicked: boolean;
-  onClick: () => void;
+  onClick: MouseEventHandler<HTMLDivElement> | undefined;
   name: string;
-}
-
-interface ITicketsSwitch {
-  isClicked: boolean;
-  onSwitch: (isSwitch: boolean) => () => void;
 }
 
 const SwitchIcon: React.FC<ISwitchIcon> = ({ isClicked, onClick, name }) => (
@@ -25,18 +22,22 @@ const SwitchIcon: React.FC<ISwitchIcon> = ({ isClicked, onClick, name }) => (
   </div>
 );
 
-const TicketsSwitch: React.FC<ITicketsSwitch> = ({ isClicked, onSwitch }) => {
+const TicketsSwitch: React.FC<{ currentPath: string }> = ({ currentPath }) => {
+  const router = useRouter();
+  const handleSwitch = (currentPath: string) => () => {
+    router.push(`/${currentPath}`);
+  };
   return (
     <div className="flex md:gap-2.5 border-b-secondary-background border-b-[3px]">
       <SwitchIcon
         name="Link Accounts"
-        isClicked={!isClicked}
-        onClick={onSwitch(false)}
+        isClicked={currentPath === ROUTING_PATH.ACCOUNTS}
+        onClick={handleSwitch(ROUTING_PATH.ACCOUNTS)}
       />
       <SwitchIcon
         name="Tickets"
-        isClicked={isClicked}
-        onClick={onSwitch(true)}
+        isClicked={currentPath === ROUTING_PATH.TICKETS}
+        onClick={handleSwitch(ROUTING_PATH.TICKETS)}
       />
     </div>
   );
