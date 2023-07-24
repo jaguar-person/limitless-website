@@ -1,29 +1,33 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { CardChecked, CardChecking } from "../issue/TicketsAddIssueCard";
+import { SERVER_TYPES } from "../../../../utils/enums";
 
 interface ITicketsAddServerCard {
-  type: string;
+  type: SERVER_TYPES;
   name: string;
   count: number;
+  currentServer: boolean;
+  onCurrentServer: () => void;
 }
 
 const TicketsAddServerCard: React.FC<ITicketsAddServerCard> = ({
   type,
   name,
   count,
+  currentServer,
+  onCurrentServer,
 }) => {
-  const [isChecked, setChecked] = useState(false);
   return (
     <div
       className={
         "card-container flex flex-row gap-4 justify-between items-center md:vertical p-4 md:p-8 " +
-        (isChecked
+        (currentServer
           ? "border-gems text-white"
           : "border-secondary-background-accent text-secondary")
       }
       onClick={() => {
-        setChecked(!isChecked);
+        onCurrentServer();
       }}
     >
       <Image
@@ -36,7 +40,7 @@ const TicketsAddServerCard: React.FC<ITicketsAddServerCard> = ({
         {count}x {name}
       </p>
       <div className="relative md:absolute md:top-3 md:right-3">
-        {isChecked ? <CardChecked /> : <CardChecking />}
+        {currentServer ? <CardChecked /> : <CardChecking />}
       </div>
     </div>
   );

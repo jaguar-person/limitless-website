@@ -21,3 +21,8 @@ export enum TicketsAddSteps {
   PLAYER,
   DESCRIPTION,
 }
+
+export enum SERVER_TYPES {
+  USA = "usa",
+  EUR = "eur",
+}
