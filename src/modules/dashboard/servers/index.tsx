@@ -4,6 +4,7 @@ import ServerCard from "../../../components/card";
 import Decoration from "../../../components/decoration";
 import Button from "../../../components/button";
 import { IServer } from "../../../utils/types";
+import { useRouter } from "next/router";
 
 interface IServers {
   servers: IServer[];
@@ -11,6 +12,7 @@ interface IServers {
 
 const Servers: React.FC<IServers> = ({ servers }) => {
   const isMobile = useIsMobile();
+  const router = useRouter();
   return (
     <div className="text-center flex flex-col items-center gap-2 md:gap-9">
       <div className=" flex flex-col gap-2 py-3">
@@ -40,6 +42,9 @@ const Servers: React.FC<IServers> = ({ servers }) => {
         rightIcon="site"
         size="xl"
         width={isMobile ? "full" : "fit"}
+        onClick={() => {
+          router.push("/servers");
+        }}
       />
     </div>
   );

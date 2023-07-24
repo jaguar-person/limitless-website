@@ -30,13 +30,6 @@ const ServersList: React.FC<IServersList> = ({ servers }) => {
             <ServerCard server={item} key={i} />
           ))}
         </div>
-        <Button
-          name="explore servers"
-          bgColor="bright"
-          rightIcon="site"
-          size="xl"
-          width={isMobile ? "full" : "fit"}
-        />
       </div>
     </div>
   );
