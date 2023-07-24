@@ -1,12 +1,15 @@
 import { NextPage } from "next";
+import DashBoardLayout from "../layouts/Dashboard";
 import MainLayout from "../layouts/Main";
 import Dashboard from "../modules/dashboard";
 
 const DashboardPage: NextPage = () => {
   return (
-    <MainLayout>
-      <Dashboard />
-    </MainLayout>
+    <DashBoardLayout>
+      <MainLayout>
+        <Dashboard />
+      </MainLayout>
+    </DashBoardLayout>
   );
 };
 
