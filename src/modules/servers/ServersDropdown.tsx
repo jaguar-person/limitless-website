@@ -15,7 +15,7 @@ const ServersDropDown: React.FC = () => {
       <div className="dropdown-container min-w-[190px] ">
         {gameModes.map((mode, key) => (
           <label
-            className="flex items-center gap-2 text-secondary ml-2 border-b border-b-secondary-background-accent pb-2"
+            className="flex items-center gap-2 text-secondary ml-2 border-b border-b-secondary-background-accent pb-2 cursor-pointer"
             key={key}
           >
             <input type="checkbox" name="checkbox" />
