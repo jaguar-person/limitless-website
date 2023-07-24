@@ -51,7 +51,12 @@ const Menu: React.FC = () => {
               </NavItem>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="flex gap-4 items-center">
+              <div
+                className="flex gap-4 items-center"
+                onClick={() => {
+                  router.push("/accounts");
+                }}
+              >
                 <Image src={AvatarIcon} width={64} height={64} alt="Avatar" />
                 <div className="flex flex-col gap-2">
                   <p className="text-white text-3xl">TripleZone</p>
