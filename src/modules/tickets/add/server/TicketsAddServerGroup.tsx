@@ -1,13 +1,7 @@
 import React from "react";
 import TicketsAddServerCard from "./TicketsAddServerCard";
 import { SERVER_TYPES } from "../../../../utils/enums";
-
-type ServerType = {
-  name: string;
-  count: number;
-  isChecked: boolean;
-  type: SERVER_TYPES;
-};
+import { ServerType } from "../../../../utils/types";
 
 interface ITicketsAddServerGroup {
   servers: ServerType[];
