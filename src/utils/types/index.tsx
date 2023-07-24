@@ -1,4 +1,5 @@
 import { TicketStatus } from "../enums";
+import { SERVER_TYPES } from "../enums";
 
 export type TicketTableType = {
   id: string;
@@ -35,4 +36,19 @@ export type IServer = {
   description: string;
   player_alive: number;
   player_total: number;
+};
+
+export type ServerType = {
+  name: string;
+  count: number;
+  isChecked: boolean;
+  type: SERVER_TYPES;
+};
+
+export type PlayerType = {
+  name: string;
+  id: string;
+  icon: string;
+  status: boolean;
+  isChecked: boolean;
 };
