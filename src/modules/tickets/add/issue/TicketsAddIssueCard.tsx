@@ -6,6 +6,8 @@ import { CheckIconChecked } from "../../../../components/stepper";
 interface ITicketsAddIssueCard {
   title: string;
   description: string;
+  currentIssue: boolean;
+  onCurrentIssue: () => void;
 }
 
 export const CardChecking = () => (
@@ -20,20 +22,21 @@ export const CardChecked = () => (
 const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
   title,
   description,
+  currentIssue,
+  onCurrentIssue,
 }) => {
-  const [isChecked, setChecked] = useState(false);
   return (
     <div
       className={
         "card-container flex flex-col items-start md:items-center gap-2 p-4 " +
-        (isChecked ? "border-gems" : "border-secondary-background-accent")
+        (currentIssue ? "border-gems" : "border-secondary-background-accent")
       }
       onClick={() => {
-        setChecked(!isChecked);
+        onCurrentIssue();
       }}
     >
       <div className="absolute top-3 right-3">
-        {isChecked ? <CardChecked /> : <CardChecking />}
+        {currentIssue ? <CardChecked /> : <CardChecking />}
       </div>
       <Image
         src={IssueIcon}
