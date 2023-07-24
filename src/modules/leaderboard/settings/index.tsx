@@ -44,7 +44,11 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
             title="Kills"
             bgColor="secondary-background-accent"
             width="full"
-          />
+          >
+            <div className="dropdown-container min-w-[190px] text-secondary">
+              Some Stats
+            </div>
+          </DropDown>
         </LeaderBoardSettingsItem>
       </div>
     </div>
