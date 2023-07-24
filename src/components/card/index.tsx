@@ -5,6 +5,7 @@ import UsersIcon from "../../images/users.svg";
 import ServerIcon from "../../images/server.svg";
 
 import { IServer } from "../../utils/types";
+import Button from "../button";
 
 interface IServerCard {
   server: IServer;
@@ -45,10 +46,7 @@ const ServerCard: React.FC<IServerCard> = ({ server }) => {
             </p>
           </div>
         </div>
-        <div className="flex gap-2.5 py-4 px-7 md:px-8 bg-gems font-bold rounded-md">
-          <p className="font-bold text-background">Copy IP</p>
-          <Image src={LinkIcon} width={24} height={24} alt="link" />
-        </div>
+        <Button name="Copy IP" rightIcon="link_2" bgColor="gems" />
       </div>
     </div>
   );

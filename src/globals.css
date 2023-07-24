@@ -6,6 +6,10 @@
     @apply rounded-md py-5 px-5 flex gap-3 items-center justify-center cursor-pointer font-bold
 }
 
+.btn-animation {
+    @apply transform transition-transform active:scale-y-75 hover:scale-105 duration-200
+}
+
 .tr--hover {
     @apply hover:border hover:border-gems hover:bg-gradient-to-l hover:from-gems/[6%] hover:to-gems/[38%]
 }
