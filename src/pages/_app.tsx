@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { IsSsrMobileContext } from "../utils/hooks/useIsMobile";
 
 import "../globals.css";
+import "../styles/custom-checkbox.css";
 
 export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
   hasNoLayout?: boolean;
