@@ -7,8 +7,8 @@ import USAIcon from "../../../images/usa.svg";
 
 const LeaderBoardSettingsServerDropDown: React.FC = () => {
   const options = {
-    europe: ["2x Solo", "2x Solo", "2x Solo"],
-    america: ["3x Solo", "3x Solo", "3x Solo"],
+    europe: ["2x Solo-1", "2x Solo-2", "2x Solo-3"],
+    america: ["3x Solo-1", "3x Solo-2", "3x Solo-3"],
   };
 
   const [currentServer, setCurrentServer] = useState("");
@@ -23,8 +23,12 @@ const LeaderBoardSettingsServerDropDown: React.FC = () => {
       bgColor="secondary-background-accent"
       width="full"
     >
-      <div className="dropdown-container">
-        <SearchBar icon="search_2" placeholder="Search a server..." />
+      <div className="dropdown-container px-2.5 !bg-secondary-background-accent">
+        <SearchBar
+          icon="search_2"
+          placeholder="Search a server..."
+          background="secondary-background"
+        />
         {Object.entries(options).map((server) => (
           <div key={server[0]}>
             <div className="flex justify-between text-xs">
