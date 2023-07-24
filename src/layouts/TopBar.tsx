@@ -46,12 +46,13 @@ const TopBar: React.FC = () => {
         >
           Support
         </NavItem>
-        <NavItem
-          path={ROUTING_PATH.SHOP}
-          isCurrentPath={currentPathName === ROUTING_PATH.SHOP}
+        <a
+          href="https://store.limitlessrust.com/category/all-packages"
+          target="_blank"
+          className="cursor-pointer md:text-lg text-3xl md:font-normal"
         >
           Shop
-        </NavItem>
+        </a>
         <NavItem
           path={ROUTING_PATH.TICKETS}
           isCurrentPath={currentPathName === ROUTING_PATH.TICKETS}

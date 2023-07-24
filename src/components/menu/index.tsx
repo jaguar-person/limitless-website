@@ -41,7 +41,13 @@ const Menu: React.FC = () => {
               >
                 Support
               </NavItem>
-              <NavItem>Shop</NavItem>
+              <a
+                href="https://store.limitlessrust.com/category/all-packages"
+                target="_blank"
+                className="cursor-pointer md:text-lg text-3xl md:font-normal text-secondary"
+              >
+                Shop
+              </a>
               <NavItem
                 path={ROUTING_PATH.TICKETS}
                 isCurrentPath={currentPathName === ROUTING_PATH.TICKETS}
