@@ -13,7 +13,7 @@ import Button from "../button";
 const Menu: React.FC = () => {
   const [isMenu, setMenu] = useState(false);
   const router = useRouter();
-  const currentPathName = router.pathname.split("/")[1];
+  const currentPathName = router.pathname;
   return (
     <div className="md:hidden block cursor-pointer">
       <Image
@@ -35,7 +35,12 @@ const Menu: React.FC = () => {
               >
                 Leaderboard
               </NavItem>
-              <NavItem>Support</NavItem>
+              <NavItem
+                path={ROUTING_PATH.SUPPORT}
+                isCurrentPath={currentPathName === ROUTING_PATH.SUPPORT}
+              >
+                Support
+              </NavItem>
               <NavItem>Shop</NavItem>
               <NavItem
                 path={ROUTING_PATH.TICKETS}

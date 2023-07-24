@@ -7,7 +7,7 @@ import { ROUTING_PATH } from "../../../utils/constants";
 
 const TicketsMain: React.FC = () => {
   const router = useRouter();
-  const currentPath = router.pathname.split("/")[1];
+  const currentPath = router.pathname;
   return (
     <div className="flex flex-col gap-8">
       <TicketsSwitch currentPath={currentPath} />

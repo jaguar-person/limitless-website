@@ -16,7 +16,7 @@ const NavItem: React.FC<INavItem> = ({ children, path, isCurrentPath }) => {
         (isCurrentPath ? "text-gems font-bold" : "text-secondary font-medium ")
       }
       onClick={() => {
-        router.push(`/${path}`);
+        router.push(`${path}`);
       }}
     >
       {children}

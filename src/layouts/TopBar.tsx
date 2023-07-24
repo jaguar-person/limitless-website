@@ -9,7 +9,7 @@ import { ROUTING_PATH } from "../utils/constants";
 
 const TopBar: React.FC = () => {
   const router = useRouter();
-  const currentPathName = router.pathname.split("/")[1];
+  const currentPathName = router.pathname;
 
   return (
     <div className="flex justify-between items-center relative z-30">
@@ -20,7 +20,7 @@ const TopBar: React.FC = () => {
         height={64}
         className="hidden md:block"
         onClick={() => {
-          router.push("/");
+          router.push(ROUTING_PATH.DASHBOARD);
         }}
       />
       <Image
@@ -30,7 +30,7 @@ const TopBar: React.FC = () => {
         height={32}
         className="block md:hidden"
         onClick={() => {
-          router.push("/");
+          router.push(ROUTING_PATH.DASHBOARD);
         }}
       />
       <div className="hidden md:flex gap-10 text-lg text-secondary">
