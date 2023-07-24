@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import TicketsSwitch from "./TicketsSwitch";
 import TicketsLinkedAccounts from "./linked-accounts";
 import TicketsMyTickets from "./my-tickets";
+import { useRouter } from "next/router";
+import { ROUTING_PATH } from "../../../utils/constants";
 
 const TicketsMain: React.FC = () => {
-  const [isTicket, setSwitchTicket] = useState(true);
-
-  const handleSwitch = (flag: boolean) => () => {
-    setSwitchTicket(flag);
-  };
-
+  const router = useRouter();
+  const currentPath = router.pathname.split("/")[1];
   return (
     <div className="flex flex-col gap-8">
-      <TicketsSwitch isClicked={isTicket} onSwitch={handleSwitch} />
-      {isTicket ? <TicketsMyTickets /> : <TicketsLinkedAccounts />}
+      <TicketsSwitch currentPath={currentPath} />
+      {currentPath === ROUTING_PATH.TICKETS ? (
+        <TicketsMyTickets />
+      ) : (
+        <TicketsLinkedAccounts />
+      )}
     </div>
   );
 };
