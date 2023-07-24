@@ -23,7 +23,7 @@ const Button: React.FC<IButton> = ({
   onClick,
 }) => (
   <button
-    className={`z-10 rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} w-${width}`}
+    className={`z-10 rounded-md py-3 px-5 flex gap-2 items-center justify-center cursor-pointer font-bold bg-${bgColor} w-${width} outline-none focus:ring-4 shadow-lg btn-animation`}
     onClick={onClick}
   >
     {!!leftIcon && (
