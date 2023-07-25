@@ -5,6 +5,7 @@ import Decoration from "../../../components/decoration";
 import Button from "../../../components/button";
 import { IServer } from "../../../utils/types";
 import { useRouter } from "next/router";
+import { ROUTING_PATH } from "../../../utils/constants";
 
 interface IServers {
   servers: IServer[];
@@ -43,7 +44,7 @@ const Servers: React.FC<IServers> = ({ servers }) => {
         size="xl"
         width={isMobile ? "full" : "fit"}
         onClick={() => {
-          router.push("/servers");
+          router.push(ROUTING_PATH.SERVERS);
         }}
       />
     </div>

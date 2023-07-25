@@ -6,6 +6,7 @@ import Pagination from "../../../../components/pagination";
 import { useRouter } from "next/router";
 import Button from "../../../../components/button";
 import { useIsMobile } from "../../../../utils/hooks/useIsMobile";
+import { ROUTING_PATH } from "../../../../utils/constants";
 
 const MOCK_TICKETS = [
   {
@@ -69,7 +70,7 @@ const TicketsMyTickets: React.FC = () => {
         </p>
         <div
           onClick={() => {
-            router.push("./tickets/add");
+            router.push(ROUTING_PATH.TICKETS_ADD);
           }}
         >
           <Button

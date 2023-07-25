@@ -9,6 +9,7 @@ import TicketDetailsInfo from "./TicketDetailsInfo";
 import MobileBgImage from "../../../../images/mobile-ticket-bg.png";
 import { TicketsCloseTicketModal } from "../../modals";
 import Modal from "../../../../components/modal";
+import { ROUTING_PATH } from "../../../../utils/constants";
 interface ITicketsDetailHeader {
   ticket: {
     status: TicketStatus;
@@ -38,7 +39,7 @@ const TicketsDetailHeader: React.FC<ITicketsDetailHeader> = ({ ticket }) => {
             title="Cheater"
             size="lg"
             onClick={() => {
-              router.push("/tickets");
+              router.push(ROUTING_PATH.TICKETS);
             }}
           />
           <TicketStatusBadge status={ticket.status} />

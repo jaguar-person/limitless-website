@@ -18,7 +18,7 @@ const TopBar: React.FC = () => {
         alt="My image"
         width={64}
         height={64}
-        className="hidden md:block"
+        className="hidden md:block cursor-pointer"
         onClick={() => {
           router.push(ROUTING_PATH.DASHBOARD);
         }}
@@ -28,7 +28,7 @@ const TopBar: React.FC = () => {
         alt="My image"
         width={32}
         height={32}
-        className="block md:hidden"
+        className="block md:hidden cursor-pointer"
         onClick={() => {
           router.push(ROUTING_PATH.DASHBOARD);
         }}

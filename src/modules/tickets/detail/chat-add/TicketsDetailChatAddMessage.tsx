@@ -2,6 +2,7 @@ import React from "react";
 import FileUpload from "../../../../components/file-upload";
 import Button from "../../../../components/button";
 import { useRouter } from "next/router";
+import { ROUTING_PATH } from "../../../../utils/constants";
 
 interface ITicketsDetailChatAddMessage {
   onMessage: () => void;
@@ -30,7 +31,7 @@ const TicketsDetailChatAddMessage: React.FC<ITicketsDetailChatAddMessage> = ({
         <div
           className="w-1/2"
           onClick={() => {
-            router.push("/tickets");
+            router.push(ROUTING_PATH.TICKETS);
           }}
         >
           <Button bgColor="gems" name="Send" width="full" />
