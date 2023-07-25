@@ -31,13 +31,25 @@
 }
 
 .rank-1 {
- @apply bg-gradient-to-r from-points/[15%] md:via-secondary-background-accent to-background md:to-secondary-background-accent
+ @apply bg-gradient-to-r from-points/[15%] to-secondary-background-accent
 }
 
 .rank-2 {
- @apply bg-gradient-to-l from-background md:from-secondary-background to-[#BEBEBE]/20   
+ @apply bg-gradient-to-l from-secondary-background-accent  to-[#BEBEBE]/20   
 }
 
 .rank-3 {
-    @apply bg-gradient-to-l from-background md:from-secondary-background-accent md:via-secondary-background-accent to-[#FF9B3E]/[15%]
+    @apply bg-gradient-to-l from-secondary-background-accent  to-[#FF9B3E]/[15%]
+}
+
+.rank-1__mobile {
+    @apply bg-gradient-to-r from-points/[15%]  to-background
+}
+
+.rank-2__mobile {
+    @apply bg-gradient-to-l from-background  to-[#BEBEBE]/20   
+}
+   
+.rank-3__mobile {
+    @apply bg-gradient-to-l from-background  to-[#FF9B3E]/[15%]
 }
