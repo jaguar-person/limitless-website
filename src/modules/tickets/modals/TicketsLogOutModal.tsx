@@ -14,6 +14,7 @@ const TicketsLogOutModal: React.FC = () => {
         onClick={() => {
           setShow(true);
         }}
+        width="full"
       />
       {isShow && (
         <Modal>

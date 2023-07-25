@@ -10,6 +10,7 @@ import Footer from "../../layouts/Footer";
 import Button from "../button";
 import Nav from "../../modules/shared/nav";
 import { ROUTING_PATH } from "../../utils/constants";
+import { TicketsLogOutModal } from "../../modules/tickets/modals";
 
 const Menu: React.FC = () => {
   const [isMenu, setMenu] = useState(false);
@@ -66,7 +67,7 @@ const Menu: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <Button name="Log Out" bgColor="danger" width="full" />
+              <TicketsLogOutModal />
             </div>
             <div className="absolute -bottom-48 left-0 w-full ">
               <Footer />
