@@ -20,7 +20,7 @@ const LeaderBoard: React.FC = () => {
             setLeaderBoard(type);
           }}
         />
-        <LeaderBoardMain flag={isLeaderBoard} />
+        <LeaderBoardMain />
       </div>
     </div>
   );
