@@ -14,9 +14,9 @@ const LeaderTableMobile: React.FC<ILeaderTableMobile> = ({ index, item }) => (
     className={clsx("py-2 px-4 flex gap-3 relative", {
       "bg-[#2A2737] border-[#48406D]": index % 2 === 0,
       "bg-background": index % 2 === 1,
-      "rank-1": index === 0,
-      "rank-2": index === 1,
-      "rank-3": index === 2,
+      "rank-1__mobile": index === 0,
+      "rank-2__mobile": index === 1,
+      "rank-3__mobile": index === 2,
     })}
   >
     <div className="absolute top-2 right-4 text-white">
