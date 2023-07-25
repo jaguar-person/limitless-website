@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import MobileMenuIcon from "../../images/mobile-menu.svg";
 import MobileCloseIcon from "../../images/mobile-close.svg";
 import AvatarIcon from "../../images/avatar.png";
+import LogoIcon from "../../images/logo.svg";
 
 import Footer from "../../layouts/Footer";
 import Button from "../button";
@@ -26,8 +27,29 @@ const Menu: React.FC = () => {
         }}
       />
       {!!isMenu && (
-        <div className="fixed top-16 left-0 w-full h-full bg-background">
-          <div className="relative flex flex-col gap-14 mt-10 px-12 z-30">
+        <div className="fixed top-0 left-0 w-full h-full bg-background">
+          <div className="flex justify-between py-6 px-4">
+            <Image
+              src={LogoIcon}
+              alt="My image"
+              width={32}
+              height={32}
+              className="block md:hidden cursor-pointer"
+              onClick={() => {
+                router.push(ROUTING_PATH.DASHBOARD);
+              }}
+            />
+            <Image
+              src={isMenu ? MobileCloseIcon : MobileMenuIcon}
+              width={32}
+              height={32}
+              alt="menu"
+              onClick={() => {
+                setMenu(!isMenu);
+              }}
+            />
+          </div>
+          <div className="relative flex flex-col gap-14 mt-5 px-12 z-30">
             <Nav currentPathName={currentPathName} />
             <div className="flex flex-col gap-4 cursor-pointer">
               <div
@@ -46,7 +68,7 @@ const Menu: React.FC = () => {
               </div>
               <Button name="Log Out" bgColor="danger" width="full" />
             </div>
-            <div className="absolute -bottom-56 left-0 w-full ">
+            <div className="absolute -bottom-48 left-0 w-full ">
               <Footer />
             </div>
           </div>

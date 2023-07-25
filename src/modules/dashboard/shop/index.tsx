@@ -29,13 +29,19 @@ const Shop: React.FC = () => {
           Purchase a package from our webstore, gain exclusive perks and show
           your support for our servers. Visit the webstore now!
         </p>
-        <Button
-          name="visit shop"
-          bgColor="points"
-          rightIcon="site"
-          size="xl"
-          width={isMobile ? "full" : "fit"}
-        />
+        <a
+          href="https://store.limitlessrust.com/category/all-packages"
+          target="_blank"
+          className="w-full md:w-fit"
+        >
+          <Button
+            name="visit shop"
+            bgColor="points"
+            rightIcon="site"
+            size="xl"
+            width={isMobile ? "full" : "fit"}
+          />
+        </a>
       </div>
     </div>
   );
