@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ITicketAddStep } from "../issue";
 import TicketsAddTitle from "../TicketsAddTitle";
 import TicketsAddServerCard from "./TicketsAddServerCard";
 import { SERVER_TYPES } from "../../../../utils/enums";
@@ -98,9 +97,18 @@ const MOCK_SERVERS = [
   },
 ];
 
-const TicketAddSelectServer: React.FC<ITicketAddStep> = ({ onCurrentStep }) => {
+interface ITicketAddSelectServer {
+  onCurrentStep: () => void;
+  onDisabled: () => void;
+}
+
+const TicketAddSelectServer: React.FC<ITicketAddSelectServer> = ({
+  onCurrentStep,
+  onDisabled,
+}) => {
   const [servers, setServers] = useState(MOCK_SERVERS);
   const handleCurrentServer = (currentIssue: number) => () => {
+    onDisabled();
     setServers(
       servers.map((server, i) => {
         if (i === currentIssue) {
