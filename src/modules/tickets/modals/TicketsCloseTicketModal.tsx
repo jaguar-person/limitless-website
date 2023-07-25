@@ -7,7 +7,7 @@ const TicketsCloseTicketModal: React.FC = () => {
   const [isShow, setShow] = useState(false);
   const isMobile = useIsMobile();
   return (
-    <div className="relative z-50">
+    <div>
       <Button
         name="Close Ticket"
         bgColor="danger"
