@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroIcon from "../../../images/hero.svg";
 import MobileHeroIcon from "../../../images/mobile-hero.png";
 import Button from "../../../components/button";
+import HeroButton from "./HeroButton";
 
 const Hero: React.FC = () => {
   return (
@@ -28,13 +29,9 @@ const Hero: React.FC = () => {
           <span className="text-points">Limitless Rust</span> The Ultimate
           Experience
         </div>
-        <div className="flex md:flex-row flex-col gap-4 md:gap-10 relative z-20 w-full md:w-[45%]">
-          <div className="w-full md:w-1/2">
-            <Button name="shop" size="xl" width="full" />
-          </div>
-          <div className="w-full md:w-1/2">
-            <Button name="Join Discord" size="xl" bgColor="info" width="full" />
-          </div>
+        <div className="flex lg:flex-row flex-col gap-4 lg:gap-10 relative z-20 w-full lg:w-[45%]">
+          <HeroButton name="Shop" color="gems" />
+          <HeroButton name="Join Discord" color="info" />
         </div>
       </div>
     </div>
