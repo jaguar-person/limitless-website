@@ -1,10 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import Pagination from "../../../components/pagination";
+import LeaderBoardButton from "../shared/LeaderBoardButton";
 import LeaderTable from "../shared/LeaderTable";
-
-import RightIcon from "../../../images/arrow-right.svg";
-import FiltersModal from "../shared/FiltersModal";
 
 const MOCK_DATA = [
   {
@@ -99,10 +96,14 @@ const MOCK_DATA = [
   },
 ];
 
-const LeaderBoardTable: React.FC = () => (
+interface ILeaderBoardTable {
+  onFlag: () => void;
+}
+
+const LeaderBoardTable: React.FC<ILeaderBoardTable> = ({ onFlag }) => (
   <div className="flex flex-col gap-6">
     <div className="md:hidden block">
-      <FiltersModal />
+      <LeaderBoardButton name="Heatmap" onClick={onFlag} />
     </div>
     <div className="md:hidden block">
       <Pagination />
