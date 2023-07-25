@@ -22,9 +22,13 @@ const LeaderBoardMain: React.FC<ILeaderboardMain> = ({ flag }) => (
           bgColor="secondary-background-accent"
           width="fit"
         >
-          <div className="dropdown-container text-secondary p-2 ">
-            <div>Lifetime</div>
-            <div>Wipe</div>
+          <div className="dropdown-container text-secondary">
+            <div className="border-b border-b-secondary-background-accent pl-2">
+              Lifetime
+            </div>
+            <div className="border-b border-b-secondary-background-accent pl-2 pb-2">
+              Wipe
+            </div>
           </div>
         </DropDown>
       </div>
