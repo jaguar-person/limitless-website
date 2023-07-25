@@ -4,6 +4,7 @@ import RightIcon from "../../../images/arrow-right.svg";
 import SearchBar from "../../../components/search-bar";
 import DropDown from "../../../components/dropdown";
 import CloseIcon from "../../../images/mobile-close.svg";
+import Button from "../../../components/button";
 
 interface IDropDownWithTitle {
   title: string;
@@ -24,19 +25,15 @@ const FiltersModal: React.FC = () => {
   const [isShow, setShow] = useState(false);
   return (
     <div className={"relative " + (isShow ? "z-40" : "z-20")}>
-      <div
-        className="flex justify-between py-3 px-5 bg-gems items-center rounded-md"
-        onClick={() => {
-          setShow(true);
-        }}
-      >
-        <p className="text-background font-bold text-base">Show Heatmap</p>
-        <Image
-          src={RightIcon}
-          width={20}
-          height={20}
-          alt="icon"
-          className="w-5 h-5"
+      <div className="border border-secondary-background-accent rounded-[4px] w-fit">
+        <Button
+          name="Filters"
+          color="secondary"
+          bgColor="secondary-background"
+          rightIcon="filter"
+          onClick={() => {
+            setShow(true);
+          }}
         />
       </div>
       {isShow && (
