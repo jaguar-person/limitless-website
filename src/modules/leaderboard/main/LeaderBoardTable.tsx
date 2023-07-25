@@ -108,6 +108,7 @@ const LeaderBoardTable: React.FC = () => (
       <Pagination />
     </div>
     <LeaderTable data={MOCK_DATA} />
+    <Pagination />
   </div>
 );
 
