@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import RefreshIcon from "../../../../images/refresh.svg";
-import SiteIcon from "../../../../images/site.svg";
 import DiscrodIconBlue from "../../../../images/discord--blue.svg";
 import DiscrodIconPink from "../../../../images/discord--pink.svg";
 import LinkIcon from "../../../../images/link.svg";

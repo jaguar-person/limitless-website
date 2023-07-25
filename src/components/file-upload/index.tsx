@@ -3,8 +3,8 @@ import Image from "next/image";
 import FileUploadIcon from "../../images/upload.svg";
 
 interface IFileUpload {
-  value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const FileUpload: React.FC<IFileUpload> = ({ value, onChange }) => (

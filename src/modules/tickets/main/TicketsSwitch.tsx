@@ -25,7 +25,7 @@ const SwitchIcon: React.FC<ISwitchIcon> = ({ isClicked, onClick, name }) => (
 const TicketsSwitch: React.FC<{ currentPath: string }> = ({ currentPath }) => {
   const router = useRouter();
   const handleSwitch = (currentPath: string) => () => {
-    router.push(`/${currentPath}`);
+    router.push(`${currentPath}`);
   };
   return (
     <div className="flex md:gap-2.5 border-b-secondary-background border-b-[3px]">

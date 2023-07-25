@@ -8,6 +8,7 @@ import TicketAddReportPlayer from "./player";
 import TicketAddDescription from "./description";
 import Decoration from "../../../components/decoration";
 import Button from "../../../components/button";
+import { ROUTING_PATH } from "../../../utils/constants";
 
 const TicketsAdd: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(TicketsAddSteps.ISSUE);
@@ -42,7 +43,12 @@ const TicketsAdd: React.FC = () => {
           />
         );
       case TicketsAddSteps.DESCRIPTION:
-        return <TicketAddDescription onCurrentStep={handleCurrentStep(-1)} onDisabled={handleDisabled} />;
+        return (
+          <TicketAddDescription
+            onCurrentStep={handleCurrentStep(-1)}
+            onDisabled={handleDisabled}
+          />
+        );
     }
   };
 
@@ -50,7 +56,7 @@ const TicketsAdd: React.FC = () => {
     setDisabled(true);
     if (!isDisabled) {
       if (currentStep === TicketsAddSteps.DESCRIPTION) {
-        router.push("/tickets");
+        router.push(ROUTING_PATH.TICKETS);
       } else {
         setCurrentStep(currentStep + 1);
       }
@@ -86,7 +92,7 @@ const TicketsAdd: React.FC = () => {
               bgColor="background"
               width="full"
               onClick={() => {
-                router.push("/tickets");
+                router.push(ROUTING_PATH.TICKETS);
               }}
             />
             <Button

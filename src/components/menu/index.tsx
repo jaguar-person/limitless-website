@@ -8,6 +8,7 @@ import AvatarIcon from "../../images/avatar.png";
 import Footer from "../../layouts/Footer";
 import Button from "../button";
 import Nav from "../../modules/shared/nav";
+import { ROUTING_PATH } from "../../utils/constants";
 
 const Menu: React.FC = () => {
   const [isMenu, setMenu] = useState(false);
@@ -28,11 +29,11 @@ const Menu: React.FC = () => {
         <div className="fixed top-16 left-0 w-full h-full bg-background">
           <div className="relative flex flex-col gap-14 mt-10 px-12 z-30">
             <Nav currentPathName={currentPathName} />
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 cursor-pointer">
               <div
                 className="flex gap-4 items-center"
                 onClick={() => {
-                  router.push("/accounts");
+                  router.push(ROUTING_PATH.ACCOUNTS);
                 }}
               >
                 <Image src={AvatarIcon} width={64} height={64} alt="Avatar" />

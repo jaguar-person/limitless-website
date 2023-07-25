@@ -5,7 +5,6 @@ import MobileBgImage from "../../../images/mobile-ticket-bg.png";
 import Avatar from "../../../images/avatar--rounded.png";
 import TicketsUserID from "./TicketsUserID";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
-import Button from "../../../components/button";
 import { TicketsLogOutModal } from "../modals";
 
 const TicketsUserInfo: React.FC = () => {

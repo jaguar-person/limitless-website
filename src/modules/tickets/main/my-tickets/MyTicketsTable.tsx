@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { TicketTableType } from "../../../../utils/types";
 import TicketStatusBadge from "../../shared/TicketStatus";
 import { useIsMobile } from "../../../../utils/hooks/useIsMobile";
+import { ROUTING_PATH } from "../../../../utils/constants";
 
 interface IMyTicketsTableRow {
   data: TicketTableType;
@@ -27,7 +28,7 @@ const MyTicketsTableRow: React.FC<IMyTicketsTableRow> = ({ data, isEven }) => {
           : "md:bg-secondary-background-accent")
       }
       onClick={() => {
-        router.push(`/tickets/${data.id.slice(1)}`);
+        router.push(`${ROUTING_PATH.TICKETS}/${data.id.slice(1)}`);
       }}
     >
       <div className="flex justify-between w-full md:w-1/5  items-center">
