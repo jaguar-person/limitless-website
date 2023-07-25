@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ITicketAddStep } from "../issue";
 import TicketsAddTitle from "../TicketsAddTitle";
 import SearchBar from "../../../../components/search-bar";
 import TicketsAddPlayerCard from "./TicketsAddPlayerCard";
@@ -112,11 +111,20 @@ const MOCK_PLAYERS = [
   },
 ];
 
-const TicketAddReportPlayer: React.FC<ITicketAddStep> = ({ onCurrentStep }) => {
+interface ITicketAddReportPlayer {
+  onCurrentStep: () => void;
+  onDisabled: () => void;
+}
+
+const TicketAddReportPlayer: React.FC<ITicketAddReportPlayer> = ({
+  onCurrentStep,
+  onDisabled,
+}) => {
   const [players, setPlayers] = useState(MOCK_PLAYERS);
   const checkedCount =
     players.filter((player) => player.isChecked === true).length + 1;
   const handlePlayer = (currentPlayer: number) => () => {
+    onDisabled();
     if (checkedCount < 11) {
       setPlayers(
         players.map((player, i) => {

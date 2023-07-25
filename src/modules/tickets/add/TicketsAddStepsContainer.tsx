@@ -7,11 +7,13 @@ import Icon from "../../../components/icon";
 interface ITicketAddSteps {
   currentStep: number;
   onCurrentStep: (count: number) => void;
+  isDisabled: boolean;
 }
 
 const TicketAddStepsContainer: React.FC<ITicketAddSteps> = ({
   currentStep,
   onCurrentStep,
+  isDisabled,
 }) => {
   const isMobile = useIsMobile();
   if (isMobile)
@@ -29,7 +31,10 @@ const TicketAddStepsContainer: React.FC<ITicketAddSteps> = ({
         </p>
         <div
           onClick={() => {
-            currentStep < 3 && currentStep >= 0 && onCurrentStep(1);
+            !isDisabled &&
+              currentStep < 3 &&
+              currentStep >= 0 &&
+              onCurrentStep(1);
           }}
         >
           <Icon icon="arrow-right" />

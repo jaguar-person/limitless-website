@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import TicketsAddTitle from "../TicketsAddTitle";
 import TicketsAddIssueCard from "./TicketsAddIssueCard";
 
-export interface ITicketAddStep {
-  onCurrentStep: () => void;
+export interface ITicketAddChooseIssue {
+  onDisabled: () => void;
 }
 
 const MOCK_ISSUES = [
@@ -57,9 +57,12 @@ const MOCK_ISSUES = [
   },
 ];
 
-const TicketAddChooseIssue: React.FC = () => {
+const TicketAddChooseIssue: React.FC<ITicketAddChooseIssue> = ({
+  onDisabled,
+}) => {
   const [issues, setIssues] = useState(MOCK_ISSUES);
   const handleCurrentIssue = (currentIssue: number) => () => {
+    onDisabled();
     setIssues(
       issues.map((issue, i) => {
         if (i === currentIssue) {

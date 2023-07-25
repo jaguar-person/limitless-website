@@ -11,46 +11,49 @@ import Button from "../../../components/button";
 
 const TicketsAdd: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(TicketsAddSteps.ISSUE);
+  const [isDisabled, setDisabled] = useState(true);
+
+  const handleDisabled = () => {
+    setDisabled(false);
+  };
+
+  const handleCurrentStep = (count: number) => () => {
+    setCurrentStep(currentStep + count);
+  };
+
   const router = useRouter();
 
   const TicketsAddSwitch = (currentStep: number) => {
     switch (currentStep) {
       case TicketsAddSteps.ISSUE:
-        return <TicketAddChooseIssue />;
+        return <TicketAddChooseIssue onDisabled={handleDisabled} />;
       case TicketsAddSteps.SERVER:
         return (
           <TicketAddSelectServer
-            onCurrentStep={() => {
-              setCurrentStep(currentStep - 1);
-            }}
+            onCurrentStep={handleCurrentStep(-1)}
+            onDisabled={handleDisabled}
           />
         );
       case TicketsAddSteps.PLAYER:
         return (
           <TicketAddReportPlayer
-            onCurrentStep={() => {
-              setCurrentStep(currentStep - 1);
-            }}
+            onCurrentStep={handleCurrentStep(-1)}
+            onDisabled={handleDisabled}
           />
         );
       case TicketsAddSteps.DESCRIPTION:
-        return (
-          <TicketAddDescription
-            onCurrentStep={() => {
-              setCurrentStep(currentStep - 1);
-            }}
-          />
-        );
-      default:
-        return <TicketAddChooseIssue />;
+        return <TicketAddDescription onCurrentStep={handleCurrentStep(-1)} onDisabled={handleDisabled} />;
     }
   };
 
   const handleAdd = () => {
-    if (currentStep === TicketsAddSteps.DESCRIPTION) {
-      router.push("/tickets");
-    } else {
-      setCurrentStep(currentStep + 1);
+    setDisabled(true);
+    if (!isDisabled) {
+      if (currentStep === TicketsAddSteps.DESCRIPTION) {
+        router.push("/tickets");
+      } else {
+        setCurrentStep(currentStep + 1);
+      }
     }
   };
   return (
@@ -68,37 +71,34 @@ const TicketsAdd: React.FC = () => {
               currentStep={currentStep}
               onCurrentStep={(count) => {
                 setCurrentStep(currentStep + count);
+                setDisabled(true);
               }}
+              isDisabled={isDisabled}
             />
             <div className="flex flex-col gap-2 flex-grow overflow-hidden">
               {TicketsAddSwitch(currentStep)}
             </div>
           </div>
           <div className="flex gap-2.5 md:self-end">
-            <div
-              className="w-1/2"
+            <Button
+              name="Cancel"
+              color="danger"
+              bgColor="background"
+              width="full"
               onClick={() => {
                 router.push("/tickets");
               }}
-            >
-              <Button
-                name="Cancel"
-                color="danger"
-                bgColor="background"
-                width="full"
-              />
-            </div>
-            <div className="w-1/2" onClick={handleAdd}>
-              <Button
-                name={
-                  currentStep === TicketsAddSteps.DESCRIPTION
-                    ? "Send"
-                    : "Continue"
-                }
-                bgColor="gems"
-                width="full"
-              />
-            </div>
+            />
+            <Button
+              name={
+                currentStep === TicketsAddSteps.DESCRIPTION
+                  ? "Send"
+                  : "Continue"
+              }
+              bgColor="gems"
+              width="full"
+              onClick={handleAdd}
+            />
           </div>
         </div>
       </div>
