@@ -27,7 +27,7 @@ export const TR: React.FC<IRow> = ({ children, row }) => {
   return (
     <div
       className={clsx(
-        "py-2 px-5 rounded-md flex justify-between my-1 w-full tr--hover",
+        "py-2 px-5 rounded-md flex justify-between w-full tr--hover border border-secondary-background",
         {
           "bg-secondary-background-accent": row % 2 === 0,
           "bg-secondary-background": row % 2 === 1,
