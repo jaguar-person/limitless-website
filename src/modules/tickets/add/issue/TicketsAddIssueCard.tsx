@@ -29,7 +29,7 @@ const TicketsAddIssueCard: React.FC<ITicketsAddIssueCard> = ({
     <div
       className={
         "card-container flex flex-col items-start md:items-center gap-2 p-4 " +
-        (currentIssue ? "border-gems" : "border-secondary-background-accent")
+        (currentIssue ? "!border-gems" : "border-secondary-background-accent")
       }
       onClick={() => {
         onCurrentIssue();

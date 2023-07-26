@@ -23,7 +23,7 @@ const TicketsAddServerCard: React.FC<ITicketsAddServerCard> = ({
       className={
         "card-container flex flex-row gap-4 justify-between items-center md:vertical p-4 md:p-8 " +
         (currentServer
-          ? "border-gems text-white"
+          ? "!border-gems text-white"
           : "border-secondary-background-accent text-secondary")
       }
       onClick={() => {
