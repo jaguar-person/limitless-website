@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import RightIcon from "../../../images/arrow-right.svg";
 import SearchBar from "../../../components/search-bar";
 import DropDown from "../../../components/dropdown";
 import CloseIcon from "../../../images/mobile-close.svg";
@@ -11,7 +10,7 @@ interface IDropDownWithTitle {
   children: React.ReactNode;
 }
 
-export const DropDownWithTitle: React.FC<IDropDownWithTitle> = ({
+const DropDownWithTitle: React.FC<IDropDownWithTitle> = ({
   title,
   children,
 }) => (
