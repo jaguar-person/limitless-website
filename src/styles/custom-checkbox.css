@@ -5,15 +5,13 @@
       /* Remove most all native input styles */
       appearance: none;
       /* For iOS < 15 */
-      background-color: #94E777;
       /* Not removed via appearance */
       margin: 0;
     
       font: inherit;
-      color: #94E777;
       width: 16px;
       height: 16px;
-      border: 0.15em solid #94E777;
+      border: 0.15em solid #363541;
       border-radius: 0.15em;
       transform: translateY(-0.075em);
     
@@ -23,8 +21,8 @@
     
     input[type="checkbox"]::before {
       content: "";
-      width: 12px;
-      height: 12px;
+      width: 11px;
+      height: 11px;
       clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
       transform: scale(0);
       transform-origin: bottom left;
@@ -35,5 +33,10 @@
     
     input[type="checkbox"]:checked::before {
       transform: scale(1);
+    }
+
+    input[type="checkbox"]:checked:checked {
+      background-color: #94E777;
+      border-color: #94E777;
     }
     
