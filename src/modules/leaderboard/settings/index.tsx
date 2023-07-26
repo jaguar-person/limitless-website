@@ -45,7 +45,7 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
             bgColor="secondary-background-accent"
             width="full"
           >
-            <div className="dropdown-container min-w-[190px] text-secondary p-2">
+            <div className="dropdown-container min-w-[190px] text-secondary p-3 !bg-secondary-background-accent">
               Some Stats
             </div>
           </DropDown>
