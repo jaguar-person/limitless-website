@@ -3,12 +3,10 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import TitleArrow from "../../../../components/title-arrow";
 import TicketStatusBadge from "../../shared/TicketStatus";
-import Button from "../../../../components/button";
 import { TicketStatus } from "../../../../utils/enums";
 import TicketDetailsInfo from "./TicketDetailsInfo";
 import MobileBgImage from "../../../../images/mobile-ticket-bg.png";
 import { TicketsCloseTicketModal } from "../../modals";
-import Modal from "../../../../components/modal";
 import { ROUTING_PATH } from "../../../../utils/constants";
 interface ITicketsDetailHeader {
   ticket: {

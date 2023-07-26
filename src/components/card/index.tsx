@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import LinkIcon from "../../images/link_2.svg";
 import UsersIcon from "../../images/users.svg";
 import ServerIcon from "../../images/server.svg";
 

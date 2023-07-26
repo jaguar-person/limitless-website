@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import IssueIcon from "../../../../images/issue.svg";
 import { CheckIconChecked } from "../../../../components/stepper";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TicketsSwitch from "./TicketsSwitch";
 import TicketsLinkedAccounts from "./linked-accounts";
 import TicketsMyTickets from "./my-tickets";

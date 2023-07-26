@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TicketsAddTitle from "../TicketsAddTitle";
-import TicketsAddServerCard from "./TicketsAddServerCard";
 import { SERVER_TYPES } from "../../../../utils/enums";
 import TicketsAddServerGroup from "./TicketsAddServerGroup";
 
