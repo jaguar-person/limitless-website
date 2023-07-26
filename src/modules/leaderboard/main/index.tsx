@@ -24,10 +24,10 @@ const LeaderBoardMain: React.FC = () => {
             width="fit"
           >
             <div className="dropdown-container text-secondary">
-              <div className="border-b border-b-secondary-background-accent pl-2">
+              <div className="border-b border-b-secondary-background-accent pl-3 pb-2">
                 Lifetime
               </div>
-              <div className="border-b border-b-secondary-background-accent pl-2 pb-2">
+              <div className="border-b border-b-secondary-background-accent pl-3 pb-2">
                 Wipe
               </div>
             </div>
