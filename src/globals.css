@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: #1F1E24;
+}
 
 .btn-custom {
     @apply rounded-md py-5 px-5 flex gap-3 items-center justify-center cursor-pointer font-bold
