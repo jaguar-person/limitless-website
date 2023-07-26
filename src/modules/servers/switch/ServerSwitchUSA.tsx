@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { GetServerSidePropsContext } from "next";
-import { getIsSsrMobile } from "../../../utils/hooks/useIsMobile";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 import USAIcon from "../../../images/usa.svg";
 

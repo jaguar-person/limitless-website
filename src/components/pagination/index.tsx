@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import LeftArrowIcon from "../../images/arrow-left.svg";
 import RightArrowIcon from "../../images/arrow-right.svg";

@@ -4,7 +4,6 @@ import { LeaderBoardTableType } from "../../../utils/types";
 import { Table, THead, TH, TBody, TR, TD } from "../../../components/table";
 import { BorderWave } from "../../../components/border-wave";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
-import clsx from "clsx";
 import LeaderTableMobile from "./LeaderTableMobile";
 
 interface ILeaderTable {

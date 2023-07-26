@@ -2,7 +2,6 @@ import React from "react";
 import ServersDropDown from "../ServersDropdown";
 import Line from "../../../components/line";
 import ServerCard from "../../../components/card";
-import Button from "../../../components/button";
 
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 import { IServer } from "../../../utils/types";

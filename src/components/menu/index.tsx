@@ -7,7 +7,6 @@ import AvatarIcon from "../../images/avatar.png";
 import LogoIcon from "../../images/logo.svg";
 
 import Footer from "../../layouts/Footer";
-import Button from "../button";
 import Nav from "../../modules/shared/nav";
 import { ROUTING_PATH } from "../../utils/constants";
 import { TicketsLogOutModal } from "../../modules/tickets/modals";

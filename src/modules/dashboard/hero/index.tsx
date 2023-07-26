@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import HeroIcon from "../../../images/hero.svg";
 import MobileHeroIcon from "../../../images/mobile-hero.png";
-import Button from "../../../components/button";
 import HeroButton from "./HeroButton";
 
 const Hero: React.FC = () => {
