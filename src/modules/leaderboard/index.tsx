@@ -7,6 +7,11 @@ import Decoration from "../../components/decoration";
 const LeaderBoard: React.FC = () => {
   const [isLeaderBoard, setLeaderBoard] = useState(true);
   const isMobile = useIsMobile();
+
+  const handleLeaderBoard = () => {
+    setLeaderBoard(!isLeaderBoard);
+  };
+
   return (
     <div className="mt-16 md:mt-48 mb-48 md:mb-20 gap-16 md:gap-20 flex flex-col items-center">
       <div className="flex flex-col gap-4 text-white font-bold text-5xl items-center text-center">
@@ -20,7 +25,10 @@ const LeaderBoard: React.FC = () => {
             setLeaderBoard(type);
           }}
         />
-        <LeaderBoardMain />
+        <LeaderBoardMain
+          isLeaderBoard={isLeaderBoard}
+          onLeaderBoard={handleLeaderBoard}
+        />
       </div>
     </div>
   );

@@ -3,11 +3,15 @@ import DropDown from "../../../components/dropdown";
 import LeaderBoardTable from "./LeaderBoardTable";
 import HeatMap from "./HeatMap";
 
-const LeaderBoardMain: React.FC = () => {
-  const [isLearderBoard, setLeaderBoard] = useState(true);
-  const handleFlag = () => {
-    setLeaderBoard(!isLearderBoard);
-  };
+interface ILeaderBoardMain {
+  isLeaderBoard: boolean;
+  onLeaderBoard: () => void;
+}
+
+const LeaderBoardMain: React.FC<ILeaderBoardMain> = ({
+  isLeaderBoard,
+  onLeaderBoard,
+}) => {
   return (
     <div className="flex flex-col gap-2.5 flex-grow overflow-hidden ">
       <div className="container">
@@ -33,8 +37,8 @@ const LeaderBoardMain: React.FC = () => {
             </div>
           </DropDown>
         </div>
-        {isLearderBoard ? (
-          <LeaderBoardTable onFlag={handleFlag} />
+        {isLeaderBoard ? (
+          <LeaderBoardTable onFlag={onLeaderBoard} />
         ) : (
           <div className="min-h-screen md:min-h-fit">
             <HeatMap />
