@@ -17,7 +17,7 @@ const TicketsAddPlayerCard: React.FC<ITicketsAddPlayerCard> = ({
       className={
         "relative cursor-pointer flex gap-2.5 items-center py-2 px-2.5 bg-secondary-background border rounded-md " +
         (currentPlayer.isChecked
-          ? "border-gems"
+          ? "!border-gems"
           : "border-secondary-background-accent")
       }
       onClick={onCurrentPlayer}
