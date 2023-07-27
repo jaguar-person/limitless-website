@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import Tooltip from "../../../components/tooltip";
 
 interface ITicketsUserID {
   name: string;
@@ -22,8 +23,8 @@ const CopyIcon: React.FC<{ isHovered: boolean }> = ({ isHovered }) => (
 );
 
 const TicketsUserID: React.FC<ITicketsUserID> = ({ name, id }) => {
-  const ref = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isCopied, setCopy] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -31,13 +32,19 @@ const TicketsUserID: React.FC<ITicketsUserID> = ({ name, id }) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+    setCopy(false);
   };
+
+  const handleCopied = () => {
+    setCopy(true);
+  };
+
   return (
     <div
-      className="flex md:gap-8 items-center md:px-5 py-2.5 md:rounded-md md:bg-[#302E3C] z-10 cursor-pointer"
-      ref={ref}
+      className="relative flex md:gap-8 items-center md:px-5 py-2.5 md:rounded-md md:bg-[#302E3C] z-20 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleCopied}
     >
       <div className="truncate w-full">
         <div className="flex gap-2 items-center">
@@ -55,6 +62,8 @@ const TicketsUserID: React.FC<ITicketsUserID> = ({ name, id }) => {
       <div className="md:block hidden">
         <CopyIcon isHovered={isHovered} />
       </div>
+
+      <Tooltip isCopied={isCopied} />
     </div>
   );
 };
