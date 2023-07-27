@@ -1,7 +1,6 @@
-import React from "react";
+import React, { MouseEventHandler, useState } from "react";
 import SearchBar from "../../../../components/search-bar";
 import { TicketStatus } from "../../../../utils/enums";
-import DropDown from "../../../../components/dropdown";
 
 interface ITicket {
   type: TicketStatus;
@@ -22,6 +21,41 @@ export const Ticket: React.FC<ITicket> = ({ type }) => (
   </div>
 );
 
+const TicketsSelect: React.FC = () => {
+  const [currentStatus, setCurrentStatus] = useState(TicketStatus.OPENED);
+  const [isShow, setShow] = useState(false);
+
+  const handleCurrentStatus = (status: TicketStatus) => () => {
+    setCurrentStatus(status);
+    setShow(false);
+  };
+  return (
+    <div className="relative flex flex-col gap-2">
+      <div
+        className="bg-secondary-background border border-secondary-background-accent rounded-md py-2 px-5"
+        onClick={() => {
+          setShow(!isShow);
+        }}
+      >
+        <Ticket type={currentStatus} />
+      </div>
+      {isShow && (
+        <ul className="absolute -bottom-[120px] p-2 bg-secondary-background rounded-md w-full z-10">
+          <li onClick={handleCurrentStatus(TicketStatus.OPENED)}>
+            <Ticket type={TicketStatus.OPENED} />
+          </li>
+          <li onClick={handleCurrentStatus(TicketStatus.CLOSED)}>
+            <Ticket type={TicketStatus.CLOSED} />
+          </li>
+          <li onClick={handleCurrentStatus(TicketStatus.AWAITING)}>
+            <Ticket type={TicketStatus.AWAITING} />
+          </li>
+        </ul>
+      )}
+    </div>
+  );
+};
+
 const MyTicketsSearch: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between items-center md:px-5 rounded-md md:bg-secondary-background md:border border-secondary-background-accent">
@@ -35,13 +69,7 @@ const MyTicketsSearch: React.FC = () => {
         <SearchBar icon="search_2" placeholder="Search a ticket..." />
       </div>
       <div className="md:hidden block w-full">
-        <DropDown width="full" title={<Ticket type={TicketStatus.OPENED} />}>
-          <div className="bg-secondary-background-accent flex flex-col gap-1 pl-5 mt-1 rounded-md">
-            <Ticket type={TicketStatus.OPENED} />
-            <Ticket type={TicketStatus.CLOSED} />
-            <Ticket type={TicketStatus.AWAITING} />
-          </div>
-        </DropDown>
+        <TicketsSelect />
       </div>
     </div>
   );
