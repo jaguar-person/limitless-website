@@ -15,6 +15,10 @@ const TicketsLinkAccountModal: React.FC<ITicketsLinkAccountModal> = ({
 }) => {
   const [isShow, setShow] = useState(false);
   const isMobile = useIsMobile();
+
+  const handleClose = () => {
+    setShow(false);
+  };
   return (
     <div>
       <Button
@@ -29,7 +33,7 @@ const TicketsLinkAccountModal: React.FC<ITicketsLinkAccountModal> = ({
         }}
       />
       {isShow && (
-        <Modal>
+        <Modal onClose={handleClose}>
           <div className="flex flex-col gap-5 items-center z-50">
             <Image src={ModalLinkImage} width={243} height={54} alt="link" />
             <p className="text-secondary-in-box text-sm text-center md:max-w-[380px] md:mx-10">

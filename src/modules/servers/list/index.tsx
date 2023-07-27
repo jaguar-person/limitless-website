@@ -11,7 +11,6 @@ interface IServersList {
 }
 
 const ServersList: React.FC<IServersList> = ({ servers }) => {
-  const isMobile = useIsMobile();
   return (
     <div className="flex flex-col gap-2 md:gap-2.5">
       <div className="flex justify-between pb-2 md:pb-0 w-full">

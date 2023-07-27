@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Button from "../../../components/button";
 import Modal from "../../../components/modal";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
@@ -6,6 +7,11 @@ import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 const TicketsLogOutModal: React.FC = () => {
   const [isShow, setShow] = useState(false);
   const isMobile = useIsMobile();
+
+  const handleClose = () => {
+    setShow(false);
+  };
+
   return (
     <div>
       <Button
@@ -17,8 +23,8 @@ const TicketsLogOutModal: React.FC = () => {
         width="full"
       />
       {isShow && (
-        <Modal>
-          <div className="flex flex-col gap-5 items-center z-50">
+        <Modal onClose={handleClose}>
+          <div className="flex flex-col gap-5 items-center">
             <p className="text-white text-3xl font-extrabold tracking-tight">
               Log Out
             </p>

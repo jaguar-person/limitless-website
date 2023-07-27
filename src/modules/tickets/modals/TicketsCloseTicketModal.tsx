@@ -6,6 +6,11 @@ import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 const TicketsCloseTicketModal: React.FC = () => {
   const [isShow, setShow] = useState(false);
   const isMobile = useIsMobile();
+
+  const handleClose = () => {
+    setShow(false);
+  };
+
   return (
     <div>
       <Button
@@ -16,7 +21,7 @@ const TicketsCloseTicketModal: React.FC = () => {
         }}
       />
       {isShow && (
-        <Modal>
+        <Modal onClose={handleClose}>
           <div className="flex flex-col gap-5 text-center z-50">
             <p className="text-white font-extrabold text-3xl tracking-tight">
               Close Ticket
@@ -39,6 +44,7 @@ const TicketsCloseTicketModal: React.FC = () => {
               color={isMobile ? "danger" : "secondary-in-box"}
               bgColor="secondary-background"
               size="base"
+              width="full"
               onClick={() => {
                 setShow(false);
               }}
