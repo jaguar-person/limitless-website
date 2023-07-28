@@ -1,6 +1,8 @@
-import React, { MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import SearchBar from "../../../../components/search-bar";
 import { TicketStatus } from "../../../../utils/enums";
+import ArrowDown from "../../../../images/arrow-down.svg";
 
 interface ITicket {
   type: TicketStatus;
@@ -32,12 +34,13 @@ const TicketsSelect: React.FC = () => {
   return (
     <div className="relative flex flex-col gap-2">
       <div
-        className="bg-secondary-background border border-secondary-background-accent rounded-md py-2 px-5"
+        className="bg-secondary-background border border-secondary-background-accent rounded-md py-2 px-5 flex justify-between items-center"
         onClick={() => {
           setShow(!isShow);
         }}
       >
         <Ticket type={currentStatus} />
+        <Image src={ArrowDown} width={14} height={14} alt="down" />
       </div>
       {isShow && (
         <ul className="absolute -bottom-[120px] p-2 bg-secondary-background rounded-md w-full z-10">
