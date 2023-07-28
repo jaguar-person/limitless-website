@@ -5,7 +5,9 @@ import SearchBar from "../../../components/search-bar";
 import EURIcon from "../../../images/eur.svg";
 import USAIcon from "../../../images/usa.svg";
 
-const LeaderBoardSettingsServerDropDown: React.FC = () => {
+const LeaderBoardSettingsServerDropDown: React.FC<{ isFixed?: boolean }> = ({
+  isFixed = true,
+}) => {
   const options = {
     europe: ["2x Solo-1", "2x Solo-2", "2x Solo-3"],
     america: ["3x Solo-1", "3x Solo-2", "3x Solo-3"],
@@ -23,7 +25,11 @@ const LeaderBoardSettingsServerDropDown: React.FC = () => {
       bgColor="secondary-background-accent"
       width="full"
     >
-      <div className="dropdown-container px-2.5 !bg-secondary-background-accent">
+      <div
+        className={`dropdown-container ${
+          isFixed ? "" : "!relative"
+        } px-2.5 !bg-secondary-background-accent`}
+      >
         <SearchBar
           icon="search_2"
           placeholder="Search a server..."

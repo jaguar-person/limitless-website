@@ -4,7 +4,7 @@ import RightIcon from "../../../images/arrow-right--black.svg";
 
 interface ILeaderBoardButton {
   name: string;
-  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: () => void;
 }
 
 const LeaderBoardButton: React.FC<ILeaderBoardButton> = ({ name, onClick }) => (
