@@ -22,7 +22,7 @@ const LeaderBoardSettingsServerDropDown: React.FC<{ isFixed?: boolean }> = ({
   return (
     <DropDown
       title="LR - US 2x Quad Monthly"
-      bgColor="secondary-background-accent"
+      bgColor="secondary-background"
       width="full"
     >
       <div

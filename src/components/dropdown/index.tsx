@@ -33,7 +33,7 @@ const DropDown: React.FC<IDropdown> = ({
   return (
     <div className={`relative cursor-pointer w-full md:w-${width}`} ref={ref}>
       <div
-        className={`py-3 px-5 bg-${bgColor} border-secondary-background-accent flex md:gap-2.5 justify-between w-full rounded-md`}
+        className={`py-3 px-5 bg-${bgColor} border border-secondary-background-accent flex md:gap-2.5 justify-between w-full rounded-md`}
         onClick={handleShowMenu}
       >
         <div className="text-secondary font-semibold text-base">{title}</div>
