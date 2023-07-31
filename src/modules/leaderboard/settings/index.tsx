@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { useDetectClickOutside } from "react-detect-click-outside";
-
+import React from "react";
 import SearchBar from "../../../components/search-bar";
 import LeaderBoardSettingsItem from "./item";
 import DropDown from "../../../components/dropdown";
 import LeaderBoardSettingsSwitch from "./LeaderBoardSettingsSwitch";
 import LeaderBoardSettingsServerDropDown from "./LeaderBoardSettignsServerDropdown";
-import Decoration from "../../../components/decoration";
-import FiltersModal from "../shared/FiltersModal";
-import LeaderBoardButton from "../shared/LeaderBoardButton";
+import LeaderBoardBottomSheet from "../shared/LeaderBoardBottomSheet";
+import { BottomSheet } from "react-spring-bottom-sheet";
+
+import "react-spring-bottom-sheet/dist/style.css";
 
 interface ILeaderBoardSetting {
   isLeaderBoard: boolean;
@@ -23,18 +22,11 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
   currentBarStatus,
   onCurrentBarStatus,
 }) => {
-  const handleLeaderBoard = () => {
-    onLeaderBoard(!isLeaderBoard);
-  };
-
-  const ref = useDetectClickOutside({ onTriggered: onCurrentBarStatus });
-
   return (
     <div
-      className={`fixed md:relative left-0 bottom-0 px-4 md:py-4 flex flex-col gap-6 md:gap-4  bg-background md:bg-secondary-background border-t md:border border-background-light md:border-secondary-background-accent rounded-t-2xl md:rounded-md md:min-h-[770px] min-w-[300px] z-30 md:z-0 w-full md:w-fit shadow-lg md:shadow-none transition-all duration-200 ${
+      className={`fixed md:relative left-0 bottom-0 px-4 md:py-4 flex flex-col gap-6 md:gap-4 md:bg-secondary-background border-none md:border md:border-secondary-background-accent rounded-t-2xl md:rounded-md md:min-h-[770px] min-w-[300px] z-30 md:z-0 w-full md:w-fit shadow-lg md:shadow-none transition-all duration-200 ${
         currentBarStatus ? "h-0 py-0" : "h-fit py-4"
       } `}
-      ref={ref}
     >
       <div className="md:block hidden">
         <SearchBar icon="search" placeholder="Search by ID or username..." />
@@ -77,24 +69,13 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
           </LeaderBoardSettingsItem>
         </div>
       </div>
-      <div className="md:hidden block self-center" onClick={onCurrentBarStatus}>
-        <Decoration color="points" />
-      </div>
-      <div className="md:hidden flex flex-col gap-2">
-        <div className="flex gap-2">
-          <DropDown title="PVP" width="full" />
-          <FiltersModal />
-        </div>
-        <LeaderBoardSettingsItem title="">
-          <LeaderBoardSettingsServerDropDown isFixed={false} />
-        </LeaderBoardSettingsItem>
-        <div className="mt-1">
-          <LeaderBoardButton
-            name={isLeaderBoard ? "Heatmap" : "LeaderBoard"}
-            onClick={handleLeaderBoard}
-          />
-        </div>
-      </div>
+      <BottomSheet open={!currentBarStatus} onDismiss={onCurrentBarStatus}>
+        <LeaderBoardBottomSheet
+          isLeaderBoard={isLeaderBoard}
+          onLeaderBoard={onLeaderBoard}
+          onCurrentBarStatus={onCurrentBarStatus}
+        />
+      </BottomSheet>
     </div>
   );
 };
