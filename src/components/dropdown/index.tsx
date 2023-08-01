@@ -11,6 +11,7 @@ interface IDropdown {
   bgColor?: string;
   width: "fit" | "full";
   onServerDropdown?: () => void;
+  isLeaderBoard?: boolean;
 }
 
 const DropDown: React.FC<IDropdown> = ({
@@ -19,6 +20,7 @@ const DropDown: React.FC<IDropdown> = ({
   title,
   width = "fit",
   onServerDropdown,
+  isLeaderBoard = false,
 }) => {
   const [isShowMenu, setShowMenu] = useState(false);
 
@@ -34,7 +36,10 @@ const DropDown: React.FC<IDropdown> = ({
   const ref = useDetectClickOutside({ onTriggered: closeShowMenu });
 
   return (
-    <div className={`relative cursor-pointer w-full md:w-${width}`} ref={ref}>
+    <div
+      className={`relative cursor-pointer w-full md:w-${width}`}
+      ref={isLeaderBoard ? null : ref}
+    >
       <div
         className={`py-3 px-5 bg-${bgColor} border border-secondary-background-accent flex md:gap-2.5 justify-between w-full rounded-md`}
         onClick={handleShowMenu}

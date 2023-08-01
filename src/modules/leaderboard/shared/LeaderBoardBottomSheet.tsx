@@ -30,9 +30,7 @@ const LeaderBoardBottomSheet: React.FC<ILeaderBoardBottomSheet> = ({
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
           <DropDown title="PVP" width="full" />
-          <div onClick={onShowBottomSheet}>
-            <FiltersModal />
-          </div>
+          <FiltersModal />
         </div>
         <LeaderBoardSettingsItem title="">
           <LeaderBoardSettingsServerDropDown

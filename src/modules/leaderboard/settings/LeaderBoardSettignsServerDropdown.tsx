@@ -4,6 +4,7 @@ import DropDown from "../../../components/dropdown";
 import SearchBar from "../../../components/search-bar";
 import EURIcon from "../../../images/eur.svg";
 import USAIcon from "../../../images/usa.svg";
+import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 
 const LeaderBoardSettingsServerDropDown: React.FC<{
   isFixed?: boolean;
@@ -14,6 +15,8 @@ const LeaderBoardSettingsServerDropDown: React.FC<{
     america: ["3x Solo-1", "3x Solo-2", "3x Solo-3"],
   };
 
+  const isMobile = useIsMobile();
+
   const [currentServer, setCurrentServer] = useState("");
 
   const handleServer = (server: string) => (e: React.MouseEvent) => {
@@ -23,9 +26,12 @@ const LeaderBoardSettingsServerDropDown: React.FC<{
   return (
     <DropDown
       title="LR - US 2x Quad Monthly"
-      bgColor="secondary-background"
+      bgColor={
+        isMobile ? "secondary-background" : "secondary-background-accent"
+      }
       width="full"
       onServerDropdown={onServerDropdown}
+      isLeaderBoard={true}
     >
       <div
         className={`dropdown-container ${
