@@ -13,7 +13,7 @@ const TicketsUserInfo: React.FC = () => {
   return (
     <div>
       <div className="relative flex justify-between items-center md:px-10 md:py-5 border-secondary-background-accent rounded-md mb-2.5 md:mb-0">
-        <div className="min-w-[480px] md:w-full absolute -top-20 -left-4 md:top-0 md:left-0 bg-blend-overlay z-0">
+        <div className="md:w-full absolute -top-20 -left-4 -right-4 md:top-0 md:left-0 bg-blend-overlay z-0">
           <Image
             src={isMobile ? MobileBgImage : BgImage}
             width={1265}
