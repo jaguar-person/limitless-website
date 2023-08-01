@@ -26,6 +26,7 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
   const handleServerDropdown = () => {
     setServerDropdown(!isServerDropdown);
   };
+
   return (
     <div
       className={`fixed md:relative left-0 bottom-0 p-4 md:py-4 flex flex-col gap-6 md:gap-4 bg-background md:bg-secondary-background border-t border-t-background-light md:border md:border-secondary-background-accent rounded-t-2xl md:rounded-md md:min-h-[770px] min-w-[300px] z-30 md:z-0 w-full md:w-fit shadow-lg md:shadow-none transition-all duration-200 ${

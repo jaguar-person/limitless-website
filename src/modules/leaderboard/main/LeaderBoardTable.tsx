@@ -103,9 +103,6 @@ interface ILeaderBoardTable {
 const LeaderBoardTable: React.FC<ILeaderBoardTable> = ({ onFlag }) => (
   <div className="flex flex-col gap-6">
     <div className="md:hidden block">
-      <LeaderBoardButton name="Heatmap" onClick={onFlag} />
-    </div>
-    <div className="md:hidden block">
       <Pagination />
     </div>
     <LeaderTable data={MOCK_DATA} />
