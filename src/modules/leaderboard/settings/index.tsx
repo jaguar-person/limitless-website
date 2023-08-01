@@ -15,7 +15,7 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
   isLeaderBoard,
   onLeaderBoard,
 }) => {
-  const [isShowBottomSheet, setShowBottomSheet] = useState(true);
+  const [isShowBottomSheet, setShowBottomSheet] = useState(false);
   const [isServerDropdown, setServerDropdown] = useState(false);
 
   const handleShowBottomSheet = () => {
