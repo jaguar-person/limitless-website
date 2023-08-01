@@ -1,15 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import LeaderBoardSettings from "./settings";
 import LeaderBoardMain from "./main";
 import { useIsMobile } from "../../utils/hooks/useIsMobile";
 import Decoration from "../../components/decoration";
-import { ScrollContext } from "../../layouts/Main";
 
 const LeaderBoard: React.FC = () => {
   const [isLeaderBoard, setLeaderBoard] = useState(true);
   const isMobile = useIsMobile();
-
-  const { isScroll, setScroll } = useContext(ScrollContext);
 
   const handleLeaderBoard = () => {
     setLeaderBoard(!isLeaderBoard);
@@ -26,10 +23,6 @@ const LeaderBoard: React.FC = () => {
           isLeaderBoard={isLeaderBoard}
           onLeaderBoard={(type: boolean) => {
             setLeaderBoard(type);
-          }}
-          currentBarStatus={!isScroll}
-          onCurrentBarStatus={() => {
-            setScroll(false);
           }}
         />
         <LeaderBoardMain

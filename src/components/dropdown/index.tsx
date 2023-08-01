@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 import { useDetectClickOutside } from "react-detect-click-outside";
 
@@ -10,6 +10,7 @@ interface IDropdown {
   title: React.ReactNode;
   bgColor?: string;
   width: "fit" | "full";
+  onServerDropdown?: () => void;
 }
 
 const DropDown: React.FC<IDropdown> = ({
@@ -17,6 +18,7 @@ const DropDown: React.FC<IDropdown> = ({
   bgColor = "secondary-background",
   title,
   width = "fit",
+  onServerDropdown,
 }) => {
   const [isShowMenu, setShowMenu] = useState(false);
 
@@ -26,6 +28,7 @@ const DropDown: React.FC<IDropdown> = ({
 
   const handleShowMenu = () => {
     setShowMenu(!isShowMenu);
+    onServerDropdown && onServerDropdown();
   };
 
   const ref = useDetectClickOutside({ onTriggered: closeShowMenu });

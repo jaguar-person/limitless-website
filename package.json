@@ -32,7 +32,6 @@
     "react-hook-form": "^7.33.1",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
-    "react-spring-bottom-sheet": "^3.4.1",
     "remark-gfm": "^3.0.1",
     "rusty-config": "git+https://npm-dependency:zxFxkCUNt2Mi1vupyzGx@gitlab.com/rusticated/rusty-config.git#43f6feb696512c8008a2928579dc25decf9eae20",
     "rusty-web": "git+https://npm-dependency:gvwoMHDvtJsJkHY3JvAR@gitlab.com/rusticated/rusty-web.git#6ef45ca05f769010913c7c8e98a76486db7b1d6f",

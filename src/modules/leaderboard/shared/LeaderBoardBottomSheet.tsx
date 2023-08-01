@@ -9,20 +9,22 @@ import LeaderBoardButton from "./LeaderBoardButton";
 interface ILeaderBoardBottomSheet {
   isLeaderBoard: boolean;
   onLeaderBoard: (type: boolean) => void;
-  onCurrentBarStatus: () => void;
+  onShowBottomSheet: () => void;
+  onServerDropdown: () => void;
 }
 
 const LeaderBoardBottomSheet: React.FC<ILeaderBoardBottomSheet> = ({
   isLeaderBoard,
   onLeaderBoard,
-  onCurrentBarStatus,
+  onShowBottomSheet,
+  onServerDropdown,
 }) => {
   const handleLeaderBoard = () => {
     onLeaderBoard(!isLeaderBoard);
   };
   return (
-    <div className="md:hidden flex flex-col gap-6 mx-4 mb-4">
-      <div className="self-center" onClick={onCurrentBarStatus}>
+    <div className="md:hidden flex flex-col gap-6">
+      <div className="self-center" onClick={onShowBottomSheet}>
         <Decoration color="points" />
       </div>
       <div className="flex flex-col gap-2">
@@ -31,7 +33,10 @@ const LeaderBoardBottomSheet: React.FC<ILeaderBoardBottomSheet> = ({
           <FiltersModal />
         </div>
         <LeaderBoardSettingsItem title="">
-          <LeaderBoardSettingsServerDropDown isFixed={false} />
+          <LeaderBoardSettingsServerDropDown
+            isFixed={false}
+            onServerDropdown={onServerDropdown}
+          />
         </LeaderBoardSettingsItem>
         <div className="mt-1">
           <LeaderBoardButton
