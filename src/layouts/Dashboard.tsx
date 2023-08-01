@@ -12,7 +12,7 @@ const DashBoardLayout: React.FC<IDashBoardLayout> = ({ children }) => (
       src={BackgroundImage}
       width={2134}
       height={1423}
-      className="hidden md:block absolute left-0 w-full -top-16  z-10"
+      className="hidden md:block absolute left-0 w-full -top-16  z-10 pointer-events-none"
       alt="background"
     />
     {children}
