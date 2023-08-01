@@ -5,9 +5,10 @@ import SearchBar from "../../../components/search-bar";
 import EURIcon from "../../../images/eur.svg";
 import USAIcon from "../../../images/usa.svg";
 
-const LeaderBoardSettingsServerDropDown: React.FC<{ isFixed?: boolean }> = ({
-  isFixed = true,
-}) => {
+const LeaderBoardSettingsServerDropDown: React.FC<{
+  isFixed?: boolean;
+  onServerDropdown?: () => void;
+}> = ({ isFixed = true, onServerDropdown }) => {
   const options = {
     europe: ["2x Solo-1", "2x Solo-2", "2x Solo-3"],
     america: ["3x Solo-1", "3x Solo-2", "3x Solo-3"],
@@ -24,6 +25,7 @@ const LeaderBoardSettingsServerDropDown: React.FC<{ isFixed?: boolean }> = ({
       title="LR - US 2x Quad Monthly"
       bgColor="secondary-background"
       width="full"
+      onServerDropdown={onServerDropdown}
     >
       <div
         className={`dropdown-container ${

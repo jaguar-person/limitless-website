@@ -1,31 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "../../../components/search-bar";
 import LeaderBoardSettingsItem from "./item";
 import DropDown from "../../../components/dropdown";
 import LeaderBoardSettingsSwitch from "./LeaderBoardSettingsSwitch";
 import LeaderBoardSettingsServerDropDown from "./LeaderBoardSettignsServerDropdown";
 import LeaderBoardBottomSheet from "../shared/LeaderBoardBottomSheet";
-import { BottomSheet } from "react-spring-bottom-sheet";
-
-import "react-spring-bottom-sheet/dist/style.css";
 
 interface ILeaderBoardSetting {
   isLeaderBoard: boolean;
   onLeaderBoard: (type: boolean) => void;
-  currentBarStatus: boolean;
-  onCurrentBarStatus: () => void;
 }
 
 const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
   isLeaderBoard,
   onLeaderBoard,
-  currentBarStatus,
-  onCurrentBarStatus,
 }) => {
+  const [isShowBottomSheet, setShowBottomSheet] = useState(true);
+  const [isServerDropdown, setServerDropdown] = useState(false);
+
+  const handleShowBottomSheet = () => {
+    setShowBottomSheet(!isShowBottomSheet);
+    setServerDropdown(false);
+  };
+
+  const handleServerDropdown = () => {
+    setServerDropdown(!isServerDropdown);
+  };
   return (
     <div
-      className={`fixed md:relative left-0 bottom-0 px-4 md:py-4 flex flex-col gap-6 md:gap-4 md:bg-secondary-background border-none md:border md:border-secondary-background-accent rounded-t-2xl md:rounded-md md:min-h-[770px] min-w-[300px] z-30 md:z-0 w-full md:w-fit shadow-lg md:shadow-none transition-all duration-200 ${
-        currentBarStatus ? "h-0 py-0" : "h-fit py-4"
+      className={`fixed md:relative left-0 bottom-0 p-4 md:py-4 flex flex-col gap-6 md:gap-4 bg-background md:bg-secondary-background border-t border-t-background-light md:border md:border-secondary-background-accent rounded-t-2xl md:rounded-md md:min-h-[770px] min-w-[300px] z-30 md:z-0 w-full md:w-fit shadow-lg md:shadow-none transition-all duration-200 ${
+        isShowBottomSheet
+          ? "h-12"
+          : isServerDropdown
+          ? "h-[71%] overflow-y-auto"
+          : "h-60"
       } `}
     >
       <div className="md:block hidden">
@@ -69,13 +77,12 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
           </LeaderBoardSettingsItem>
         </div>
       </div>
-      <BottomSheet open={!currentBarStatus} onDismiss={onCurrentBarStatus}>
-        <LeaderBoardBottomSheet
-          isLeaderBoard={isLeaderBoard}
-          onLeaderBoard={onLeaderBoard}
-          onCurrentBarStatus={onCurrentBarStatus}
-        />
-      </BottomSheet>
+      <LeaderBoardBottomSheet
+        isLeaderBoard={isLeaderBoard}
+        onLeaderBoard={onLeaderBoard}
+        onShowBottomSheet={handleShowBottomSheet}
+        onServerDropdown={handleServerDropdown}
+      />
     </div>
   );
 };
