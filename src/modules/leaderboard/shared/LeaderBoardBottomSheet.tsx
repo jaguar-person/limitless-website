@@ -9,6 +9,7 @@ import LeaderBoardButton from "./LeaderBoardButton";
 interface ILeaderBoardBottomSheet {
   isLeaderBoard: boolean;
   onLeaderBoard: (type: boolean) => void;
+  isShowBottomSheet: boolean;
   onShowBottomSheet: () => void;
   onServerDropdown: () => void;
 }
@@ -16,12 +17,14 @@ interface ILeaderBoardBottomSheet {
 const LeaderBoardBottomSheet: React.FC<ILeaderBoardBottomSheet> = ({
   isLeaderBoard,
   onLeaderBoard,
+  isShowBottomSheet,
   onShowBottomSheet,
   onServerDropdown,
 }) => {
   const handleLeaderBoard = () => {
     onLeaderBoard(!isLeaderBoard);
   };
+
   return (
     <div className="md:hidden flex flex-col gap-6">
       <div className="self-center" onClick={onShowBottomSheet}>
@@ -36,6 +39,7 @@ const LeaderBoardBottomSheet: React.FC<ILeaderBoardBottomSheet> = ({
           <LeaderBoardSettingsServerDropDown
             isFixed={false}
             onServerDropdown={onServerDropdown}
+            isBottom={isShowBottomSheet}
           />
         </LeaderBoardSettingsItem>
         <div className="mt-1">

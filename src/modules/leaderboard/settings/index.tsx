@@ -81,6 +81,7 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
       <LeaderBoardBottomSheet
         isLeaderBoard={isLeaderBoard}
         onLeaderBoard={onLeaderBoard}
+        isShowBottomSheet={isShowBottomSheet}
         onShowBottomSheet={handleShowBottomSheet}
         onServerDropdown={handleServerDropdown}
       />
