@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import SearchBar from "../../../components/search-bar";
 import LeaderBoardSettingsItem from "./item";
-import DropDown from "../../../components/dropdown";
+import DropDown, {
+  DropDownContainer,
+  DropDownItem,
+} from "../../../components/dropdown";
 import LeaderBoardSettingsSwitch from "./LeaderBoardSettingsSwitch";
 import LeaderBoardSettingsServerDropDown from "./LeaderBoardSettignsServerDropdown";
 import LeaderBoardBottomSheet from "../shared/LeaderBoardBottomSheet";
@@ -71,9 +74,9 @@ const LeaderBoardSettings: React.FC<ILeaderBoardSetting> = ({
               bgColor="secondary-background-accent"
               width="full"
             >
-              <div className="dropdown-container min-w-[190px] text-secondary p-3 !bg-secondary-background-accent">
-                Some Stats
-              </div>
+              <DropDownContainer>
+                <DropDownItem>1</DropDownItem>
+              </DropDownContainer>
             </DropDown>
           </LeaderBoardSettingsItem>
         </div>

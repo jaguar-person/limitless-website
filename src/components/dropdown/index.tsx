@@ -14,6 +14,18 @@ interface IDropdown {
   isLeaderBoard?: boolean;
 }
 
+export const DropDownItem: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <div className="border-b border-b-secondary-background-accent pl-3 pb-2">
+    {children}
+  </div>
+);
+
+export const DropDownContainer: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => <div className="dropdown-container">{children}</div>;
+
 const DropDown: React.FC<IDropdown> = ({
   children,
   bgColor = "secondary-background",

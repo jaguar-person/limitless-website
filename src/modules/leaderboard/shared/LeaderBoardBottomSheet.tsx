@@ -5,6 +5,7 @@ import FiltersModal from "./FiltersModal";
 import LeaderBoardSettingsItem from "../settings/item";
 import LeaderBoardSettingsServerDropDown from "../settings/LeaderBoardSettignsServerDropdown";
 import LeaderBoardButton from "./LeaderBoardButton";
+import { DropDownContainer, DropDownItem } from "../../../components/dropdown";
 
 interface ILeaderBoardBottomSheet {
   isLeaderBoard: boolean;
@@ -32,7 +33,11 @@ const LeaderBoardBottomSheet: React.FC<ILeaderBoardBottomSheet> = ({
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
-          <DropDown title="PVP" width="full" />
+          <DropDown title="PVP" width="full">
+            <DropDownContainer>
+              <DropDownItem>1</DropDownItem>
+            </DropDownContainer>
+          </DropDown>
           <FiltersModal />
         </div>
         <LeaderBoardSettingsItem title="">

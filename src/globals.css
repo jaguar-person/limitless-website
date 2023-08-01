@@ -23,7 +23,7 @@ body {
 }
 
 .dropdown-container {
-    @apply mt-2.5 z-30 right-0 absolute rounded-md bg-secondary-background border border-secondary-background-accent flex flex-col gap-2.5 pt-2.5 w-full cursor-pointer
+    @apply mt-2.5 z-30 right-0 absolute rounded-md bg-secondary-background border border-secondary-background-accent flex flex-col gap-2.5 pt-2.5 w-full cursor-pointer text-secondary
 }
 
 .card-container {
