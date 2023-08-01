@@ -6,10 +6,15 @@ import EURIcon from "../../../images/eur.svg";
 import USAIcon from "../../../images/usa.svg";
 import { useIsMobile } from "../../../utils/hooks/useIsMobile";
 
-const LeaderBoardSettingsServerDropDown: React.FC<{
+interface ILeaderBoardSettingsServerDropDown {
   isFixed?: boolean;
   onServerDropdown?: () => void;
-}> = ({ isFixed = true, onServerDropdown }) => {
+  isBottom?: boolean;
+}
+
+const LeaderBoardSettingsServerDropDown: React.FC<
+  ILeaderBoardSettingsServerDropDown
+> = ({ isFixed = true, onServerDropdown, isBottom = false }) => {
   const options = {
     europe: ["2x Solo-1", "2x Solo-2", "2x Solo-3"],
     america: ["3x Solo-1", "3x Solo-2", "3x Solo-3"],
@@ -31,7 +36,7 @@ const LeaderBoardSettingsServerDropDown: React.FC<{
       }
       width="full"
       onServerDropdown={onServerDropdown}
-      isLeaderBoard={true}
+      isLeaderBoard={isBottom ? false : true}
     >
       <div
         className={`dropdown-container ${
