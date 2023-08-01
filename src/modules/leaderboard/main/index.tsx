@@ -1,5 +1,8 @@
 import React from "react";
-import DropDown from "../../../components/dropdown";
+import DropDown, {
+  DropDownContainer,
+  DropDownItem,
+} from "../../../components/dropdown";
 import LeaderBoardTable from "./LeaderBoardTable";
 import HeatMap from "./HeatMap";
 
@@ -27,14 +30,10 @@ const LeaderBoardMain: React.FC<ILeaderBoardMain> = ({
             bgColor="secondary-background-accent"
             width="fit"
           >
-            <div className="dropdown-container text-secondary">
-              <div className="border-b border-b-secondary-background-accent pl-3 pb-2">
-                Lifetime
-              </div>
-              <div className="border-b border-b-secondary-background-accent pl-3 pb-2">
-                Wipe
-              </div>
-            </div>
+            <DropDownContainer>
+              <DropDownItem>Lifetime</DropDownItem>
+              <DropDownItem>Wipe</DropDownItem>
+            </DropDownContainer>
           </DropDown>
         </div>
         {isLeaderBoard ? (

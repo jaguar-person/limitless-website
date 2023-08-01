@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import SearchBar from "../../../components/search-bar";
-import DropDown from "../../../components/dropdown";
+import DropDown, {
+  DropDownContainer,
+  DropDownItem,
+} from "../../../components/dropdown";
 import CloseIcon from "../../../images/mobile-close.svg";
 import Button from "../../../components/button";
 
@@ -51,7 +54,13 @@ const FiltersModal: React.FC = () => {
                   title="Lifetime"
                   bgColor="secondary-background"
                   width="full"
-                />
+                >
+                  <DropDownContainer>
+                    <DropDownItem>1</DropDownItem>
+                    <DropDownItem>2</DropDownItem>
+                    <DropDownItem>3</DropDownItem>
+                  </DropDownContainer>
+                </DropDown>
               </DropDownWithTitle>
               <div className="flex gap-3">
                 <div className="w-1/2">
@@ -60,7 +69,13 @@ const FiltersModal: React.FC = () => {
                       title="Kills"
                       bgColor="secondary-background"
                       width="full"
-                    />
+                    >
+                      <DropDownContainer>
+                        <DropDownItem>1</DropDownItem>
+                        <DropDownItem>2</DropDownItem>
+                        <DropDownItem>3</DropDownItem>
+                      </DropDownContainer>
+                    </DropDown>
                   </DropDownWithTitle>
                 </div>
                 <div className="w-1/2">
@@ -69,7 +84,13 @@ const FiltersModal: React.FC = () => {
                       title="Desc"
                       bgColor="secondary-background"
                       width="full"
-                    />
+                    >
+                      <DropDownContainer>
+                        <DropDownItem>1</DropDownItem>
+                        <DropDownItem>2</DropDownItem>
+                        <DropDownItem>3</DropDownItem>
+                      </DropDownContainer>
+                    </DropDown>
                   </DropDownWithTitle>
                 </div>
               </div>
