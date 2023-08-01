@@ -15,7 +15,7 @@ const Shop: React.FC = () => {
         width={352}
         height={333}
         alt="shop"
-        className="w-full rounded-xl"
+        className="w-full rounded-xl pointer-events-none"
       />
       <div className="bg-bright"></div>
       <div className="flex flex-col gap-2 md:gap-5 items-start py-6 md:py-10">
